@@ -59,6 +59,7 @@
 		6E11B2D71AFE6A9400EEAF37 = {
 			isa = PBXGroup;
 			children = (
+				6EFD2C1F1B18C06E00DFDFF2 /* Frameworks */,
 				6E11B2E21AFE6A9400EEAF37 /* Cerradura */,
 				6E11B2F81AFE6A9400EEAF37 /* CerraduraTests */,
 				6E11B2E11AFE6A9400EEAF37 /* Products */,
@@ -110,6 +111,13 @@
 				6E11B2FA1AFE6A9400EEAF37 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6EFD2C1F1B18C06E00DFDFF2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -418,6 +426,7 @@
 				6E11B3011AFE6A9400EEAF37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6E11B3021AFE6A9400EEAF37 /* Build configuration list for PBXNativeTarget "CerraduraTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +435,7 @@
 				6E11B3041AFE6A9400EEAF37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
