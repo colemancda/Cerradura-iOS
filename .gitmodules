@@ -1,0 +1,3 @@
+[submodule "CoreCerraduraClient"]
+	path = CoreCerraduraClient
+	url = git@github.com:colemancda/CoreCerraduraClient.git
