@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>6518760F-1DC3-4522-BB7A-571EC0FCB0EB</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Cerradura</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>ACFD7193FD9E2A3F48E6D0863F74951FF595FC16</key>
 		<string>https://github.com/colemancda/Cerradura-iOS.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Cerradura/Cerradura.xcodeproj/project.xcworkspace</string>
+	<string>Cerradura/Cerradura.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>ACFD7193FD9E2A3F48E6D0863F74951FF595FC16</key>
