@@ -118,7 +118,7 @@
                     <toolbarItems>
                         <barButtonItem systemItem="action" id="ATm-Ob-7UX"/>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="abr-63-rKt"/>
-                        <barButtonItem title="History" id="Jsg-jO-lx3">
+                        <barButtonItem image="Activity" id="Jsg-jO-lx3">
                             <connections>
                                 <segue destination="ynv-gJ-Ewk" kind="show" id="DsJ-dY-3hv"/>
                             </connections>
@@ -130,16 +130,16 @@
             </objects>
             <point key="canvasLocation" x="2249" y="470"/>
         </scene>
-        <!--History-->
+        <!--Activity-->
         <scene sceneID="P8F-Iv-W2g">
             <objects>
                 <tableViewController id="ynv-gJ-Ewk" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="iga-SS-kZw">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="57" sectionHeaderHeight="22" sectionFooterHeight="22" id="iga-SS-kZw">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="uut-RU-S5f">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="57" id="uut-RU-S5f">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uut-RU-S5f" id="Rnk-lr-vW6">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -151,7 +151,7 @@
                             <outlet property="delegate" destination="ynv-gJ-Ewk" id="cZR-Ds-ahV"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="History" id="88m-AU-PQE"/>
+                    <navigationItem key="navigationItem" title="Activity" id="88m-AU-PQE"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ovK-7C-wg0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -236,4 +236,7 @@
             <point key="canvasLocation" x="-221" y="470"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Activity" width="19" height="17"/>
+    </resources>
 </document>
