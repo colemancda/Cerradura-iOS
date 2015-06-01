@@ -13,6 +13,8 @@
 		6E11B2ED1AFE6A9400EEAF37 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E11B2EC1AFE6A9400EEAF37 /* Images.xcassets */; };
 		6E11B2F01AFE6A9400EEAF37 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E11B2EE1AFE6A9400EEAF37 /* LaunchScreen.xib */; };
 		6E11B2FC1AFE6A9400EEAF37 /* CerraduraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E11B2FB1AFE6A9400EEAF37 /* CerraduraTests.swift */; };
+		6EC4C1A51B1CB3A00068522E /* Crypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EFD2C6F1B18CAAC00DFDFF2 /* Crypto.framework */; };
+		6EC4C1A61B1CB3A00068522E /* Crypto.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6EFD2C6F1B18CAAC00DFDFF2 /* Crypto.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6EFD2CF01B18CE5500DFDFF2 /* CoreCerradura.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EFD2C2F1B18C22400DFDFF2 /* CoreCerradura.framework */; };
 		6EFD2CF11B18CE5500DFDFF2 /* CoreCerradura.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6EFD2C2F1B18C22400DFDFF2 /* CoreCerradura.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6EFD2CF41B18CE5500DFDFF2 /* CoreCerraduraClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EFD2CC51B18CAF600DFDFF2 /* CoreCerraduraClient.framework */; };
@@ -40,6 +42,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 6E11B2DF1AFE6A9400EEAF37;
 			remoteInfo = Cerradura;
+		};
+		6EC4C1A71B1CB3A10068522E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6EFD2C461B18CAAC00DFDFF2 /* Crypto.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 2112163C1AE68AD2004E1CE6;
+			remoteInfo = Crypto;
 		};
 		6EFD2C2E1B18C22400DFDFF2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -282,6 +291,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				6EFD2CF51B18CE5500DFDFF2 /* CoreCerraduraClient.framework in Embed Frameworks */,
+				6EC4C1A61B1CB3A00068522E /* Crypto.framework in Embed Frameworks */,
 				6EFD2D111B18CE5600DFDFF2 /* NetworkObjects.framework in Embed Frameworks */,
 				6EFD2CF91B18CE5500DFDFF2 /* IDZSwiftCommonCrypto.framework in Embed Frameworks */,
 				6EFD2D091B18CE5600DFDFF2 /* RoutingHTTPServer.framework in Embed Frameworks */,
@@ -325,6 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EFD2CF41B18CE5500DFDFF2 /* CoreCerraduraClient.framework in Frameworks */,
+				6EC4C1A51B1CB3A00068522E /* Crypto.framework in Frameworks */,
 				6EFD2D101B18CE5600DFDFF2 /* NetworkObjects.framework in Frameworks */,
 				6EFD2CF81B18CE5500DFDFF2 /* IDZSwiftCommonCrypto.framework in Frameworks */,
 				6EFD2D081B18CE5600DFDFF2 /* RoutingHTTPServer.framework in Frameworks */,
@@ -538,6 +549,7 @@
 				6EFD2D0B1B18CE5600DFDFF2 /* PBXTargetDependency */,
 				6EFD2D0F1B18CE5600DFDFF2 /* PBXTargetDependency */,
 				6EFD2D131B18CE5600DFDFF2 /* PBXTargetDependency */,
+				6EC4C1A81B1CB3A10068522E /* PBXTargetDependency */,
 			);
 			name = Cerradura;
 			productName = Cerradura;
@@ -858,6 +870,11 @@
 			isa = PBXTargetDependency;
 			target = 6E11B2DF1AFE6A9400EEAF37 /* Cerradura */;
 			targetProxy = 6E11B2F61AFE6A9400EEAF37 /* PBXContainerItemProxy */;
+		};
+		6EC4C1A81B1CB3A10068522E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Crypto;
+			targetProxy = 6EC4C1A71B1CB3A10068522E /* PBXContainerItemProxy */;
 		};
 		6EFD2CF31B18CE5500DFDFF2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
