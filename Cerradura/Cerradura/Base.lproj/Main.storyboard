@@ -255,6 +255,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Activity" width="19" height="17"/>
+        <image name="Activity" width="25" height="25"/>
     </resources>
 </document>
