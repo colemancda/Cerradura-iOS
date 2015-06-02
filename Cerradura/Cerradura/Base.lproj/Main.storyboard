@@ -228,12 +228,30 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="ROh-1w-oKR" kind="presentation" modalTransitionStyle="flipHorizontal" id="F72-nn-blg"/>
+                        <segue destination="vuf-Dr-0ST" kind="presentation" id="VV7-Jx-1if"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WpM-ZZ-2HG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-221" y="470"/>
+            <point key="canvasLocation" x="-493" y="-532"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="PGY-Qd-46y">
+            <objects>
+                <tabBarController id="vuf-Dr-0ST" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="juk-s3-lbD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ROh-1w-oKR" kind="relationship" relationship="viewControllers" id="Uc0-HG-Vz8"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J1o-U9-BPe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="607" y="-532"/>
         </scene>
     </scenes>
     <resources>
