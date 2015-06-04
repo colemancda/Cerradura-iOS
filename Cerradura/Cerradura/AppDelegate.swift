@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CoreCerraduraClient
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // start network activity indicator manager
+        NetworkActivityIndicatorManager.sharedManager.managingNetworkActivityIndicator = true
+        
+        // load data cache
+        
+        
         return true
     }
 
@@ -44,3 +52,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+// MARK: - Extensions
+
+extension Store {
+    
+    /** Shared store that may be nil. App must ensure that this class property is initialized before use. */
+    static var sharedStore: Store!
+}
