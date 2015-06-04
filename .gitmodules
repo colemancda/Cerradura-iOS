@@ -1,3 +1,6 @@
 [submodule "CoreCerraduraClient"]
 	path = CoreCerraduraClient
 	url = git@github.com:colemancda/CoreCerraduraClient.git
+[submodule "KeychainAccess"]
+	path = KeychainAccess
+	url = git@github.com:colemancda/KeychainAccess.git
