@@ -40,6 +40,34 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		6E062EBA1B20B6FC004DBAB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E062EAB1B20B6FC004DBAB7 /* KeychainAccess.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 140F195C1A49D79400B0016A;
+			remoteInfo = "KeychainAccess-iOS";
+		};
+		6E062EBC1B20B6FC004DBAB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E062EAB1B20B6FC004DBAB7 /* KeychainAccess.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 140F19671A49D79500B0016A;
+			remoteInfo = "KeychainAccess-iOSTests";
+		};
+		6E062EBE1B20B6FC004DBAB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E062EAB1B20B6FC004DBAB7 /* KeychainAccess.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 140C8F0A1A4EBE3100F85556;
+			remoteInfo = "KeychainAccess-Mac";
+		};
+		6E062EC01B20B6FC004DBAB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E062EAB1B20B6FC004DBAB7 /* KeychainAccess.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 140C8F141A4EBE3100F85556;
+			remoteInfo = "KeychainAccess-MacTests";
+		};
 		6E11B2F61AFE6A9400EEAF37 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6E11B2D81AFE6A9400EEAF37 /* Project object */;
@@ -315,6 +343,7 @@
 		6E062E391B209FAC004DBAB7 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Error.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		6E062E3C1B209FC8004DBAB7 /* NetworkActivityIndicatorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkActivityIndicatorManager.swift; sourceTree = "<group>"; };
 		6E062E3E1B209FDC004DBAB7 /* FetchedResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = FetchedResultsViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		6E062EAB1B20B6FC004DBAB7 /* KeychainAccess.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KeychainAccess.xcodeproj; path = ../KeychainAccess/Lib/KeychainAccess.xcodeproj; sourceTree = "<group>"; };
 		6E0C9BC41B1F3C540018450C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6E11B2E01AFE6A9400EEAF37 /* Cerradura.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cerradura.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E11B2E41AFE6A9400EEAF37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -379,6 +408,17 @@
 				6E062E391B209FAC004DBAB7 /* Error.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		6E062EAC1B20B6FC004DBAB7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6E062EBB1B20B6FC004DBAB7 /* KeychainAccess.framework */,
+				6E062EBD1B20B6FC004DBAB7 /* KeychainAccess-iOSTests.xctest */,
+				6E062EBF1B20B6FC004DBAB7 /* KeychainAccess.framework */,
+				6E062EC11B20B6FC004DBAB7 /* KeychainAccess-MacTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		6E0C9BC31B1F3C370018450C /* Controllers */ = {
@@ -453,6 +493,7 @@
 		6EFD2C1F1B18C06E00DFDFF2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6E062EAB1B20B6FC004DBAB7 /* KeychainAccess.xcodeproj */,
 				6EFD2C201B18C22400DFDFF2 /* CoreCerradura.xcodeproj */,
 				6EFD2CBF1B18CAF500DFDFF2 /* CoreCerraduraClient.xcodeproj */,
 				6EFD2C431B18CAAC00DFDFF2 /* IDZSwiftCommonCrypto.xcodeproj */,
@@ -670,6 +711,10 @@
 					ProjectRef = 6EFD2C431B18CAAC00DFDFF2 /* IDZSwiftCommonCrypto.xcodeproj */;
 				},
 				{
+					ProductGroup = 6E062EAC1B20B6FC004DBAB7 /* Products */;
+					ProjectRef = 6E062EAB1B20B6FC004DBAB7 /* KeychainAccess.xcodeproj */;
+				},
+				{
 					ProductGroup = 6EFD2C4A1B18CAAC00DFDFF2 /* Products */;
 					ProjectRef = 6EFD2C491B18CAAC00DFDFF2 /* Lumberjack.xcodeproj */;
 				},
@@ -691,6 +736,34 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		6E062EBB1B20B6FC004DBAB7 /* KeychainAccess.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = KeychainAccess.framework;
+			remoteRef = 6E062EBA1B20B6FC004DBAB7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6E062EBD1B20B6FC004DBAB7 /* KeychainAccess-iOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "KeychainAccess-iOSTests.xctest";
+			remoteRef = 6E062EBC1B20B6FC004DBAB7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6E062EBF1B20B6FC004DBAB7 /* KeychainAccess.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = KeychainAccess.framework;
+			remoteRef = 6E062EBE1B20B6FC004DBAB7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6E062EC11B20B6FC004DBAB7 /* KeychainAccess-MacTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "KeychainAccess-MacTests.xctest";
+			remoteRef = 6E062EC01B20B6FC004DBAB7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		6EFD2C2F1B18C22400DFDFF2 /* CoreCerradura.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
