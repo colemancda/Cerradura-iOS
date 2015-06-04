@@ -7,21 +7,22 @@
 //
 
 import UIKit
-import CoreCerraduraClient
-
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        // print app info
+        println("Launching Cerradura v\(AppVersion) Build \(AppBuild)")
         
         // start network activity indicator manager
         NetworkActivityIndicatorManager.sharedManager.managingNetworkActivityIndicator = true
         
-        // load data cache
+        // load data cache if the user is logged in
+        
         
         
         return true
@@ -48,14 +49,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
-}
-
-// MARK: - Extensions
-
-extension Store {
-    
-    /** Shared store that may be nil. App must ensure that this class property is initialized before use. */
-    static var sharedStore: Store!
 }
