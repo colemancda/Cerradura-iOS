@@ -8,31 +8,51 @@
 
 import Foundation
 import KeychainAccess
-import CoreCerraduraClient
 
 /** Holds the information for authenticating with the server. */
-final class Authentication {
+public final class Authentication {
     
-    /** Authentication singleton. */
-    static let sharedAuthentication = Authentication()
+    // MARK: - Class Properties
     
-    let keychain = Keychain(service: NSBundle.mainBundle().infoDictionary![kCFBundleIdentifierKey] as! String)
+    /** Key for storing the password in the keychain. */
+    public static let keychainPasswordKey = "Password"
+    
+    /** Key for storing the username in the keychain. */
+    public static let keychainUsernameKey = "Username"
+    
+    // MARK: - Properties
     
     /** Checks whether the user is logged in on the device. */
-    var isAuthenticated: Bool {
+    public var isAuthenticated: Bool {
         
-        return (self.keychain[AuthenticationPasswordKey] != nil)
+        return (self.keychain[Authentication.keychainPasswordKey] != nil) && (self.keychain[Authentication.keychainUsernameKey] != nil)
+    }
+    
+    // MARK: - Private Properties
+    
+    /** The keychain used for storing the credentials. */
+    private let keychain: Keychain
+    
+    // MARK: - Initialization
+    
+    public init(keychainIdentifier: String = NSBundle.mainBundle().infoDictionary![kCFBundleIdentifierKey] as! String, accessGroup: String? = nil) {
+        
+        // set keychain
+        
+        if accessGroup != nil {
+            
+            self.keychain = Keychain(service: keychainIdentifier, accessGroup: accessGroup!)
+        }
+        else {
+            
+            self.keychain = Keychain(service: keychainIdentifier)
+        }
+        
+        
+        
+        
+        
     }
     
     
-    
-    
-    
-    
-    
 }
-
-// MARK: - Private Constants
-
-/** Key for storing the password in the keychain. */
-private let AuthenticationPasswordKey = "Password"
