@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E062E161B208C6D004DBAB7 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E062E151B208C6D004DBAB7 /* R.generated.swift */; };
 		6E0C9BC51B1F3C540018450C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0C9BC41B1F3C540018450C /* LoginViewController.swift */; };
 		6E11B2E61AFE6A9400EEAF37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E11B2E51AFE6A9400EEAF37 /* AppDelegate.swift */; };
 		6E11B2EB1AFE6A9400EEAF37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E11B2E91AFE6A9400EEAF37 /* Main.storyboard */; };
@@ -307,6 +308,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6E062E151B208C6D004DBAB7 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		6E0C9BC41B1F3C540018450C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6E11B2E01AFE6A9400EEAF37 /* Cerradura.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cerradura.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E11B2E41AFE6A9400EEAF37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -391,6 +393,7 @@
 				6E11B2E91AFE6A9400EEAF37 /* Main.storyboard */,
 				6E11B2EC1AFE6A9400EEAF37 /* Images.xcassets */,
 				6E11B2EE1AFE6A9400EEAF37 /* LaunchScreen.xib */,
+				6E062E151B208C6D004DBAB7 /* R.generated.swift */,
 				6E0C9BC31B1F3C370018450C /* Controllers */,
 				6E11B2E31AFE6A9400EEAF37 /* Supporting Files */,
 			);
@@ -540,6 +543,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6E11B2FF1AFE6A9400EEAF37 /* Build configuration list for PBXNativeTarget "Cerradura" */;
 			buildPhases = (
+				6E062E061B208C22004DBAB7 /* R.swift */,
 				6E11B2DC1AFE6A9400EEAF37 /* Sources */,
 				6E11B2DD1AFE6A9400EEAF37 /* Frameworks */,
 				6E11B2DE1AFE6A9400EEAF37 /* Resources */,
@@ -852,6 +856,23 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6E062E061B208C22004DBAB7 /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = R.swift;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SRCROOT/rswift\" \"$SRCROOT\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6E11B2DC1AFE6A9400EEAF37 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -859,6 +880,7 @@
 			files = (
 				6E0C9BC51B1F3C540018450C /* LoginViewController.swift in Sources */,
 				6E11B2E61AFE6A9400EEAF37 /* AppDelegate.swift in Sources */,
+				6E062E161B208C6D004DBAB7 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
