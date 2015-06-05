@@ -1,5 +1,5 @@
 //
-//  Error.swift
+//  ErrorAlert.swift
 //  Cerradura
 //
 //  Created by Alsey Coleman Miller on 12/8/14.
