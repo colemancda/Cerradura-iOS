@@ -59,10 +59,10 @@ internal extension Store {
             
             fatalError("Could not delete old SQLite file.\n\(deleteError)")
         }
-        else {
-            
-            println("Deleted old SQLite file")
-        }
+        
+        println("Deleted old SQLite file")
+        
+        self.sharedStore = nil
     }
 }
 

@@ -9,7 +9,7 @@
 import Foundation
 import KeychainAccess
 
-/** Holds the information for authenticating with the server. */
+/** Holds the information for authenticating with the server, and manages storage in the keychain. */
 public final class Authentication {
     
     // MARK: - Class Properties
@@ -22,10 +22,38 @@ public final class Authentication {
     
     // MARK: - Properties
     
-    /** Checks whether the user is logged in on the device. */
-    public var isAuthenticated: Bool {
+    /** Username and password credentials. */
+    public var credentials: (String, String)? {
         
-        return (self.keychain[Authentication.keychainPasswordKey] != nil) && (self.keychain[Authentication.keychainUsernameKey] != nil)
+        get {
+            
+            let username = self.keychain[Authentication.keychainUsernameKey]
+            
+            let password = self.keychain[Authentication.keychainPasswordKey]
+            
+            if username == nil || password == nil {
+                
+                return nil
+            }
+            
+            return (username!, password!)
+        }
+        
+        set {
+            
+            if self.credentials == nil {
+                
+                self.keychain[Authentication.keychainUsernameKey] = nil
+                
+                self.keychain[Authentication.keychainPasswordKey] = nil
+            }
+            
+            let (username, password) = self.credentials!
+            
+            self.keychain[Authentication.keychainUsernameKey] = username
+            
+            self.keychain[Authentication.keychainPasswordKey] = password
+        }
     }
     
     // MARK: - Private Properties
@@ -47,11 +75,6 @@ public final class Authentication {
             
             self.keychain = Keychain(service: keychainIdentifier)
         }
-        
-        
-        
-        
-        
     }
     
     
