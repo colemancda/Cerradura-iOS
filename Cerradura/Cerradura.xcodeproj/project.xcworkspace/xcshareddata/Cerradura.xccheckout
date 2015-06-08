@@ -32,6 +32,8 @@
 		<string>https://github.com/colemancda/IDZSwiftCommonCrypto.git</string>
 		<key>D9420E81D6A438210B7B3BBEADC7A0283866D9A2</key>
 		<string>https://github.com/colemancda/CommonCrypto.git</string>
+		<key>DD091C5D03D23C2F1EC054BC9C018DF9A9125FD6</key>
+		<string>github.com:colemancda/DZNEmptyDataSet.git</string>
 		<key>E2F476CE895D3596DBE8080E8F363F8F94823E70</key>
 		<string>https://github.com/colemancda/ExSwift.git</string>
 		<key>F5203A135CBC59107F981B12C20EBB5794D3BC69</key>
@@ -63,6 +65,8 @@
 		<string>../../../CoreCerraduraClient/CoreCerradura/IDZSwiftCommonCrypto</string>
 		<key>D9420E81D6A438210B7B3BBEADC7A0283866D9A2</key>
 		<string>../../../CoreCerraduraClient/CoreCerradura/IDZSwiftCommonCrypto/CommonCrypto</string>
+		<key>DD091C5D03D23C2F1EC054BC9C018DF9A9125FD6</key>
+		<string>../../../DZNEmptyDataSet/</string>
 		<key>E2F476CE895D3596DBE8080E8F363F8F94823E70</key>
 		<string>../../../CoreCerraduraClient/CoreCerradura/NetworkObjects/ExSwift</string>
 		<key>F5203A135CBC59107F981B12C20EBB5794D3BC69</key>
@@ -139,6 +143,14 @@
 			<string>F5203A135CBC59107F981B12C20EBB5794D3BC69</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Crypto</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DD091C5D03D23C2F1EC054BC9C018DF9A9125FD6</string>
+			<key>IDESourceControlWCCName</key>
+			<string>DZNEmptyDataSet</string>
 		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>

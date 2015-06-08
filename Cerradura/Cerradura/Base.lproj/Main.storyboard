@@ -5,7 +5,7 @@
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--Locks-->
+        <!--Keys-->
         <scene sceneID="wfq-Mr-9uh">
             <objects>
                 <tableViewController id="azA-Zn-ODa" sceneMemberID="viewController">
@@ -46,7 +46,7 @@
                             <outlet property="delegate" destination="azA-Zn-ODa" id="mYd-6U-jxy"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Locks" id="xJI-ei-lFj">
+                    <navigationItem key="navigationItem" title="Keys" id="xJI-ei-lFj">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="WJc-Cu-lHj">
                             <connections>
                                 <segue destination="Nyg-pd-xzP" kind="presentation" id="Vbc-V9-7Be"/>
@@ -98,7 +98,7 @@
             </objects>
             <point key="canvasLocation" x="3069" y="-296"/>
         </scene>
-        <!--View Controller-->
+        <!--Title-->
         <scene sceneID="zSe-Sl-5JA">
             <objects>
                 <viewController id="DPL-a1-c8t" sceneMemberID="viewController">
@@ -119,15 +119,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem systemItem="action" id="ATm-Ob-7UX"/>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="abr-63-rKt"/>
-                        <barButtonItem image="Activity" id="Jsg-jO-lx3">
-                            <connections>
-                                <segue destination="ynv-gJ-Ewk" kind="show" id="DsJ-dY-3hv"/>
-                            </connections>
-                        </barButtonItem>
-                    </toolbarItems>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Title" id="iih-3n-OPi">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="aRb-m6-Pl8"/>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NJY-0g-nNy" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -279,7 +274,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c81-VR-BNh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1427" y="1361"/>
+            <point key="canvasLocation" x="1459" y="1361"/>
         </scene>
         <!--Settings-->
         <scene sceneID="djV-T9-be2">
@@ -377,7 +372,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Activity" width="25" height="25"/>
         <image name="KeysTabBarIcon" width="25" height="25"/>
         <image name="LockTabBarIcon" width="13" height="25"/>
         <image name="SettingsTabBarIcon" width="25" height="25"/>
