@@ -4,3 +4,6 @@
 [submodule "KeychainAccess"]
 	path = KeychainAccess
 	url = git@github.com:colemancda/KeychainAccess.git
+[submodule "DZNEmptyDataSet"]
+	path = DZNEmptyDataSet
+	url = git@github.com:colemancda/DZNEmptyDataSet.git
