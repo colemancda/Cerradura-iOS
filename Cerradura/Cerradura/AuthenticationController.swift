@@ -19,6 +19,8 @@ final class AuthenticationController {
     
     static let sharedController = AuthenticationController()
     
+    static let preferencesUserIDKey = "UserID"
+    
     // MARK: - Properties
     
     let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -28,12 +30,42 @@ final class AuthenticationController {
         return (self.authentication.credentials != nil)
     }
     
-    var userResourceID: UInt?
+    /** Stored resource ID for the authenticated user. */
+    private(set) var userResourceID: UInt? {
+        
+        get {
+            
+            return NSUserDefaults.standardUserDefaults().objectForKey(AuthenticationController.preferencesUserIDKey) as? UInt
+        }
+        
+        set {
+            
+            if self.userResourceID == nil {
+                
+                NSUserDefaults.standardUserDefaults().removeObjectForKey(AuthenticationController.preferencesUserIDKey)
+            }
+            else {
+                
+                NSUserDefaults.standardUserDefaults().setInteger(Int(self.userResourceID!), forKey: AuthenticationController.preferencesUserIDKey)
+            }
+            
+            let success = NSUserDefaults.standardUserDefaults().synchronize()
+            
+            fatalError("Could not save resource ID to user defaults")
+        }
+    }
     
     // MARK: - Private Properties
     
     /** Manages storing the credentials. */
     private let authentication: Authentication = Authentication()
+    
+    // MARK: - Initialization
+    
+    public init() {
+        
+        NSNotificationCenter.defaultCenter().addObserver(<#observer: AnyObject#>, selector: <#Selector#>, name: <#String?#>, object: <#AnyObject?#>)
+    }
     
     // MARK: - Methods
     
@@ -60,14 +92,22 @@ final class AuthenticationController {
             
             if results!.count == 0 {
                 
-                let error = NSError(domain: <#String#>, code: <#Int#>, userInfo: <#[NSObject : AnyObject]?#>)
+                completion(ErrorCode.CouldNotFetchUserID.toError())
+                
+                return
             }
             
             // get user ID
             
             let user = (results as! [User]).first!
             
+            // save credentials
             
+            self.userResourceID = user.valueForKey("id") as? UInt
+            
+            self.authentication.credentials = (username, password)
+            
+            completion(nil)
         })
     }
     
@@ -75,13 +115,12 @@ final class AuthenticationController {
         
         self.authentication.credentials = nil
         
+        self.userResourceID = nil
+        
         Store.removeSharedStore()
     }
-}
-
-// MARK: - Protocols
-
-protocol AuthenticationControllerDelegate {
     
-    func authenticationControllerDidLogout(controller: AuthenticationController)
+    // MARK: - Notifications
+    
+    @objc private func 
 }
