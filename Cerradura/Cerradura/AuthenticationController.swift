@@ -23,7 +23,7 @@ final class AuthenticationController {
     
     // MARK: - Properties
     
-    let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    var delegate: AuthenticationControllerDelegate?
     
     var isAuthenticated: Bool {
         
@@ -59,13 +59,6 @@ final class AuthenticationController {
     
     /** Manages storing the credentials. */
     private let authentication: Authentication = Authentication()
-    
-    // MARK: - Initialization
-    
-    public init() {
-        
-        NSNotificationCenter.defaultCenter().addObserver(<#observer: AnyObject#>, selector: <#Selector#>, name: <#String?#>, object: <#AnyObject?#>)
-    }
     
     // MARK: - Methods
     
@@ -107,6 +100,10 @@ final class AuthenticationController {
             
             self.authentication.credentials = (username, password)
             
+            // register for notifications
+            
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: "authenticationDidFail", name: StoreNotification.AuthenticationDidFail.rawValue, object: Store.sharedStore)
+            
             completion(nil)
         })
     }
@@ -117,10 +114,25 @@ final class AuthenticationController {
         
         self.userResourceID = nil
         
+        // deregister for notifications
+        
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: "authenticationDidFail", object: Store.sharedStore)
+        
         Store.removeSharedStore()
     }
     
     // MARK: - Notifications
     
-    @objc private func 
+    @objc private func authenticationDidFail(notification: NSNotification) {
+        
+        // logout
+        self.logout()
+    }
+}
+
+// MARK: - Protocols
+
+internal protocol AuthenticationControllerDelegate {
+    
+    func authenticationControllerDidLogout(controller: AuthenticationController)
 }
