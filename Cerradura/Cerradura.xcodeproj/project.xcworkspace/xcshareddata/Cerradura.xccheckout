@@ -58,7 +58,7 @@
 		<key>ACFD7193FD9E2A3F48E6D0863F74951FF595FC16</key>
 		<string>../../..</string>
 		<key>AFADF01AFBA46DFD7A5AFD980110E89E8E63AACD</key>
-		<string>../../../KeychainAccess/</string>
+		<string>../../../KeychainAccess</string>
 		<key>CA0F008EE3879A49D4AD08C803AC26CAC131963A</key>
 		<string>../../../CoreCerraduraClient/CoreCerradura/IDZSwiftCommonCrypto</string>
 		<key>D9420E81D6A438210B7B3BBEADC7A0283866D9A2</key>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0G5-lq-kRc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vuf-Dr-0ST">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -161,11 +161,11 @@
             </objects>
             <point key="canvasLocation" x="3069" y="470"/>
         </scene>
-        <!--Permissions-->
+        <!--Keys-->
         <scene sceneID="Ma0-8u-brX">
             <objects>
                 <navigationController id="ROh-1w-oKR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Permissions" id="LJf-uI-0kG"/>
+                    <tabBarItem key="tabBarItem" title="Keys" image="KeysTabBarIcon" id="LJf-uI-0kG"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XuK-hS-kos">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -209,7 +209,7 @@
         <scene sceneID="djV-T9-be2">
             <objects>
                 <navigationController id="5UA-jR-8i2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" id="SPt-2L-fbX"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="SettingsTabBarIcon" id="SPt-2L-fbX"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3hU-ju-66n">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -221,73 +221,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hhr-fy-dCi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="607" y="1361"/>
-        </scene>
-        <!--Login View Controller-->
-        <scene sceneID="hwI-pq-MQJ">
-            <objects>
-                <viewController id="0G5-lq-kRc" customClass="LoginViewController" customModule="Cerradura" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ZrB-PJ-R98"/>
-                        <viewControllerLayoutGuide type="bottom" id="4BU-BH-3ap"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="MIH-sy-cN5">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IvA-VT-5c2">
-                                <rect key="frame" x="223" y="28" width="155" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QmR-AT-JiC">
-                                <rect key="frame" x="223" y="66" width="155" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="http://localhost:8080" borderStyle="roundedRect" placeholder="Server URL" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6ul-rh-N8k">
-                                <rect key="frame" x="223" y="104" width="155" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Llx-2f-CUn">
-                                <rect key="frame" x="281" y="142" width="38" height="30"/>
-                                <state key="normal" title="Login">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="login:" destination="0G5-lq-kRc" eventType="touchUpInside" id="MnQ-ct-kjE"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="IvA-VT-5c2" firstAttribute="centerX" secondItem="QmR-AT-JiC" secondAttribute="centerX" id="23v-xh-o5N"/>
-                            <constraint firstItem="IvA-VT-5c2" firstAttribute="centerX" secondItem="6ul-rh-N8k" secondAttribute="centerX" id="2fW-sc-rQc"/>
-                            <constraint firstItem="6ul-rh-N8k" firstAttribute="top" secondItem="QmR-AT-JiC" secondAttribute="bottom" constant="8" id="6Jm-dh-zNx"/>
-                            <constraint firstAttribute="centerX" secondItem="Llx-2f-CUn" secondAttribute="centerX" id="FJB-Kp-Vn4"/>
-                            <constraint firstItem="QmR-AT-JiC" firstAttribute="top" secondItem="IvA-VT-5c2" secondAttribute="bottom" constant="8" id="Fo7-za-JpS"/>
-                            <constraint firstAttribute="centerX" secondItem="QmR-AT-JiC" secondAttribute="centerX" id="Fqr-Jf-R7e"/>
-                            <constraint firstItem="Llx-2f-CUn" firstAttribute="top" secondItem="6ul-rh-N8k" secondAttribute="bottom" constant="8" id="IMY-js-igp"/>
-                            <constraint firstItem="IvA-VT-5c2" firstAttribute="top" secondItem="ZrB-PJ-R98" secondAttribute="bottom" constant="8" id="Pfr-Ln-bf7"/>
-                            <constraint firstAttribute="centerX" secondItem="IvA-VT-5c2" secondAttribute="centerX" id="Zzu-66-mqI"/>
-                            <constraint firstItem="6ul-rh-N8k" firstAttribute="width" secondItem="IvA-VT-5c2" secondAttribute="width" id="aFr-e5-GbQ"/>
-                            <constraint firstItem="6ul-rh-N8k" firstAttribute="width" secondItem="QmR-AT-JiC" secondAttribute="width" id="dUa-nb-KrG"/>
-                            <constraint firstAttribute="centerX" secondItem="6ul-rh-N8k" secondAttribute="centerX" id="gK0-sU-bcW"/>
-                            <constraint firstItem="QmR-AT-JiC" firstAttribute="top" secondItem="IvA-VT-5c2" secondAttribute="bottom" constant="8" id="kaf-hX-Bb1"/>
-                            <constraint firstItem="6ul-rh-N8k" firstAttribute="top" secondItem="QmR-AT-JiC" secondAttribute="bottom" constant="8" id="tVn-TK-9qv"/>
-                            <constraint firstItem="IvA-VT-5c2" firstAttribute="centerX" secondItem="Llx-2f-CUn" secondAttribute="centerX" id="zit-er-pfQ"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="passwordTextField" destination="QmR-AT-JiC" id="WGE-sY-Q8e"/>
-                        <outlet property="serverURLTextField" destination="6ul-rh-N8k" id="Qfc-jh-4aN"/>
-                        <outlet property="usernameTextField" destination="IvA-VT-5c2" id="DZd-t4-RiL"/>
-                        <segue destination="vuf-Dr-0ST" kind="presentation" identifier="loginSegue" modalTransitionStyle="flipHorizontal" id="VV7-Jx-1if"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WpM-ZZ-2HG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-493" y="-532"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="PGY-Qd-46y">
@@ -314,7 +247,7 @@
         <scene sceneID="dRL-Pw-6TO">
             <objects>
                 <navigationController id="oaj-tF-byS" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Lock" id="znP-Gd-goH"/>
+                    <tabBarItem key="tabBarItem" title="Lock" image="LockTabBarIcon" id="znP-Gd-goH"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="iOT-gY-YeU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -369,6 +302,9 @@
     </scenes>
     <resources>
         <image name="Activity" width="25" height="25"/>
+        <image name="KeysTabBarIcon" width="25" height="25"/>
+        <image name="LockTabBarIcon" width="13" height="25"/>
+        <image name="SettingsTabBarIcon" width="25" height="25"/>
         <image name="permissionBadgeAdmin" width="200" height="200"/>
     </resources>
 </document>

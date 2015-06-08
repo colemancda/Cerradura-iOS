@@ -9,7 +9,7 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, AuthenticationControllerDelegate {
 
     var window: UIWindow?
 
@@ -20,6 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // start network activity indicator manager
         NetworkActivityIndicatorManager.sharedManager.managingNetworkActivityIndicator = true
+        
+        // load authentication manager
+        AuthenticationController.sharedController.delegate = self
         
         // load data cache if the user is logged in
         
@@ -48,5 +51,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    // MARK: - AuthenticationControllerDelegate
+    
+    func authenticationControllerDidLogout(controller: AuthenticationController) {
+        
+        
     }
 }
