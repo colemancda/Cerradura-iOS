@@ -351,7 +351,7 @@
 		6E062ED11B20E357004DBAB7 /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		6E062F001B21F45A004DBAB7 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		6E0C9BC41B1F3C540018450C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		6E11B2E01AFE6A9400EEAF37 /* Cerradura.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cerradura.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E11B2E01AFE6A9400EEAF37 /* Punku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Punku.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E11B2E41AFE6A9400EEAF37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E11B2E51AFE6A9400EEAF37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E11B2EA1AFE6A9400EEAF37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -472,7 +472,7 @@
 		6E11B2E11AFE6A9400EEAF37 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6E11B2E01AFE6A9400EEAF37 /* Cerradura.app */,
+				6E11B2E01AFE6A9400EEAF37 /* Punku.app */,
 				6E11B2F51AFE6A9400EEAF37 /* CerraduraTests.xctest */,
 			);
 			name = Products;
@@ -662,7 +662,7 @@
 			);
 			name = Cerradura;
 			productName = Cerradura;
-			productReference = 6E11B2E01AFE6A9400EEAF37 /* Cerradura.app */;
+			productReference = 6E11B2E01AFE6A9400EEAF37 /* Punku.app */;
 			productType = "com.apple.product-type.application";
 		};
 		6E11B2F41AFE6A9400EEAF37 /* CerraduraTests */ = {
@@ -1212,7 +1212,7 @@
 				);
 				INFOPLIST_FILE = Cerradura/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Punku;
 				PROVISIONING_PROFILE = "";
 				SWIFT_WHOLE_MODULE_OPTIMIZATION = YES;
 			};
@@ -1230,7 +1230,7 @@
 				);
 				INFOPLIST_FILE = Cerradura/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Punku;
 				PROVISIONING_PROFILE = "";
 				SWIFT_WHOLE_MODULE_OPTIMIZATION = YES;
 			};
