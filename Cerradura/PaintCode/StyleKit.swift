@@ -18,6 +18,10 @@ public class StyleKit : NSObject {
 
     private struct Cache {
         static var navigationItemTintColor: UIColor = UIColor(red: 0.098, green: 0.455, blue: 0.824, alpha: 1.000)
+        static var imageOfLockTabBarIconSelected: UIImage?
+        static var lockTabBarIconSelectedTargets: [AnyObject]?
+        static var imageOfLockTabBarIcon: UIImage?
+        static var lockTabBarIconTargets: [AnyObject]?
     }
 
     //// Colors
@@ -207,330 +211,6 @@ public class StyleKit : NSObject {
         beizerPath.fill()
     }
 
-    public class func drawSettingsTabBarIcon(#frame: CGRect, tintColor: UIColor) {
-        //// General Declarations
-        let context = UIGraphicsGetCurrentContext()
-
-
-        //// Subframes
-        let group2: CGRect = CGRectMake(frame.minX + floor(frame.width * 0.00000 + 0.5), frame.minY + floor(frame.height * 0.00004 + 0) + 0.5, floor(frame.width * 1.00000 - 0.5) - floor(frame.width * 0.00000 + 0.5) + 1, floor(frame.height * 0.99752 - 0.49) - floor(frame.height * 0.00004 + 0) + 0.5)
-
-
-        //// Group 2
-        CGContextSaveGState(context)
-        CGContextBeginTransparencyLayer(context, nil)
-
-        //// Clip Clip
-        var clipPath = UIBezierPath()
-        clipPath.moveToPoint(CGPointMake(group2.minX + 0.55471 * group2.width, group2.minY + 1.00000 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.44959 * group2.width, group2.minY + 1.00000 * group2.height))
-        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.37437 * group2.width, group2.minY + 0.86378 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.43378 * group2.width, group2.minY + 1.00000 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.42826 * group2.width, group2.minY + 1.00003 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.33274 * group2.width, group2.minY + 0.84651 * group2.height))
-        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.20142 * group2.width, group2.minY + 0.89902 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.21934 * group2.width, group2.minY + 0.89902 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.20591 * group2.width, group2.minY + 0.89902 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.19274 * group2.width, group2.minY + 0.89902 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.18534 * group2.width, group2.minY + 0.89253 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.11083 * group2.width, group2.minY + 0.81813 * group2.height))
-        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.15388 * group2.width, group2.minY + 0.66811 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.09950 * group2.width, group2.minY + 0.80659 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.09557 * group2.width, group2.minY + 0.80258 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.13691 * group2.width, group2.minY + 0.62713 * group2.height))
-        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.00000 * group2.width, group2.minY + 0.55476 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.00000 * group2.width, group2.minY + 0.57706 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.00000 * group2.width, group2.minY + 0.57126 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.00000 * group2.width, group2.minY + 0.44959 * group2.height))
-        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.13645 * group2.width, group2.minY + 0.37406 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.00000 * group2.width, group2.minY + 0.43311 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.00000 * group2.width, group2.minY + 0.42791 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.15343 * group2.width, group2.minY + 0.33300 * group2.height))
-        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.10816 * group2.width, group2.minY + 0.18477 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.09175 * group2.width, group2.minY + 0.20057 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.09599 * group2.width, group2.minY + 0.19646 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.18829 * group2.width, group2.minY + 0.10460 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.19824 * group2.width, group2.minY + 0.10428 * group2.height))
-        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.33176 * group2.width, group2.minY + 0.15396 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.21034 * group2.width, group2.minY + 0.10428 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.25522 * group2.width, group2.minY + 0.12099 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.37326 * group2.width, group2.minY + 0.13677 * group2.height))
-        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.44512 * group2.width, group2.minY + 0.00000 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.42323 * group2.width, group2.minY + -0.00002 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.42936 * group2.width, group2.minY + 0.00000 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.55024 * group2.width, group2.minY + 0.00000 * group2.height))
-        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.62541 * group2.width, group2.minY + 0.13631 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.56598 * group2.width, group2.minY + 0.00000 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.57152 * group2.width, group2.minY + 0.00002 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.66710 * group2.width, group2.minY + 0.15345 * group2.height))
-        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.79846 * group2.width, group2.minY + 0.10102 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.78034 * group2.width, group2.minY + 0.10102 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.79394 * group2.width, group2.minY + 0.10102 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.80709 * group2.width, group2.minY + 0.10102 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.81449 * group2.width, group2.minY + 0.10739 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.88900 * group2.width, group2.minY + 0.18167 * group2.height))
-        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.84590 * group2.width, group2.minY + 0.33186 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.90033 * group2.width, group2.minY + 0.19334 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.90421 * group2.width, group2.minY + 0.19733 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.86292 * group2.width, group2.minY + 0.37307 * group2.height))
-        clipPath.addCurveToPoint(CGPointMake(group2.minX + 1.00000 * group2.width, group2.minY + 0.44524 * group2.height), controlPoint1: CGPointMake(group2.minX + 1.00000 * group2.width, group2.minY + 0.42292 * group2.height), controlPoint2: CGPointMake(group2.minX + 1.00000 * group2.width, group2.minY + 0.42871 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 1.00000 * group2.width, group2.minY + 0.55029 * group2.height))
-        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.86337 * group2.width, group2.minY + 0.62592 * group2.height), controlPoint1: CGPointMake(group2.minX + 1.00000 * group2.width, group2.minY + 0.56638 * group2.height), controlPoint2: CGPointMake(group2.minX + 1.00000 * group2.width, group2.minY + 0.57204 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.84651 * group2.width, group2.minY + 0.66702 * group2.height))
-        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.89233 * group2.width, group2.minY + 0.81482 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.90787 * group2.width, group2.minY + 0.79887 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.90382 * group2.width, group2.minY + 0.80300 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.81159 * group2.width, group2.minY + 0.89549 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.80158 * group2.width, group2.minY + 0.89577 * group2.height))
-        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.66832 * group2.width, group2.minY + 0.84603 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.78954 * group2.width, group2.minY + 0.89577 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.74476 * group2.width, group2.minY + 0.87904 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.62658 * group2.width, group2.minY + 0.86324 * group2.height))
-        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.55471 * group2.width, group2.minY + 1.00000 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.57648 * group2.width, group2.minY + 1.00000 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.57079 * group2.width, group2.minY + 1.00000 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.55471 * group2.width, group2.minY + 1.00000 * group2.height))
-        clipPath.closePath()
-        clipPath.moveToPoint(CGPointMake(group2.minX + 0.46052 * group2.width, group2.minY + 0.95658 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.54343 * group2.width, group2.minY + 0.95658 * group2.height))
-        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.58997 * group2.width, group2.minY + 0.83912 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.55294 * group2.width, group2.minY + 0.93679 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.57351 * group2.width, group2.minY + 0.88432 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.59329 * group2.width, group2.minY + 0.83012 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.66878 * group2.width, group2.minY + 0.79902 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.67690 * group2.width, group2.minY + 0.80253 * group2.height))
-        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.79579 * group2.width, group2.minY + 0.85047 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.72189 * group2.width, group2.minY + 0.82211 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.77507 * group2.width, group2.minY + 0.84380 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.85405 * group2.width, group2.minY + 0.79232 * group2.height))
-        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.80398 * group2.width, group2.minY + 0.67696 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.84665 * group2.width, group2.minY + 0.77139 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.82422 * group2.width, group2.minY + 0.72017 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.79990 * group2.width, group2.minY + 0.66818 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.83113 * group2.width, group2.minY + 0.59209 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.83964 * group2.width, group2.minY + 0.58874 * group2.height))
-        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.95741 * group2.width, group2.minY + 0.53880 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.88508 * group2.width, group2.minY + 0.57089 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.93774 * group2.width, group2.minY + 0.54885 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.95741 * group2.width, group2.minY + 0.45711 * group2.height))
-        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.83987 * group2.width, group2.minY + 0.41084 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.93751 * group2.width, group2.minY + 0.44756 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.88506 * group2.width, group2.minY + 0.42719 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.83102 * group2.width, group2.minY + 0.40761 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.79958 * group2.width, group2.minY + 0.33145 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.80333 * group2.width, group2.minY + 0.32286 * group2.height))
-        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.85108 * group2.width, group2.minY + 0.20461 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.82267 * group2.width, group2.minY + 0.27832 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.84418 * group2.width, group2.minY + 0.22578 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.79266 * group2.width, group2.minY + 0.14634 * group2.height))
-        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.67648 * group2.width, group2.minY + 0.19688 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.77381 * group2.width, group2.minY + 0.15305 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.72101 * group2.width, group2.minY + 0.17614 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.66818 * group2.width, group2.minY + 0.20076 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.59269 * group2.width, group2.minY + 0.16971 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.58932 * group2.width, group2.minY + 0.16114 * group2.height))
-        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.53930 * group2.width, group2.minY + 0.04348 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.57148 * group2.width, group2.minY + 0.11569 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.54930 * group2.width, group2.minY + 0.06299 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.45645 * group2.width, group2.minY + 0.04348 * group2.height))
-        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.40996 * group2.width, group2.minY + 0.16089 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.44689 * group2.width, group2.minY + 0.06322 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.42639 * group2.width, group2.minY + 0.11571 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.40670 * group2.width, group2.minY + 0.16984 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.33142 * group2.width, group2.minY + 0.20105 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.32330 * group2.width, group2.minY + 0.19751 * group2.height))
-        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.20413 * group2.width, group2.minY + 0.14964 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.27821 * group2.width, group2.minY + 0.17796 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.22492 * group2.width, group2.minY + 0.15630 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.14597 * group2.width, group2.minY + 0.20782 * group2.height))
-        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.19594 * group2.width, group2.minY + 0.32311 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.15327 * group2.width, group2.minY + 0.22872 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.17577 * group2.width, group2.minY + 0.27991 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.20008 * group2.width, group2.minY + 0.33191 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.16868 * group2.width, group2.minY + 0.40797 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.16024 * group2.width, group2.minY + 0.41130 * group2.height))
-        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.04262 * group2.width, group2.minY + 0.46117 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.11486 * group2.width, group2.minY + 0.42913 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.06230 * group2.width, group2.minY + 0.45116 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.04262 * group2.width, group2.minY + 0.54296 * group2.height))
-        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.16008 * group2.width, group2.minY + 0.58939 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.06252 * group2.width, group2.minY + 0.55255 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.11491 * group2.width, group2.minY + 0.57297 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.16886 * group2.width, group2.minY + 0.59265 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.20031 * group2.width, group2.minY + 0.66856 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.19655 * group2.width, group2.minY + 0.67713 * group2.height))
-        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.14881 * group2.width, group2.minY + 0.79523 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.17721 * group2.width, group2.minY + 0.72164 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.15572 * group2.width, group2.minY + 0.77411 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.20734 * group2.width, group2.minY + 0.85369 * group2.height))
-        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.32346 * group2.width, group2.minY + 0.80307 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.22615 * group2.width, group2.minY + 0.84692 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.27887 * group2.width, group2.minY + 0.82383 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.33181 * group2.width, group2.minY + 0.79917 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.40714 * group2.width, group2.minY + 0.83041 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.41051 * group2.width, group2.minY + 0.83898 * group2.height))
-        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.46052 * group2.width, group2.minY + 0.95658 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.42841 * group2.width, group2.minY + 0.88445 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.45052 * group2.width, group2.minY + 0.93706 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.46052 * group2.width, group2.minY + 0.95658 * group2.height))
-        clipPath.closePath()
-        clipPath.moveToPoint(CGPointMake(group2.minX + 0.50000 * group2.width, group2.minY + 0.67502 * group2.height))
-        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.32512 * group2.width, group2.minY + 0.49999 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.40361 * group2.width, group2.minY + 0.67502 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.32512 * group2.width, group2.minY + 0.59650 * group2.height))
-        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.50000 * group2.width, group2.minY + 0.32508 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.32512 * group2.width, group2.minY + 0.40355 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.40359 * group2.width, group2.minY + 0.32508 * group2.height))
-        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.67463 * group2.width, group2.minY + 0.49999 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.59633 * group2.width, group2.minY + 0.32508 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.67463 * group2.width, group2.minY + 0.40357 * group2.height))
-        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.50000 * group2.width, group2.minY + 0.67502 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.67463 * group2.width, group2.minY + 0.59650 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.59633 * group2.width, group2.minY + 0.67502 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.50000 * group2.width, group2.minY + 0.67502 * group2.height))
-        clipPath.closePath()
-        clipPath.moveToPoint(CGPointMake(group2.minX + 0.50000 * group2.width, group2.minY + 0.36854 * group2.height))
-        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.36773 * group2.width, group2.minY + 0.49999 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.42704 * group2.width, group2.minY + 0.36854 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.36773 * group2.width, group2.minY + 0.42752 * group2.height))
-        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.50000 * group2.width, group2.minY + 0.63155 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.36773 * group2.width, group2.minY + 0.57252 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.42702 * group2.width, group2.minY + 0.63155 * group2.height))
-        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.63209 * group2.width, group2.minY + 0.49999 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.57283 * group2.width, group2.minY + 0.63155 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.63209 * group2.width, group2.minY + 0.57252 * group2.height))
-        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.50000 * group2.width, group2.minY + 0.36854 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.63207 * group2.width, group2.minY + 0.42752 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.57283 * group2.width, group2.minY + 0.36854 * group2.height))
-        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.50000 * group2.width, group2.minY + 0.36854 * group2.height))
-        clipPath.closePath()
-        clipPath.usesEvenOddFillRule = true;
-
-        clipPath.addClip()
-
-
-        //// Rectangle Drawing
-        let rectanglePath = UIBezierPath(rect: CGRectMake(group2.minX + floor(group2.width * -0.20000 + 0.5), group2.minY + floor(group2.height * -0.20555 + 0.5) + 0, floor(group2.width * 1.20001 + 0.5) - floor(group2.width * -0.20000 + 0.5), floor(group2.height * 1.20550 - 0) - floor(group2.height * -0.20555 + 0.5) + 0.5))
-        tintColor.setFill()
-        rectanglePath.fill()
-
-
-        CGContextEndTransparencyLayer(context)
-        CGContextRestoreGState(context)
-    }
-
-    public class func drawSettingsTabBarIconSelected(#frame: CGRect, tintColor: UIColor) {
-        //// General Declarations
-        let context = UIGraphicsGetCurrentContext()
-
-
-        //// Subframes
-        let group: CGRect = CGRectMake(frame.minX + floor(frame.width * 0.00000 + 0.5), frame.minY + floor(frame.height * 0.00004 + 0) + 0.5, floor(frame.width * 1.00000 - 0.5) - floor(frame.width * 0.00000 + 0.5) + 1, floor(frame.height * 0.99752 - 0.49) - floor(frame.height * 0.00004 + 0) + 0.5)
-
-
-        //// Group
-        //// Group 2
-        CGContextSaveGState(context)
-        CGContextBeginTransparencyLayer(context, nil)
-
-        //// Clip Clip
-        var clipPath = UIBezierPath()
-        clipPath.moveToPoint(CGPointMake(group.minX + 0.55471 * group.width, group.minY + 1.00000 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.44959 * group.width, group.minY + 1.00000 * group.height))
-        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.37437 * group.width, group.minY + 0.86378 * group.height), controlPoint1: CGPointMake(group.minX + 0.43378 * group.width, group.minY + 1.00000 * group.height), controlPoint2: CGPointMake(group.minX + 0.42826 * group.width, group.minY + 1.00003 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.33274 * group.width, group.minY + 0.84651 * group.height))
-        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.20142 * group.width, group.minY + 0.89902 * group.height), controlPoint1: CGPointMake(group.minX + 0.21934 * group.width, group.minY + 0.89902 * group.height), controlPoint2: CGPointMake(group.minX + 0.20591 * group.width, group.minY + 0.89902 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.19274 * group.width, group.minY + 0.89902 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.18534 * group.width, group.minY + 0.89253 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.11083 * group.width, group.minY + 0.81813 * group.height))
-        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.15388 * group.width, group.minY + 0.66811 * group.height), controlPoint1: CGPointMake(group.minX + 0.09950 * group.width, group.minY + 0.80659 * group.height), controlPoint2: CGPointMake(group.minX + 0.09557 * group.width, group.minY + 0.80258 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.13691 * group.width, group.minY + 0.62713 * group.height))
-        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.00000 * group.width, group.minY + 0.55476 * group.height), controlPoint1: CGPointMake(group.minX + 0.00000 * group.width, group.minY + 0.57706 * group.height), controlPoint2: CGPointMake(group.minX + 0.00000 * group.width, group.minY + 0.57126 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.00000 * group.width, group.minY + 0.44959 * group.height))
-        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.13645 * group.width, group.minY + 0.37406 * group.height), controlPoint1: CGPointMake(group.minX + 0.00000 * group.width, group.minY + 0.43311 * group.height), controlPoint2: CGPointMake(group.minX + 0.00000 * group.width, group.minY + 0.42791 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.15343 * group.width, group.minY + 0.33300 * group.height))
-        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.10816 * group.width, group.minY + 0.18477 * group.height), controlPoint1: CGPointMake(group.minX + 0.09175 * group.width, group.minY + 0.20057 * group.height), controlPoint2: CGPointMake(group.minX + 0.09599 * group.width, group.minY + 0.19646 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.18829 * group.width, group.minY + 0.10460 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.19824 * group.width, group.minY + 0.10428 * group.height))
-        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.33176 * group.width, group.minY + 0.15396 * group.height), controlPoint1: CGPointMake(group.minX + 0.21034 * group.width, group.minY + 0.10428 * group.height), controlPoint2: CGPointMake(group.minX + 0.25522 * group.width, group.minY + 0.12099 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.37326 * group.width, group.minY + 0.13677 * group.height))
-        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.44512 * group.width, group.minY + 0.00000 * group.height), controlPoint1: CGPointMake(group.minX + 0.42323 * group.width, group.minY + -0.00002 * group.height), controlPoint2: CGPointMake(group.minX + 0.42936 * group.width, group.minY + 0.00000 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.55024 * group.width, group.minY + 0.00000 * group.height))
-        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.62541 * group.width, group.minY + 0.13631 * group.height), controlPoint1: CGPointMake(group.minX + 0.56598 * group.width, group.minY + 0.00000 * group.height), controlPoint2: CGPointMake(group.minX + 0.57152 * group.width, group.minY + 0.00002 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.66710 * group.width, group.minY + 0.15345 * group.height))
-        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.79846 * group.width, group.minY + 0.10102 * group.height), controlPoint1: CGPointMake(group.minX + 0.78034 * group.width, group.minY + 0.10102 * group.height), controlPoint2: CGPointMake(group.minX + 0.79394 * group.width, group.minY + 0.10102 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.80709 * group.width, group.minY + 0.10102 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.81449 * group.width, group.minY + 0.10739 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.88900 * group.width, group.minY + 0.18167 * group.height))
-        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.84590 * group.width, group.minY + 0.33186 * group.height), controlPoint1: CGPointMake(group.minX + 0.90033 * group.width, group.minY + 0.19334 * group.height), controlPoint2: CGPointMake(group.minX + 0.90421 * group.width, group.minY + 0.19733 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.86292 * group.width, group.minY + 0.37307 * group.height))
-        clipPath.addCurveToPoint(CGPointMake(group.minX + 1.00000 * group.width, group.minY + 0.44524 * group.height), controlPoint1: CGPointMake(group.minX + 1.00000 * group.width, group.minY + 0.42292 * group.height), controlPoint2: CGPointMake(group.minX + 1.00000 * group.width, group.minY + 0.42871 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 1.00000 * group.width, group.minY + 0.55029 * group.height))
-        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.86337 * group.width, group.minY + 0.62592 * group.height), controlPoint1: CGPointMake(group.minX + 1.00000 * group.width, group.minY + 0.56638 * group.height), controlPoint2: CGPointMake(group.minX + 1.00000 * group.width, group.minY + 0.57204 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.84651 * group.width, group.minY + 0.66702 * group.height))
-        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.89233 * group.width, group.minY + 0.81482 * group.height), controlPoint1: CGPointMake(group.minX + 0.90787 * group.width, group.minY + 0.79887 * group.height), controlPoint2: CGPointMake(group.minX + 0.90382 * group.width, group.minY + 0.80300 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.81159 * group.width, group.minY + 0.89549 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.80158 * group.width, group.minY + 0.89577 * group.height))
-        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.66832 * group.width, group.minY + 0.84603 * group.height), controlPoint1: CGPointMake(group.minX + 0.78954 * group.width, group.minY + 0.89577 * group.height), controlPoint2: CGPointMake(group.minX + 0.74476 * group.width, group.minY + 0.87904 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.62658 * group.width, group.minY + 0.86324 * group.height))
-        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.55471 * group.width, group.minY + 1.00000 * group.height), controlPoint1: CGPointMake(group.minX + 0.57648 * group.width, group.minY + 1.00000 * group.height), controlPoint2: CGPointMake(group.minX + 0.57079 * group.width, group.minY + 1.00000 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.55471 * group.width, group.minY + 1.00000 * group.height))
-        clipPath.closePath()
-        clipPath.moveToPoint(CGPointMake(group.minX + 0.46052 * group.width, group.minY + 0.95658 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.54343 * group.width, group.minY + 0.95658 * group.height))
-        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.58997 * group.width, group.minY + 0.83912 * group.height), controlPoint1: CGPointMake(group.minX + 0.55294 * group.width, group.minY + 0.93679 * group.height), controlPoint2: CGPointMake(group.minX + 0.57351 * group.width, group.minY + 0.88432 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.59329 * group.width, group.minY + 0.83012 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.66878 * group.width, group.minY + 0.79902 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.67690 * group.width, group.minY + 0.80253 * group.height))
-        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.79579 * group.width, group.minY + 0.85047 * group.height), controlPoint1: CGPointMake(group.minX + 0.72189 * group.width, group.minY + 0.82211 * group.height), controlPoint2: CGPointMake(group.minX + 0.77507 * group.width, group.minY + 0.84380 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.85405 * group.width, group.minY + 0.79232 * group.height))
-        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.80398 * group.width, group.minY + 0.67696 * group.height), controlPoint1: CGPointMake(group.minX + 0.84665 * group.width, group.minY + 0.77139 * group.height), controlPoint2: CGPointMake(group.minX + 0.82422 * group.width, group.minY + 0.72017 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.79990 * group.width, group.minY + 0.66818 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.83113 * group.width, group.minY + 0.59209 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.83964 * group.width, group.minY + 0.58874 * group.height))
-        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.95741 * group.width, group.minY + 0.53880 * group.height), controlPoint1: CGPointMake(group.minX + 0.88508 * group.width, group.minY + 0.57089 * group.height), controlPoint2: CGPointMake(group.minX + 0.93774 * group.width, group.minY + 0.54885 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.95741 * group.width, group.minY + 0.45711 * group.height))
-        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.83987 * group.width, group.minY + 0.41084 * group.height), controlPoint1: CGPointMake(group.minX + 0.93751 * group.width, group.minY + 0.44756 * group.height), controlPoint2: CGPointMake(group.minX + 0.88506 * group.width, group.minY + 0.42719 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.83102 * group.width, group.minY + 0.40761 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.79958 * group.width, group.minY + 0.33145 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.80333 * group.width, group.minY + 0.32286 * group.height))
-        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.85108 * group.width, group.minY + 0.20461 * group.height), controlPoint1: CGPointMake(group.minX + 0.82267 * group.width, group.minY + 0.27832 * group.height), controlPoint2: CGPointMake(group.minX + 0.84418 * group.width, group.minY + 0.22578 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.79266 * group.width, group.minY + 0.14634 * group.height))
-        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.67648 * group.width, group.minY + 0.19688 * group.height), controlPoint1: CGPointMake(group.minX + 0.77381 * group.width, group.minY + 0.15305 * group.height), controlPoint2: CGPointMake(group.minX + 0.72101 * group.width, group.minY + 0.17614 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.66818 * group.width, group.minY + 0.20076 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.59269 * group.width, group.minY + 0.16971 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.58932 * group.width, group.minY + 0.16114 * group.height))
-        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.53930 * group.width, group.minY + 0.04348 * group.height), controlPoint1: CGPointMake(group.minX + 0.57148 * group.width, group.minY + 0.11569 * group.height), controlPoint2: CGPointMake(group.minX + 0.54930 * group.width, group.minY + 0.06299 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.45645 * group.width, group.minY + 0.04348 * group.height))
-        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.40996 * group.width, group.minY + 0.16089 * group.height), controlPoint1: CGPointMake(group.minX + 0.44689 * group.width, group.minY + 0.06322 * group.height), controlPoint2: CGPointMake(group.minX + 0.42639 * group.width, group.minY + 0.11571 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.40670 * group.width, group.minY + 0.16984 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.33142 * group.width, group.minY + 0.20105 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.32330 * group.width, group.minY + 0.19751 * group.height))
-        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.20413 * group.width, group.minY + 0.14964 * group.height), controlPoint1: CGPointMake(group.minX + 0.27821 * group.width, group.minY + 0.17796 * group.height), controlPoint2: CGPointMake(group.minX + 0.22492 * group.width, group.minY + 0.15630 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.14597 * group.width, group.minY + 0.20782 * group.height))
-        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.19594 * group.width, group.minY + 0.32311 * group.height), controlPoint1: CGPointMake(group.minX + 0.15327 * group.width, group.minY + 0.22872 * group.height), controlPoint2: CGPointMake(group.minX + 0.17577 * group.width, group.minY + 0.27991 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.20008 * group.width, group.minY + 0.33191 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.16868 * group.width, group.minY + 0.40797 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.16024 * group.width, group.minY + 0.41130 * group.height))
-        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.04262 * group.width, group.minY + 0.46117 * group.height), controlPoint1: CGPointMake(group.minX + 0.11486 * group.width, group.minY + 0.42913 * group.height), controlPoint2: CGPointMake(group.minX + 0.06230 * group.width, group.minY + 0.45116 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.04262 * group.width, group.minY + 0.54296 * group.height))
-        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.16008 * group.width, group.minY + 0.58939 * group.height), controlPoint1: CGPointMake(group.minX + 0.06252 * group.width, group.minY + 0.55255 * group.height), controlPoint2: CGPointMake(group.minX + 0.11491 * group.width, group.minY + 0.57297 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.16886 * group.width, group.minY + 0.59265 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.20031 * group.width, group.minY + 0.66856 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.19655 * group.width, group.minY + 0.67713 * group.height))
-        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.14881 * group.width, group.minY + 0.79523 * group.height), controlPoint1: CGPointMake(group.minX + 0.17721 * group.width, group.minY + 0.72164 * group.height), controlPoint2: CGPointMake(group.minX + 0.15572 * group.width, group.minY + 0.77411 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.20734 * group.width, group.minY + 0.85369 * group.height))
-        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.32346 * group.width, group.minY + 0.80307 * group.height), controlPoint1: CGPointMake(group.minX + 0.22615 * group.width, group.minY + 0.84692 * group.height), controlPoint2: CGPointMake(group.minX + 0.27887 * group.width, group.minY + 0.82383 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.33181 * group.width, group.minY + 0.79917 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.40714 * group.width, group.minY + 0.83041 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.41051 * group.width, group.minY + 0.83898 * group.height))
-        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.46052 * group.width, group.minY + 0.95658 * group.height), controlPoint1: CGPointMake(group.minX + 0.42841 * group.width, group.minY + 0.88445 * group.height), controlPoint2: CGPointMake(group.minX + 0.45052 * group.width, group.minY + 0.93706 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.46052 * group.width, group.minY + 0.95658 * group.height))
-        clipPath.closePath()
-        clipPath.moveToPoint(CGPointMake(group.minX + 0.50000 * group.width, group.minY + 0.67502 * group.height))
-        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.32512 * group.width, group.minY + 0.49999 * group.height), controlPoint1: CGPointMake(group.minX + 0.40361 * group.width, group.minY + 0.67502 * group.height), controlPoint2: CGPointMake(group.minX + 0.32512 * group.width, group.minY + 0.59650 * group.height))
-        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.50000 * group.width, group.minY + 0.32508 * group.height), controlPoint1: CGPointMake(group.minX + 0.32512 * group.width, group.minY + 0.40355 * group.height), controlPoint2: CGPointMake(group.minX + 0.40359 * group.width, group.minY + 0.32508 * group.height))
-        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.67463 * group.width, group.minY + 0.49999 * group.height), controlPoint1: CGPointMake(group.minX + 0.59633 * group.width, group.minY + 0.32508 * group.height), controlPoint2: CGPointMake(group.minX + 0.67463 * group.width, group.minY + 0.40357 * group.height))
-        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.50000 * group.width, group.minY + 0.67502 * group.height), controlPoint1: CGPointMake(group.minX + 0.67463 * group.width, group.minY + 0.59650 * group.height), controlPoint2: CGPointMake(group.minX + 0.59633 * group.width, group.minY + 0.67502 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.50000 * group.width, group.minY + 0.67502 * group.height))
-        clipPath.closePath()
-        clipPath.moveToPoint(CGPointMake(group.minX + 0.50000 * group.width, group.minY + 0.36854 * group.height))
-        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.36773 * group.width, group.minY + 0.49999 * group.height), controlPoint1: CGPointMake(group.minX + 0.42704 * group.width, group.minY + 0.36854 * group.height), controlPoint2: CGPointMake(group.minX + 0.36773 * group.width, group.minY + 0.42752 * group.height))
-        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.50000 * group.width, group.minY + 0.63155 * group.height), controlPoint1: CGPointMake(group.minX + 0.36773 * group.width, group.minY + 0.57252 * group.height), controlPoint2: CGPointMake(group.minX + 0.42702 * group.width, group.minY + 0.63155 * group.height))
-        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.63209 * group.width, group.minY + 0.49999 * group.height), controlPoint1: CGPointMake(group.minX + 0.57283 * group.width, group.minY + 0.63155 * group.height), controlPoint2: CGPointMake(group.minX + 0.63209 * group.width, group.minY + 0.57252 * group.height))
-        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.50000 * group.width, group.minY + 0.36854 * group.height), controlPoint1: CGPointMake(group.minX + 0.63207 * group.width, group.minY + 0.42752 * group.height), controlPoint2: CGPointMake(group.minX + 0.57283 * group.width, group.minY + 0.36854 * group.height))
-        clipPath.addLineToPoint(CGPointMake(group.minX + 0.50000 * group.width, group.minY + 0.36854 * group.height))
-        clipPath.closePath()
-        clipPath.usesEvenOddFillRule = true;
-
-        clipPath.addClip()
-
-
-        //// Rectangle Drawing
-        let rectanglePath = UIBezierPath(rect: CGRectMake(group.minX + floor(group.width * -0.20000 + 0.5), group.minY + floor(group.height * -0.20555 + 0.5) + 0, floor(group.width * 1.20001 + 0.5) - floor(group.width * -0.20000 + 0.5), floor(group.height * 1.20550 - 0) - floor(group.height * -0.20555 + 0.5) + 0.5))
-        tintColor.setFill()
-        rectanglePath.fill()
-
-
-        CGContextEndTransparencyLayer(context)
-        CGContextRestoreGState(context)
-
-
-        //// Bezier Drawing
-        var bezierPath = UIBezierPath()
-        bezierPath.moveToPoint(CGPointMake(group.minX + 0.54751 * group.width, group.minY + 0.02253 * group.height))
-        bezierPath.addCurveToPoint(CGPointMake(group.minX + 0.61250 * group.width, group.minY + 0.14784 * group.height), controlPoint1: CGPointMake(group.minX + 0.54750 * group.width, group.minY + 0.02252 * group.height), controlPoint2: CGPointMake(group.minX + 0.61250 * group.width, group.minY + 0.14784 * group.height))
-        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.66750 * group.width, group.minY + 0.17290 * group.height))
-        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.79250 * group.width, group.minY + 0.11776 * group.height))
-        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.87750 * group.width, group.minY + 0.20297 * group.height))
-        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.82750 * group.width, group.minY + 0.32328 * group.height))
-        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.85250 * group.width, group.minY + 0.38844 * group.height))
-        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.97750 * group.width, group.minY + 0.44859 * group.height))
-        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.97750 * group.width, group.minY + 0.54383 * group.height))
-        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.85250 * group.width, group.minY + 0.60900 * group.height))
-        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.82750 * group.width, group.minY + 0.65912 * group.height))
-        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.87750 * group.width, group.minY + 0.78945 * group.height))
-        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.80750 * group.width, group.minY + 0.87466 * group.height))
-        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.67750 * group.width, group.minY + 0.82454 * group.height))
-        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.61250 * group.width, group.minY + 0.84459 * group.height))
-        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.54750 * group.width, group.minY + 0.97492 * group.height))
-        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.45250 * group.width, group.minY + 0.97492 * group.height))
-        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.38750 * group.width, group.minY + 0.84459 * group.height))
-        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.33250 * group.width, group.minY + 0.82454 * group.height))
-        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.20750 * group.width, group.minY + 0.87466 * group.height))
-        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.13250 * group.width, group.minY + 0.80449 * group.height))
-        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.17250 * group.width, group.minY + 0.67917 * group.height))
-        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.15250 * group.width, group.minY + 0.60900 * group.height))
-        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.02250 * group.width, group.minY + 0.55887 * group.height))
-        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.02250 * group.width, group.minY + 0.44859 * group.height))
-        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.15250 * group.width, group.minY + 0.38844 * group.height))
-        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.17250 * group.width, group.minY + 0.32328 * group.height))
-        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.12250 * group.width, group.minY + 0.20297 * group.height))
-        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.19750 * group.width, group.minY + 0.12779 * group.height))
-        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.33250 * group.width, group.minY + 0.17290 * group.height))
-        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.38750 * group.width, group.minY + 0.14784 * group.height))
-        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.44250 * group.width, group.minY + 0.02252 * group.height))
-        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.54750 * group.width, group.minY + 0.02252 * group.height))
-        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.54751 * group.width, group.minY + 0.02253 * group.height))
-        bezierPath.closePath()
-        bezierPath.moveToPoint(CGPointMake(group.minX + 0.40854 * group.width, group.minY + 0.40476 * group.height))
-        bezierPath.addCurveToPoint(CGPointMake(group.minX + 0.40631 * group.width, group.minY + 0.40693 * group.height), controlPoint1: CGPointMake(group.minX + 0.40779 * group.width, group.minY + 0.40547 * group.height), controlPoint2: CGPointMake(group.minX + 0.40705 * group.width, group.minY + 0.40620 * group.height))
-        bezierPath.addCurveToPoint(CGPointMake(group.minX + 0.40631 * group.width, group.minY + 0.59301 * group.height), controlPoint1: CGPointMake(group.minX + 0.35457 * group.width, group.minY + 0.45832 * group.height), controlPoint2: CGPointMake(group.minX + 0.35457 * group.width, group.minY + 0.54163 * group.height))
-        bezierPath.addCurveToPoint(CGPointMake(group.minX + 0.59369 * group.width, group.minY + 0.59301 * group.height), controlPoint1: CGPointMake(group.minX + 0.45806 * group.width, group.minY + 0.64440 * group.height), controlPoint2: CGPointMake(group.minX + 0.54195 * group.width, group.minY + 0.64440 * group.height))
-        bezierPath.addCurveToPoint(CGPointMake(group.minX + 0.59369 * group.width, group.minY + 0.40693 * group.height), controlPoint1: CGPointMake(group.minX + 0.64544 * group.width, group.minY + 0.54163 * group.height), controlPoint2: CGPointMake(group.minX + 0.64544 * group.width, group.minY + 0.45832 * group.height))
-        bezierPath.addCurveToPoint(CGPointMake(group.minX + 0.40854 * group.width, group.minY + 0.40476 * group.height), controlPoint1: CGPointMake(group.minX + 0.54269 * group.width, group.minY + 0.35628 * group.height), controlPoint2: CGPointMake(group.minX + 0.46044 * group.width, group.minY + 0.35555 * group.height))
-        bezierPath.closePath()
-        tintColor.setFill()
-        bezierPath.fill()
-        tintColor.setStroke()
-        bezierPath.lineWidth = 1
-        bezierPath.stroke()
-    }
-
     public class func drawPunkuDoorLogo(#frame: CGRect, tintColor: UIColor) {
 
         //// Bezier Drawing
@@ -661,6 +341,388 @@ public class StyleKit : NSObject {
         bezierPath.fill()
     }
 
+    public class func drawLockTabBarIconSelected() {
+        //// Color Declarations
+        let fillColor = UIColor(red: 0.000, green: 0.000, blue: 0.000, alpha: 1.000)
+
+        //// Bezier Drawing
+        var bezierPath = UIBezierPath()
+        bezierPath.moveToPoint(CGPointMake(12.5, 25))
+        bezierPath.addCurveToPoint(CGPointMake(25, 12.5), controlPoint1: CGPointMake(19.4, 25), controlPoint2: CGPointMake(25, 19.4))
+        bezierPath.addCurveToPoint(CGPointMake(12.5, 0), controlPoint1: CGPointMake(25, 5.6), controlPoint2: CGPointMake(19.4, 0))
+        bezierPath.addCurveToPoint(CGPointMake(0, 12.5), controlPoint1: CGPointMake(5.6, 0), controlPoint2: CGPointMake(0, 5.6))
+        bezierPath.addCurveToPoint(CGPointMake(12.5, 25), controlPoint1: CGPointMake(0, 19.4), controlPoint2: CGPointMake(5.6, 25))
+        bezierPath.closePath()
+        bezierPath.moveToPoint(CGPointMake(15.56, 12.25))
+        bezierPath.addCurveToPoint(CGPointMake(12.37, 9), controlPoint1: CGPointMake(15.56, 10.46), controlPoint2: CGPointMake(14.13, 9))
+        bezierPath.addCurveToPoint(CGPointMake(9.18, 12.25), controlPoint1: CGPointMake(10.61, 9), controlPoint2: CGPointMake(9.18, 10.46))
+        bezierPath.addCurveToPoint(CGPointMake(11.01, 15.19), controlPoint1: CGPointMake(9.18, 13.55), controlPoint2: CGPointMake(9.93, 14.67))
+        bezierPath.addLineToPoint(CGPointMake(9.18, 22))
+        bezierPath.addLineToPoint(CGPointMake(15.56, 22))
+        bezierPath.addLineToPoint(CGPointMake(13.74, 15.19))
+        bezierPath.addCurveToPoint(CGPointMake(15.56, 12.25), controlPoint1: CGPointMake(14.82, 14.67), controlPoint2: CGPointMake(15.56, 13.55))
+        bezierPath.closePath()
+        bezierPath.usesEvenOddFillRule = true;
+
+        fillColor.setFill()
+        bezierPath.fill()
+    }
+
+    public class func drawSettingsTabBarIcon(#frame: CGRect, tintColor: UIColor) {
+        //// General Declarations
+        let context = UIGraphicsGetCurrentContext()
+
+
+        //// Subframes
+        let group2: CGRect = CGRectMake(frame.minX + floor(frame.width * 0.00000 + 0.5), frame.minY + floor(frame.height * 0.00028 + 0) + 0.5, floor(frame.width * 0.99996 - 0.5) - floor(frame.width * 0.00000 + 0.5) + 1, floor(frame.height * 0.98017 - 0.49) - floor(frame.height * 0.00028 + 0) + 0.5)
+
+
+        //// Group 2
+        CGContextSaveGState(context)
+        CGContextBeginTransparencyLayer(context, nil)
+
+        //// Clip Clip
+        var clipPath = UIBezierPath()
+        clipPath.moveToPoint(CGPointMake(group2.minX + 0.55471 * group2.width, group2.minY + 1.00000 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.44959 * group2.width, group2.minY + 1.00000 * group2.height))
+        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.37437 * group2.width, group2.minY + 0.86378 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.43378 * group2.width, group2.minY + 1.00000 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.42826 * group2.width, group2.minY + 1.00003 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.33274 * group2.width, group2.minY + 0.84651 * group2.height))
+        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.20142 * group2.width, group2.minY + 0.89902 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.21934 * group2.width, group2.minY + 0.89902 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.20591 * group2.width, group2.minY + 0.89902 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.19274 * group2.width, group2.minY + 0.89902 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.18534 * group2.width, group2.minY + 0.89253 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.11083 * group2.width, group2.minY + 0.81813 * group2.height))
+        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.15388 * group2.width, group2.minY + 0.66811 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.09950 * group2.width, group2.minY + 0.80659 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.09557 * group2.width, group2.minY + 0.80258 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.13691 * group2.width, group2.minY + 0.62713 * group2.height))
+        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.00000 * group2.width, group2.minY + 0.55476 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.00000 * group2.width, group2.minY + 0.57706 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.00000 * group2.width, group2.minY + 0.57126 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.00000 * group2.width, group2.minY + 0.44959 * group2.height))
+        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.13645 * group2.width, group2.minY + 0.37406 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.00000 * group2.width, group2.minY + 0.43311 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.00000 * group2.width, group2.minY + 0.42791 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.15343 * group2.width, group2.minY + 0.33300 * group2.height))
+        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.10816 * group2.width, group2.minY + 0.18477 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.09175 * group2.width, group2.minY + 0.20057 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.09599 * group2.width, group2.minY + 0.19646 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.18829 * group2.width, group2.minY + 0.10460 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.19824 * group2.width, group2.minY + 0.10428 * group2.height))
+        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.33176 * group2.width, group2.minY + 0.15396 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.21034 * group2.width, group2.minY + 0.10428 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.25522 * group2.width, group2.minY + 0.12099 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.37326 * group2.width, group2.minY + 0.13677 * group2.height))
+        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.44512 * group2.width, group2.minY + 0.00000 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.42323 * group2.width, group2.minY + -0.00002 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.42936 * group2.width, group2.minY + 0.00000 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.55024 * group2.width, group2.minY + 0.00000 * group2.height))
+        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.62541 * group2.width, group2.minY + 0.13631 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.56598 * group2.width, group2.minY + 0.00000 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.57152 * group2.width, group2.minY + 0.00002 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.66710 * group2.width, group2.minY + 0.15345 * group2.height))
+        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.79846 * group2.width, group2.minY + 0.10102 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.78034 * group2.width, group2.minY + 0.10102 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.79394 * group2.width, group2.minY + 0.10102 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.80709 * group2.width, group2.minY + 0.10102 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.81449 * group2.width, group2.minY + 0.10739 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.88900 * group2.width, group2.minY + 0.18167 * group2.height))
+        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.84590 * group2.width, group2.minY + 0.33186 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.90033 * group2.width, group2.minY + 0.19334 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.90421 * group2.width, group2.minY + 0.19733 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.86292 * group2.width, group2.minY + 0.37307 * group2.height))
+        clipPath.addCurveToPoint(CGPointMake(group2.minX + 1.00000 * group2.width, group2.minY + 0.44524 * group2.height), controlPoint1: CGPointMake(group2.minX + 1.00000 * group2.width, group2.minY + 0.42292 * group2.height), controlPoint2: CGPointMake(group2.minX + 1.00000 * group2.width, group2.minY + 0.42871 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 1.00000 * group2.width, group2.minY + 0.55029 * group2.height))
+        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.86337 * group2.width, group2.minY + 0.62592 * group2.height), controlPoint1: CGPointMake(group2.minX + 1.00000 * group2.width, group2.minY + 0.56638 * group2.height), controlPoint2: CGPointMake(group2.minX + 1.00000 * group2.width, group2.minY + 0.57204 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.84651 * group2.width, group2.minY + 0.66702 * group2.height))
+        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.89233 * group2.width, group2.minY + 0.81482 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.90787 * group2.width, group2.minY + 0.79887 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.90382 * group2.width, group2.minY + 0.80300 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.81159 * group2.width, group2.minY + 0.89549 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.80158 * group2.width, group2.minY + 0.89577 * group2.height))
+        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.66832 * group2.width, group2.minY + 0.84603 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.78954 * group2.width, group2.minY + 0.89577 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.74476 * group2.width, group2.minY + 0.87904 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.62658 * group2.width, group2.minY + 0.86324 * group2.height))
+        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.55471 * group2.width, group2.minY + 1.00000 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.57648 * group2.width, group2.minY + 1.00000 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.57079 * group2.width, group2.minY + 1.00000 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.55471 * group2.width, group2.minY + 1.00000 * group2.height))
+        clipPath.closePath()
+        clipPath.moveToPoint(CGPointMake(group2.minX + 0.46052 * group2.width, group2.minY + 0.95658 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.54343 * group2.width, group2.minY + 0.95658 * group2.height))
+        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.58997 * group2.width, group2.minY + 0.83912 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.55294 * group2.width, group2.minY + 0.93679 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.57351 * group2.width, group2.minY + 0.88432 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.59329 * group2.width, group2.minY + 0.83012 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.66878 * group2.width, group2.minY + 0.79902 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.67690 * group2.width, group2.minY + 0.80253 * group2.height))
+        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.79579 * group2.width, group2.minY + 0.85047 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.72189 * group2.width, group2.minY + 0.82211 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.77507 * group2.width, group2.minY + 0.84380 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.85405 * group2.width, group2.minY + 0.79232 * group2.height))
+        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.80398 * group2.width, group2.minY + 0.67696 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.84665 * group2.width, group2.minY + 0.77139 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.82422 * group2.width, group2.minY + 0.72017 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.79990 * group2.width, group2.minY + 0.66818 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.83113 * group2.width, group2.minY + 0.59209 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.83964 * group2.width, group2.minY + 0.58874 * group2.height))
+        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.95741 * group2.width, group2.minY + 0.53880 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.88508 * group2.width, group2.minY + 0.57089 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.93774 * group2.width, group2.minY + 0.54885 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.95741 * group2.width, group2.minY + 0.45711 * group2.height))
+        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.83987 * group2.width, group2.minY + 0.41084 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.93751 * group2.width, group2.minY + 0.44756 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.88506 * group2.width, group2.minY + 0.42719 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.83102 * group2.width, group2.minY + 0.40761 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.79958 * group2.width, group2.minY + 0.33145 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.80333 * group2.width, group2.minY + 0.32286 * group2.height))
+        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.85108 * group2.width, group2.minY + 0.20461 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.82267 * group2.width, group2.minY + 0.27832 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.84418 * group2.width, group2.minY + 0.22578 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.79266 * group2.width, group2.minY + 0.14634 * group2.height))
+        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.67648 * group2.width, group2.minY + 0.19688 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.77381 * group2.width, group2.minY + 0.15305 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.72101 * group2.width, group2.minY + 0.17614 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.66818 * group2.width, group2.minY + 0.20076 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.59269 * group2.width, group2.minY + 0.16971 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.58932 * group2.width, group2.minY + 0.16114 * group2.height))
+        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.53930 * group2.width, group2.minY + 0.04348 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.57148 * group2.width, group2.minY + 0.11569 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.54930 * group2.width, group2.minY + 0.06299 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.45645 * group2.width, group2.minY + 0.04348 * group2.height))
+        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.40996 * group2.width, group2.minY + 0.16089 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.44689 * group2.width, group2.minY + 0.06322 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.42639 * group2.width, group2.minY + 0.11571 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.40670 * group2.width, group2.minY + 0.16984 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.33142 * group2.width, group2.minY + 0.20105 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.32330 * group2.width, group2.minY + 0.19751 * group2.height))
+        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.20413 * group2.width, group2.minY + 0.14964 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.27821 * group2.width, group2.minY + 0.17796 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.22492 * group2.width, group2.minY + 0.15630 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.14597 * group2.width, group2.minY + 0.20782 * group2.height))
+        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.19594 * group2.width, group2.minY + 0.32311 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.15327 * group2.width, group2.minY + 0.22872 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.17577 * group2.width, group2.minY + 0.27991 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.20008 * group2.width, group2.minY + 0.33191 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.16868 * group2.width, group2.minY + 0.40797 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.16024 * group2.width, group2.minY + 0.41130 * group2.height))
+        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.04262 * group2.width, group2.minY + 0.46117 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.11486 * group2.width, group2.minY + 0.42913 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.06230 * group2.width, group2.minY + 0.45116 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.04262 * group2.width, group2.minY + 0.54296 * group2.height))
+        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.16008 * group2.width, group2.minY + 0.58939 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.06252 * group2.width, group2.minY + 0.55255 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.11491 * group2.width, group2.minY + 0.57297 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.16886 * group2.width, group2.minY + 0.59265 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.20031 * group2.width, group2.minY + 0.66856 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.19655 * group2.width, group2.minY + 0.67713 * group2.height))
+        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.14881 * group2.width, group2.minY + 0.79523 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.17721 * group2.width, group2.minY + 0.72164 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.15572 * group2.width, group2.minY + 0.77411 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.20734 * group2.width, group2.minY + 0.85369 * group2.height))
+        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.32346 * group2.width, group2.minY + 0.80307 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.22615 * group2.width, group2.minY + 0.84692 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.27887 * group2.width, group2.minY + 0.82383 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.33181 * group2.width, group2.minY + 0.79917 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.40714 * group2.width, group2.minY + 0.83041 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.41051 * group2.width, group2.minY + 0.83898 * group2.height))
+        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.46052 * group2.width, group2.minY + 0.95658 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.42841 * group2.width, group2.minY + 0.88445 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.45052 * group2.width, group2.minY + 0.93706 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.46052 * group2.width, group2.minY + 0.95658 * group2.height))
+        clipPath.closePath()
+        clipPath.moveToPoint(CGPointMake(group2.minX + 0.50000 * group2.width, group2.minY + 0.67502 * group2.height))
+        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.32512 * group2.width, group2.minY + 0.49999 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.40361 * group2.width, group2.minY + 0.67502 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.32512 * group2.width, group2.minY + 0.59650 * group2.height))
+        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.50000 * group2.width, group2.minY + 0.32508 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.32512 * group2.width, group2.minY + 0.40355 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.40359 * group2.width, group2.minY + 0.32508 * group2.height))
+        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.67463 * group2.width, group2.minY + 0.49999 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.59633 * group2.width, group2.minY + 0.32508 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.67463 * group2.width, group2.minY + 0.40357 * group2.height))
+        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.50000 * group2.width, group2.minY + 0.67502 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.67463 * group2.width, group2.minY + 0.59650 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.59633 * group2.width, group2.minY + 0.67502 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.50000 * group2.width, group2.minY + 0.67502 * group2.height))
+        clipPath.closePath()
+        clipPath.moveToPoint(CGPointMake(group2.minX + 0.50000 * group2.width, group2.minY + 0.36854 * group2.height))
+        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.36773 * group2.width, group2.minY + 0.49999 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.42704 * group2.width, group2.minY + 0.36854 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.36773 * group2.width, group2.minY + 0.42752 * group2.height))
+        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.50000 * group2.width, group2.minY + 0.63155 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.36773 * group2.width, group2.minY + 0.57252 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.42702 * group2.width, group2.minY + 0.63155 * group2.height))
+        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.63209 * group2.width, group2.minY + 0.49999 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.57283 * group2.width, group2.minY + 0.63155 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.63209 * group2.width, group2.minY + 0.57252 * group2.height))
+        clipPath.addCurveToPoint(CGPointMake(group2.minX + 0.50000 * group2.width, group2.minY + 0.36854 * group2.height), controlPoint1: CGPointMake(group2.minX + 0.63207 * group2.width, group2.minY + 0.42752 * group2.height), controlPoint2: CGPointMake(group2.minX + 0.57283 * group2.width, group2.minY + 0.36854 * group2.height))
+        clipPath.addLineToPoint(CGPointMake(group2.minX + 0.50000 * group2.width, group2.minY + 0.36854 * group2.height))
+        clipPath.closePath()
+        clipPath.usesEvenOddFillRule = true;
+
+        clipPath.addClip()
+
+
+        //// Rectangle Drawing
+        let rectanglePath = UIBezierPath(rect: CGRectMake(group2.minX + floor(group2.width * -0.20001 + 0.5), group2.minY + floor(group2.height * -0.20439 + 0.5) + 0, floor(group2.width * 1.20005 + 0.5) - floor(group2.width * -0.20001 + 0.5), floor(group2.height * 1.20393 - 0) - floor(group2.height * -0.20439 + 0.5) + 0.5))
+        tintColor.setFill()
+        rectanglePath.fill()
+
+
+        CGContextEndTransparencyLayer(context)
+        CGContextRestoreGState(context)
+    }
+
+    public class func drawSettingsTabBarIconSelected(#frame: CGRect, tintColor: UIColor) {
+        //// General Declarations
+        let context = UIGraphicsGetCurrentContext()
+
+
+        //// Subframes
+        let group: CGRect = CGRectMake(frame.minX + floor(frame.width * 0.00000 + 0.5), frame.minY + floor(frame.height * 0.00028 + 0) + 0.5, floor(frame.width * 0.99996 - 0.5) - floor(frame.width * 0.00000 + 0.5) + 1, floor(frame.height * 0.98017 - 0.49) - floor(frame.height * 0.00028 + 0) + 0.5)
+
+
+        //// Group
+        //// Group 2
+        CGContextSaveGState(context)
+        CGContextBeginTransparencyLayer(context, nil)
+
+        //// Clip Clip
+        var clipPath = UIBezierPath()
+        clipPath.moveToPoint(CGPointMake(group.minX + 0.55471 * group.width, group.minY + 1.00000 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.44959 * group.width, group.minY + 1.00000 * group.height))
+        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.37437 * group.width, group.minY + 0.86378 * group.height), controlPoint1: CGPointMake(group.minX + 0.43378 * group.width, group.minY + 1.00000 * group.height), controlPoint2: CGPointMake(group.minX + 0.42826 * group.width, group.minY + 1.00003 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.33274 * group.width, group.minY + 0.84651 * group.height))
+        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.20142 * group.width, group.minY + 0.89902 * group.height), controlPoint1: CGPointMake(group.minX + 0.21934 * group.width, group.minY + 0.89902 * group.height), controlPoint2: CGPointMake(group.minX + 0.20591 * group.width, group.minY + 0.89902 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.19274 * group.width, group.minY + 0.89902 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.18534 * group.width, group.minY + 0.89253 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.11083 * group.width, group.minY + 0.81813 * group.height))
+        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.15388 * group.width, group.minY + 0.66811 * group.height), controlPoint1: CGPointMake(group.minX + 0.09950 * group.width, group.minY + 0.80659 * group.height), controlPoint2: CGPointMake(group.minX + 0.09557 * group.width, group.minY + 0.80258 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.13691 * group.width, group.minY + 0.62713 * group.height))
+        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.00000 * group.width, group.minY + 0.55476 * group.height), controlPoint1: CGPointMake(group.minX + 0.00000 * group.width, group.minY + 0.57706 * group.height), controlPoint2: CGPointMake(group.minX + 0.00000 * group.width, group.minY + 0.57126 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.00000 * group.width, group.minY + 0.44959 * group.height))
+        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.13645 * group.width, group.minY + 0.37406 * group.height), controlPoint1: CGPointMake(group.minX + 0.00000 * group.width, group.minY + 0.43311 * group.height), controlPoint2: CGPointMake(group.minX + 0.00000 * group.width, group.minY + 0.42791 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.15343 * group.width, group.minY + 0.33300 * group.height))
+        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.10816 * group.width, group.minY + 0.18477 * group.height), controlPoint1: CGPointMake(group.minX + 0.09175 * group.width, group.minY + 0.20057 * group.height), controlPoint2: CGPointMake(group.minX + 0.09599 * group.width, group.minY + 0.19646 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.18829 * group.width, group.minY + 0.10460 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.19824 * group.width, group.minY + 0.10428 * group.height))
+        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.33176 * group.width, group.minY + 0.15396 * group.height), controlPoint1: CGPointMake(group.minX + 0.21034 * group.width, group.minY + 0.10428 * group.height), controlPoint2: CGPointMake(group.minX + 0.25522 * group.width, group.minY + 0.12099 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.37326 * group.width, group.minY + 0.13677 * group.height))
+        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.44512 * group.width, group.minY + 0.00000 * group.height), controlPoint1: CGPointMake(group.minX + 0.42323 * group.width, group.minY + -0.00002 * group.height), controlPoint2: CGPointMake(group.minX + 0.42936 * group.width, group.minY + 0.00000 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.55024 * group.width, group.minY + 0.00000 * group.height))
+        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.62541 * group.width, group.minY + 0.13631 * group.height), controlPoint1: CGPointMake(group.minX + 0.56598 * group.width, group.minY + 0.00000 * group.height), controlPoint2: CGPointMake(group.minX + 0.57152 * group.width, group.minY + 0.00002 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.66710 * group.width, group.minY + 0.15345 * group.height))
+        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.79846 * group.width, group.minY + 0.10102 * group.height), controlPoint1: CGPointMake(group.minX + 0.78034 * group.width, group.minY + 0.10102 * group.height), controlPoint2: CGPointMake(group.minX + 0.79394 * group.width, group.minY + 0.10102 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.80709 * group.width, group.minY + 0.10102 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.81449 * group.width, group.minY + 0.10739 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.88900 * group.width, group.minY + 0.18167 * group.height))
+        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.84590 * group.width, group.minY + 0.33186 * group.height), controlPoint1: CGPointMake(group.minX + 0.90033 * group.width, group.minY + 0.19334 * group.height), controlPoint2: CGPointMake(group.minX + 0.90421 * group.width, group.minY + 0.19733 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.86292 * group.width, group.minY + 0.37307 * group.height))
+        clipPath.addCurveToPoint(CGPointMake(group.minX + 1.00000 * group.width, group.minY + 0.44524 * group.height), controlPoint1: CGPointMake(group.minX + 1.00000 * group.width, group.minY + 0.42292 * group.height), controlPoint2: CGPointMake(group.minX + 1.00000 * group.width, group.minY + 0.42871 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 1.00000 * group.width, group.minY + 0.55029 * group.height))
+        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.86337 * group.width, group.minY + 0.62592 * group.height), controlPoint1: CGPointMake(group.minX + 1.00000 * group.width, group.minY + 0.56638 * group.height), controlPoint2: CGPointMake(group.minX + 1.00000 * group.width, group.minY + 0.57204 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.84651 * group.width, group.minY + 0.66702 * group.height))
+        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.89233 * group.width, group.minY + 0.81482 * group.height), controlPoint1: CGPointMake(group.minX + 0.90787 * group.width, group.minY + 0.79887 * group.height), controlPoint2: CGPointMake(group.minX + 0.90382 * group.width, group.minY + 0.80300 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.81159 * group.width, group.minY + 0.89549 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.80158 * group.width, group.minY + 0.89577 * group.height))
+        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.66832 * group.width, group.minY + 0.84603 * group.height), controlPoint1: CGPointMake(group.minX + 0.78954 * group.width, group.minY + 0.89577 * group.height), controlPoint2: CGPointMake(group.minX + 0.74476 * group.width, group.minY + 0.87904 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.62658 * group.width, group.minY + 0.86324 * group.height))
+        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.55471 * group.width, group.minY + 1.00000 * group.height), controlPoint1: CGPointMake(group.minX + 0.57648 * group.width, group.minY + 1.00000 * group.height), controlPoint2: CGPointMake(group.minX + 0.57079 * group.width, group.minY + 1.00000 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.55471 * group.width, group.minY + 1.00000 * group.height))
+        clipPath.closePath()
+        clipPath.moveToPoint(CGPointMake(group.minX + 0.46052 * group.width, group.minY + 0.95658 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.54343 * group.width, group.minY + 0.95658 * group.height))
+        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.58997 * group.width, group.minY + 0.83912 * group.height), controlPoint1: CGPointMake(group.minX + 0.55294 * group.width, group.minY + 0.93679 * group.height), controlPoint2: CGPointMake(group.minX + 0.57351 * group.width, group.minY + 0.88432 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.59329 * group.width, group.minY + 0.83012 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.66878 * group.width, group.minY + 0.79902 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.67690 * group.width, group.minY + 0.80253 * group.height))
+        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.79579 * group.width, group.minY + 0.85047 * group.height), controlPoint1: CGPointMake(group.minX + 0.72189 * group.width, group.minY + 0.82211 * group.height), controlPoint2: CGPointMake(group.minX + 0.77507 * group.width, group.minY + 0.84380 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.85405 * group.width, group.minY + 0.79232 * group.height))
+        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.80398 * group.width, group.minY + 0.67696 * group.height), controlPoint1: CGPointMake(group.minX + 0.84665 * group.width, group.minY + 0.77139 * group.height), controlPoint2: CGPointMake(group.minX + 0.82422 * group.width, group.minY + 0.72017 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.79990 * group.width, group.minY + 0.66818 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.83113 * group.width, group.minY + 0.59209 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.83964 * group.width, group.minY + 0.58874 * group.height))
+        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.95741 * group.width, group.minY + 0.53880 * group.height), controlPoint1: CGPointMake(group.minX + 0.88508 * group.width, group.minY + 0.57089 * group.height), controlPoint2: CGPointMake(group.minX + 0.93774 * group.width, group.minY + 0.54885 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.95741 * group.width, group.minY + 0.45711 * group.height))
+        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.83987 * group.width, group.minY + 0.41084 * group.height), controlPoint1: CGPointMake(group.minX + 0.93751 * group.width, group.minY + 0.44756 * group.height), controlPoint2: CGPointMake(group.minX + 0.88506 * group.width, group.minY + 0.42719 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.83102 * group.width, group.minY + 0.40761 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.79958 * group.width, group.minY + 0.33145 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.80333 * group.width, group.minY + 0.32286 * group.height))
+        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.85108 * group.width, group.minY + 0.20461 * group.height), controlPoint1: CGPointMake(group.minX + 0.82267 * group.width, group.minY + 0.27832 * group.height), controlPoint2: CGPointMake(group.minX + 0.84418 * group.width, group.minY + 0.22578 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.79266 * group.width, group.minY + 0.14634 * group.height))
+        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.67648 * group.width, group.minY + 0.19688 * group.height), controlPoint1: CGPointMake(group.minX + 0.77381 * group.width, group.minY + 0.15305 * group.height), controlPoint2: CGPointMake(group.minX + 0.72101 * group.width, group.minY + 0.17614 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.66818 * group.width, group.minY + 0.20076 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.59269 * group.width, group.minY + 0.16971 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.58932 * group.width, group.minY + 0.16114 * group.height))
+        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.53930 * group.width, group.minY + 0.04348 * group.height), controlPoint1: CGPointMake(group.minX + 0.57148 * group.width, group.minY + 0.11569 * group.height), controlPoint2: CGPointMake(group.minX + 0.54930 * group.width, group.minY + 0.06299 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.45645 * group.width, group.minY + 0.04348 * group.height))
+        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.40996 * group.width, group.minY + 0.16089 * group.height), controlPoint1: CGPointMake(group.minX + 0.44689 * group.width, group.minY + 0.06322 * group.height), controlPoint2: CGPointMake(group.minX + 0.42639 * group.width, group.minY + 0.11571 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.40670 * group.width, group.minY + 0.16984 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.33142 * group.width, group.minY + 0.20105 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.32330 * group.width, group.minY + 0.19751 * group.height))
+        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.20413 * group.width, group.minY + 0.14964 * group.height), controlPoint1: CGPointMake(group.minX + 0.27821 * group.width, group.minY + 0.17796 * group.height), controlPoint2: CGPointMake(group.minX + 0.22492 * group.width, group.minY + 0.15630 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.14597 * group.width, group.minY + 0.20782 * group.height))
+        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.19594 * group.width, group.minY + 0.32311 * group.height), controlPoint1: CGPointMake(group.minX + 0.15327 * group.width, group.minY + 0.22872 * group.height), controlPoint2: CGPointMake(group.minX + 0.17577 * group.width, group.minY + 0.27991 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.20008 * group.width, group.minY + 0.33191 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.16868 * group.width, group.minY + 0.40797 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.16024 * group.width, group.minY + 0.41130 * group.height))
+        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.04262 * group.width, group.minY + 0.46117 * group.height), controlPoint1: CGPointMake(group.minX + 0.11486 * group.width, group.minY + 0.42913 * group.height), controlPoint2: CGPointMake(group.minX + 0.06230 * group.width, group.minY + 0.45116 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.04262 * group.width, group.minY + 0.54296 * group.height))
+        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.16008 * group.width, group.minY + 0.58939 * group.height), controlPoint1: CGPointMake(group.minX + 0.06252 * group.width, group.minY + 0.55255 * group.height), controlPoint2: CGPointMake(group.minX + 0.11491 * group.width, group.minY + 0.57297 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.16886 * group.width, group.minY + 0.59265 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.20031 * group.width, group.minY + 0.66856 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.19655 * group.width, group.minY + 0.67713 * group.height))
+        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.14881 * group.width, group.minY + 0.79523 * group.height), controlPoint1: CGPointMake(group.minX + 0.17721 * group.width, group.minY + 0.72164 * group.height), controlPoint2: CGPointMake(group.minX + 0.15572 * group.width, group.minY + 0.77411 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.20734 * group.width, group.minY + 0.85369 * group.height))
+        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.32346 * group.width, group.minY + 0.80307 * group.height), controlPoint1: CGPointMake(group.minX + 0.22615 * group.width, group.minY + 0.84692 * group.height), controlPoint2: CGPointMake(group.minX + 0.27887 * group.width, group.minY + 0.82383 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.33181 * group.width, group.minY + 0.79917 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.40714 * group.width, group.minY + 0.83041 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.41051 * group.width, group.minY + 0.83898 * group.height))
+        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.46052 * group.width, group.minY + 0.95658 * group.height), controlPoint1: CGPointMake(group.minX + 0.42841 * group.width, group.minY + 0.88445 * group.height), controlPoint2: CGPointMake(group.minX + 0.45052 * group.width, group.minY + 0.93706 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.46052 * group.width, group.minY + 0.95658 * group.height))
+        clipPath.closePath()
+        clipPath.moveToPoint(CGPointMake(group.minX + 0.50000 * group.width, group.minY + 0.67502 * group.height))
+        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.32512 * group.width, group.minY + 0.49999 * group.height), controlPoint1: CGPointMake(group.minX + 0.40361 * group.width, group.minY + 0.67502 * group.height), controlPoint2: CGPointMake(group.minX + 0.32512 * group.width, group.minY + 0.59650 * group.height))
+        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.50000 * group.width, group.minY + 0.32508 * group.height), controlPoint1: CGPointMake(group.minX + 0.32512 * group.width, group.minY + 0.40355 * group.height), controlPoint2: CGPointMake(group.minX + 0.40359 * group.width, group.minY + 0.32508 * group.height))
+        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.67463 * group.width, group.minY + 0.49999 * group.height), controlPoint1: CGPointMake(group.minX + 0.59633 * group.width, group.minY + 0.32508 * group.height), controlPoint2: CGPointMake(group.minX + 0.67463 * group.width, group.minY + 0.40357 * group.height))
+        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.50000 * group.width, group.minY + 0.67502 * group.height), controlPoint1: CGPointMake(group.minX + 0.67463 * group.width, group.minY + 0.59650 * group.height), controlPoint2: CGPointMake(group.minX + 0.59633 * group.width, group.minY + 0.67502 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.50000 * group.width, group.minY + 0.67502 * group.height))
+        clipPath.closePath()
+        clipPath.moveToPoint(CGPointMake(group.minX + 0.50000 * group.width, group.minY + 0.36854 * group.height))
+        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.36773 * group.width, group.minY + 0.49999 * group.height), controlPoint1: CGPointMake(group.minX + 0.42704 * group.width, group.minY + 0.36854 * group.height), controlPoint2: CGPointMake(group.minX + 0.36773 * group.width, group.minY + 0.42752 * group.height))
+        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.50000 * group.width, group.minY + 0.63155 * group.height), controlPoint1: CGPointMake(group.minX + 0.36773 * group.width, group.minY + 0.57252 * group.height), controlPoint2: CGPointMake(group.minX + 0.42702 * group.width, group.minY + 0.63155 * group.height))
+        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.63209 * group.width, group.minY + 0.49999 * group.height), controlPoint1: CGPointMake(group.minX + 0.57283 * group.width, group.minY + 0.63155 * group.height), controlPoint2: CGPointMake(group.minX + 0.63209 * group.width, group.minY + 0.57252 * group.height))
+        clipPath.addCurveToPoint(CGPointMake(group.minX + 0.50000 * group.width, group.minY + 0.36854 * group.height), controlPoint1: CGPointMake(group.minX + 0.63207 * group.width, group.minY + 0.42752 * group.height), controlPoint2: CGPointMake(group.minX + 0.57283 * group.width, group.minY + 0.36854 * group.height))
+        clipPath.addLineToPoint(CGPointMake(group.minX + 0.50000 * group.width, group.minY + 0.36854 * group.height))
+        clipPath.closePath()
+        clipPath.usesEvenOddFillRule = true;
+
+        clipPath.addClip()
+
+
+        //// Rectangle Drawing
+        let rectanglePath = UIBezierPath(rect: CGRectMake(group.minX + floor(group.width * -0.20001 + 0.5), group.minY + floor(group.height * -0.20439 + 0.5) + 0, floor(group.width * 1.20005 + 0.5) - floor(group.width * -0.20001 + 0.5), floor(group.height * 1.20393 - 0) - floor(group.height * -0.20439 + 0.5) + 0.5))
+        tintColor.setFill()
+        rectanglePath.fill()
+
+
+        CGContextEndTransparencyLayer(context)
+        CGContextRestoreGState(context)
+
+
+        //// Bezier Drawing
+        var bezierPath = UIBezierPath()
+        bezierPath.moveToPoint(CGPointMake(group.minX + 0.54751 * group.width, group.minY + 0.02253 * group.height))
+        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.61250 * group.width, group.minY + 0.14784 * group.height))
+        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.66750 * group.width, group.minY + 0.17290 * group.height))
+        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.79250 * group.width, group.minY + 0.11776 * group.height))
+        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.87750 * group.width, group.minY + 0.20297 * group.height))
+        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.82750 * group.width, group.minY + 0.32328 * group.height))
+        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.85250 * group.width, group.minY + 0.38844 * group.height))
+        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.97750 * group.width, group.minY + 0.44859 * group.height))
+        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.97750 * group.width, group.minY + 0.54383 * group.height))
+        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.85250 * group.width, group.minY + 0.60900 * group.height))
+        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.82750 * group.width, group.minY + 0.65912 * group.height))
+        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.87750 * group.width, group.minY + 0.78945 * group.height))
+        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.80750 * group.width, group.minY + 0.87466 * group.height))
+        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.67750 * group.width, group.minY + 0.82454 * group.height))
+        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.61250 * group.width, group.minY + 0.84459 * group.height))
+        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.54750 * group.width, group.minY + 0.97492 * group.height))
+        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.45250 * group.width, group.minY + 0.97492 * group.height))
+        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.38750 * group.width, group.minY + 0.84459 * group.height))
+        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.33250 * group.width, group.minY + 0.82454 * group.height))
+        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.20750 * group.width, group.minY + 0.87466 * group.height))
+        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.13250 * group.width, group.minY + 0.80449 * group.height))
+        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.17250 * group.width, group.minY + 0.67917 * group.height))
+        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.15250 * group.width, group.minY + 0.60900 * group.height))
+        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.02250 * group.width, group.minY + 0.55887 * group.height))
+        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.02250 * group.width, group.minY + 0.44859 * group.height))
+        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.15250 * group.width, group.minY + 0.38844 * group.height))
+        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.17250 * group.width, group.minY + 0.32328 * group.height))
+        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.12250 * group.width, group.minY + 0.20297 * group.height))
+        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.19750 * group.width, group.minY + 0.12779 * group.height))
+        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.33250 * group.width, group.minY + 0.17290 * group.height))
+        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.38750 * group.width, group.minY + 0.14784 * group.height))
+        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.44250 * group.width, group.minY + 0.02252 * group.height))
+        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.54750 * group.width, group.minY + 0.02252 * group.height))
+        bezierPath.addLineToPoint(CGPointMake(group.minX + 0.54751 * group.width, group.minY + 0.02253 * group.height))
+        bezierPath.closePath()
+        bezierPath.moveToPoint(CGPointMake(group.minX + 0.40854 * group.width, group.minY + 0.40476 * group.height))
+        bezierPath.addCurveToPoint(CGPointMake(group.minX + 0.40631 * group.width, group.minY + 0.40693 * group.height), controlPoint1: CGPointMake(group.minX + 0.40779 * group.width, group.minY + 0.40547 * group.height), controlPoint2: CGPointMake(group.minX + 0.40705 * group.width, group.minY + 0.40620 * group.height))
+        bezierPath.addCurveToPoint(CGPointMake(group.minX + 0.40631 * group.width, group.minY + 0.59301 * group.height), controlPoint1: CGPointMake(group.minX + 0.35457 * group.width, group.minY + 0.45832 * group.height), controlPoint2: CGPointMake(group.minX + 0.35457 * group.width, group.minY + 0.54163 * group.height))
+        bezierPath.addCurveToPoint(CGPointMake(group.minX + 0.59369 * group.width, group.minY + 0.59301 * group.height), controlPoint1: CGPointMake(group.minX + 0.45806 * group.width, group.minY + 0.64440 * group.height), controlPoint2: CGPointMake(group.minX + 0.54195 * group.width, group.minY + 0.64440 * group.height))
+        bezierPath.addCurveToPoint(CGPointMake(group.minX + 0.59369 * group.width, group.minY + 0.40693 * group.height), controlPoint1: CGPointMake(group.minX + 0.64544 * group.width, group.minY + 0.54163 * group.height), controlPoint2: CGPointMake(group.minX + 0.64544 * group.width, group.minY + 0.45832 * group.height))
+        bezierPath.addCurveToPoint(CGPointMake(group.minX + 0.40854 * group.width, group.minY + 0.40476 * group.height), controlPoint1: CGPointMake(group.minX + 0.54269 * group.width, group.minY + 0.35628 * group.height), controlPoint2: CGPointMake(group.minX + 0.46044 * group.width, group.minY + 0.35555 * group.height))
+        bezierPath.closePath()
+        tintColor.setFill()
+        bezierPath.fill()
+        tintColor.setStroke()
+        bezierPath.lineWidth = 1
+        bezierPath.stroke()
+    }
+
+    public class func drawLockTabBarIcon() {
+        //// Color Declarations
+        let fillColor = UIColor(red: 0.000, green: 0.000, blue: 0.000, alpha: 1.000)
+
+        //// Group
+        //// Oval Drawing
+        var ovalPath = UIBezierPath(ovalInRect: CGRectMake(0.5, 0.5, 24, 24))
+        fillColor.setStroke()
+        ovalPath.lineWidth = 1
+        ovalPath.stroke()
+
+
+        //// Bezier Drawing
+        var bezierPath = UIBezierPath()
+        bezierPath.moveToPoint(CGPointMake(15.54, 12.25))
+        bezierPath.addCurveToPoint(CGPointMake(12.35, 9), controlPoint1: CGPointMake(15.54, 10.46), controlPoint2: CGPointMake(14.12, 9))
+        bezierPath.addCurveToPoint(CGPointMake(9.16, 12.25), controlPoint1: CGPointMake(10.59, 9), controlPoint2: CGPointMake(9.16, 10.46))
+        bezierPath.addCurveToPoint(CGPointMake(10.99, 15.19), controlPoint1: CGPointMake(9.16, 13.55), controlPoint2: CGPointMake(9.91, 14.67))
+        bezierPath.addLineToPoint(CGPointMake(9.16, 22))
+        bezierPath.addLineToPoint(CGPointMake(15.54, 22))
+        bezierPath.addLineToPoint(CGPointMake(13.72, 15.19))
+        bezierPath.addCurveToPoint(CGPointMake(15.54, 12.25), controlPoint1: CGPointMake(14.8, 14.67), controlPoint2: CGPointMake(15.54, 13.55))
+        bezierPath.addLineToPoint(CGPointMake(15.54, 12.25))
+        bezierPath.addLineToPoint(CGPointMake(15.54, 12.25))
+        bezierPath.closePath()
+        bezierPath.usesEvenOddFillRule = true;
+
+        fillColor.setFill()
+        bezierPath.fill()
+    }
+
     //// Generated Images
 
     public class func imageOfPermissionBadgeAnytime(#frame: CGRect, tintColor: UIColor) -> UIImage {
@@ -671,6 +733,20 @@ public class StyleKit : NSObject {
         UIGraphicsEndImageContext()
 
         return imageOfPermissionBadgeAnytime
+    }
+
+    public class var imageOfLockTabBarIconSelected: UIImage {
+        if Cache.imageOfLockTabBarIconSelected != nil {
+            return Cache.imageOfLockTabBarIconSelected!
+        }
+
+        UIGraphicsBeginImageContextWithOptions(CGSizeMake(25, 25), false, 0)
+            StyleKit.drawLockTabBarIconSelected()
+
+        Cache.imageOfLockTabBarIconSelected = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+
+        return Cache.imageOfLockTabBarIconSelected!
     }
 
     public class func imageOfSettingsTabBarIcon(#frame: CGRect, tintColor: UIColor) -> UIImage {
@@ -691,6 +767,42 @@ public class StyleKit : NSObject {
         UIGraphicsEndImageContext()
 
         return imageOfSettingsTabBarIconSelected
+    }
+
+    public class var imageOfLockTabBarIcon: UIImage {
+        if Cache.imageOfLockTabBarIcon != nil {
+            return Cache.imageOfLockTabBarIcon!
+        }
+
+        UIGraphicsBeginImageContextWithOptions(CGSizeMake(25, 25), false, 0)
+            StyleKit.drawLockTabBarIcon()
+
+        Cache.imageOfLockTabBarIcon = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+
+        return Cache.imageOfLockTabBarIcon!
+    }
+
+    //// Customization Infrastructure
+
+    @IBOutlet var lockTabBarIconSelectedTargets: [AnyObject]! {
+        get { return Cache.lockTabBarIconSelectedTargets }
+        set {
+            Cache.lockTabBarIconSelectedTargets = newValue
+            for target: AnyObject in newValue {
+                target.setImage(StyleKit.imageOfLockTabBarIconSelected)
+            }
+        }
+    }
+
+    @IBOutlet var lockTabBarIconTargets: [AnyObject]! {
+        get { return Cache.lockTabBarIconTargets }
+        set {
+            Cache.lockTabBarIconTargets = newValue
+            for target: AnyObject in newValue {
+                target.setImage(StyleKit.imageOfLockTabBarIcon)
+            }
+        }
     }
 
 }
