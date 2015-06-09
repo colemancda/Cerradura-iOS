@@ -664,6 +664,7 @@
 			buildConfigurationList = 6E11B2FF1AFE6A9400EEAF37 /* Build configuration list for PBXNativeTarget "Cerradura" */;
 			buildPhases = (
 				6E062E061B208C22004DBAB7 /* R.swift */,
+				6E5C5C421B27522900E9D549 /* Paint Code Swift Extractor */,
 				6E11B2DC1AFE6A9400EEAF37 /* Sources */,
 				6E11B2DD1AFE6A9400EEAF37 /* Frameworks */,
 				6E11B2DE1AFE6A9400EEAF37 /* Resources */,
@@ -1043,6 +1044,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "#!/bin/bash\n\n#  update_build_number.sh\n#  Usage: `update_build_number.sh [branch]`\n#  Run this script after the 'Copy Bundle Resources' build phase\n#  Ref: http://tgoode.com/2014/06/05/sensible-way-increment-bundle-version-cfbundleversion-xcode/\n\nif [ $TRAVIS == \"true\" ]\nthen echo \"Updating build number to TRAVISCI.\"\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion TRAVISCI\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\nelse branch=${1:-'develop'}\nbuildNumber=$(expr $(git rev-list $branch --count) - $(git rev-list HEAD..$branch --count))\necho \"Updating build number to $buildNumber using branch '$branch'.\"\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\nfi";
+		};
+		6E5C5C421B27522900E9D549 /* Paint Code Swift Extractor */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Paint Code Swift Extractor";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SRCROOT/PaintCode/StyleKitSwiftExtractor\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
