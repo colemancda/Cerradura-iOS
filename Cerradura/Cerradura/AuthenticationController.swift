@@ -119,6 +119,8 @@ final class AuthenticationController {
         NSNotificationCenter.defaultCenter().removeObserver(self, name: "authenticationDidFail", object: Store.sharedStore)
         
         Store.removeSharedStore()
+        
+        self.delegate?.authenticationControllerDidLogout(self)
     }
     
     // MARK: - Notifications
