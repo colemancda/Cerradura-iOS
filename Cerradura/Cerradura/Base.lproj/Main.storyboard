@@ -280,7 +280,11 @@
         <scene sceneID="djV-T9-be2">
             <objects>
                 <navigationController id="5UA-jR-8i2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" image="SettingsTabBarIcon" id="SPt-2L-fbX"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="SettingsTabBarIcon" id="SPt-2L-fbX">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="SettingsTabBarIconSelected"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3hU-ju-66n">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -375,6 +379,7 @@
         <image name="KeysTabBarIcon" width="25" height="25"/>
         <image name="LockTabBarIcon" width="13" height="25"/>
         <image name="SettingsTabBarIcon" width="25" height="25"/>
+        <image name="SettingsTabBarIconSelected" width="25" height="25"/>
         <image name="permissionBadgeAdmin" width="200" height="200"/>
     </resources>
 </document>
