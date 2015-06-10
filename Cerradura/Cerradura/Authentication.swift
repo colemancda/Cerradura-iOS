@@ -46,6 +46,8 @@ public final class Authentication {
                 self.keychain[Authentication.keychainUsernameKey] = nil
                 
                 self.keychain[Authentication.keychainPasswordKey] = nil
+                
+                return
             }
             
             let (username, password) = self.credentials!

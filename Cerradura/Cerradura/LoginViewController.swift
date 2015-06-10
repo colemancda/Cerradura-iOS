@@ -30,7 +30,29 @@ class LoginViewController: UIViewController {
     
     @IBAction func login(sender: AnyObject) {
         
+        let serverURL = NSURL(string: self.serverURLTextField.text)
         
+        AuthenticationController.sharedController.login(self.usernameTextField.text.lowercaseString, password: self.passwordTextField.text, server: serverURL!, completion: { (error: NSError?) -> Void in
+            
+            NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                
+                if error != nil {
+                    
+                    let errorText = NSLocalizedString("Invalid username or password.", value: "Invalid username or password.", comment: "Invalid username or password.")
+                    
+                    self.showErrorAlert(errorText, retryHandler: { () -> Void in
+                        
+                        self.login(self)
+                    })
+                    
+                    return
+                }
+                
+                // present split VC
+                
+                self.performSegueWithIdentifier(R.segue.loginSegue, sender: self)
+            })
+        })
     }
     
     // MARK: - Segues

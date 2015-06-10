@@ -49,18 +49,21 @@ internal extension Store {
     
     class func removeSharedStore() {
         
-        // delete file
-        
-        var deleteError: NSError?
-        
-        NSFileManager.defaultManager().removeItemAtURL(SharedStoreFileURL, error: &deleteError)
-        
-        if deleteError != nil {
+        if NSFileManager.defaultManager().fileExistsAtPath(SharedStoreFileURL.path!) {
             
-            fatalError("Could not delete old SQLite file.\n\(deleteError)")
+            // delete file
+            
+            var deleteError: NSError?
+            
+            NSFileManager.defaultManager().removeItemAtURL(SharedStoreFileURL, error: &deleteError)
+            
+            if deleteError != nil {
+                
+                fatalError("Could not delete old SQLite file.\n\(deleteError)")
+            }
+            
+            println("Deleted old SQLite file")
         }
-        
-        println("Deleted old SQLite file")
         
         self.sharedStore = nil
     }

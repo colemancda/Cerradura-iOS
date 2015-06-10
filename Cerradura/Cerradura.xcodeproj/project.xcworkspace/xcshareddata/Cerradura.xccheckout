@@ -66,7 +66,7 @@
 		<key>D9420E81D6A438210B7B3BBEADC7A0283866D9A2</key>
 		<string>../../../CoreCerraduraClient/CoreCerradura/IDZSwiftCommonCrypto/CommonCrypto</string>
 		<key>DD091C5D03D23C2F1EC054BC9C018DF9A9125FD6</key>
-		<string>../../../DZNEmptyDataSet/</string>
+		<string>../../../DZNEmptyDataSet</string>
 		<key>E2F476CE895D3596DBE8080E8F363F8F94823E70</key>
 		<string>../../../CoreCerraduraClient/CoreCerradura/NetworkObjects/ExSwift</string>
 		<key>F5203A135CBC59107F981B12C20EBB5794D3BC69</key>

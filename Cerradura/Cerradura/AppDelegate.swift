@@ -61,6 +61,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AuthenticationControllerD
         
         let loginVC = self.window!.rootViewController as! LoginViewController
         
-        
+        loginVC.dismissViewControllerAnimated(true, completion: { () -> Void in
+            
+            
+        })
     }
 }

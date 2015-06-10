@@ -51,7 +51,10 @@ final class AuthenticationController {
             
             let success = NSUserDefaults.standardUserDefaults().synchronize()
             
-            fatalError("Could not save resource ID to user defaults")
+            if !success {
+                
+                fatalError("Could not save resource ID to user defaults")
+            }
         }
     }
     
