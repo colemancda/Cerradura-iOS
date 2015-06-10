@@ -23,7 +23,6 @@
 		6E11B2ED1AFE6A9400EEAF37 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E11B2EC1AFE6A9400EEAF37 /* Images.xcassets */; };
 		6E11B2F01AFE6A9400EEAF37 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E11B2EE1AFE6A9400EEAF37 /* LaunchScreen.xib */; };
 		6E11B2FC1AFE6A9400EEAF37 /* CerraduraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E11B2FB1AFE6A9400EEAF37 /* CerraduraTests.swift */; };
-		6E5C5B821B25DD9C00E9D549 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E5C5B811B25DD9C00E9D549 /* Login.storyboard */; };
 		6E5C5C451B27621000E9D549 /* StyleKitView.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5C5C441B27621000E9D549 /* StyleKitView.generated.swift */; };
 		6E5C5C471B27633700E9D549 /* StyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5C5C461B27633700E9D549 /* StyleKit.swift */; };
 		6EAED1701B21254C0049CC35 /* AuthenticationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAED16F1B21254C0049CC35 /* AuthenticationController.swift */; };
@@ -376,7 +375,6 @@
 		6E11B2F51AFE6A9400EEAF37 /* CerraduraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CerraduraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E11B2FA1AFE6A9400EEAF37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E11B2FB1AFE6A9400EEAF37 /* CerraduraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CerraduraTests.swift; sourceTree = "<group>"; };
-		6E5C5B811B25DD9C00E9D549 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		6E5C5BC51B26011500E9D549 /* DZNEmptyDataSet.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DZNEmptyDataSet.xcodeproj; path = ../DZNEmptyDataSet/DZNEmptyDataSet/DZNEmptyDataSet.xcodeproj; sourceTree = "<group>"; };
 		6E5C5C441B27621000E9D549 /* StyleKitView.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StyleKitView.generated.swift; path = PaintCode/StyleKitView.generated.swift; sourceTree = SOURCE_ROOT; };
 		6E5C5C461B27633700E9D549 /* StyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StyleKit.swift; path = PaintCode/StyleKit.swift; sourceTree = SOURCE_ROOT; };
@@ -502,7 +500,6 @@
 			children = (
 				6E11B2E51AFE6A9400EEAF37 /* AppDelegate.swift */,
 				6E11B2E91AFE6A9400EEAF37 /* Main.storyboard */,
-				6E5C5B811B25DD9C00E9D549 /* Login.storyboard */,
 				6E11B2EC1AFE6A9400EEAF37 /* Images.xcassets */,
 				6E11B2EE1AFE6A9400EEAF37 /* LaunchScreen.xib */,
 				6E062E171B208DCA004DBAB7 /* Definitions */,
@@ -1015,7 +1012,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E11B2EB1AFE6A9400EEAF37 /* Main.storyboard in Resources */,
-				6E5C5B821B25DD9C00E9D549 /* Login.storyboard in Resources */,
 				6E11B2F01AFE6A9400EEAF37 /* LaunchScreen.xib in Resources */,
 				6E11B2ED1AFE6A9400EEAF37 /* Images.xcassets in Resources */,
 			);
