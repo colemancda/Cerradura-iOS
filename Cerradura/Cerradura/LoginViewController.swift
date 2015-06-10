@@ -39,5 +39,10 @@ class LoginViewController: UIViewController {
         
         
     }
+    
+    @IBAction func logoutSegue(segue: UIStoryboardSegue) {
+        
+        
+    }
 }
 

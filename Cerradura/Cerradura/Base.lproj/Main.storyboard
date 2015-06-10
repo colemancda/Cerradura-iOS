@@ -64,7 +64,7 @@
                                     </variation>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="DPL-a1-c8t" kind="show" id="Lvf-FF-e0j"/>
+                                    <segue destination="DPL-a1-c8t" kind="show" identifier="ShowPermission" id="Lvf-FF-e0j"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -332,10 +332,10 @@
             </objects>
             <point key="canvasLocation" x="1403" y="337"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="erX-0s-hAk">
             <objects>
-                <viewController id="VFM-uZ-k45" sceneMemberID="viewController">
+                <viewController id="VFM-uZ-k45" customClass="LoginViewController" customModule="Cerradura" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jvd-uC-uqy"/>
                         <viewControllerLayoutGuide type="bottom" id="N06-ve-3vm"/>
@@ -343,8 +343,47 @@
                     <view key="view" contentMode="scaleToFill" id="7zF-1z-Q88">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="admin" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZD5-XR-4Bx">
+                                <rect key="frame" x="223" y="28" width="155" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="admin1234" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KUX-DX-2ga">
+                                <rect key="frame" x="223" y="66" width="155" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="http://localhost:8080" borderStyle="roundedRect" placeholder="Server URL" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MST-gP-KTc">
+                                <rect key="frame" x="223" y="104" width="155" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vy7-TG-dfN">
+                                <rect key="frame" x="281" y="142" width="38" height="30"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MST-gP-KTc" firstAttribute="width" secondItem="ZD5-XR-4Bx" secondAttribute="width" id="DwE-D4-cv1"/>
+                            <constraint firstItem="MST-gP-KTc" firstAttribute="top" secondItem="KUX-DX-2ga" secondAttribute="bottom" constant="8" id="Fm9-sB-POb"/>
+                            <constraint firstItem="ZD5-XR-4Bx" firstAttribute="centerX" secondItem="Vy7-TG-dfN" secondAttribute="centerX" id="GeJ-5o-yH9"/>
+                            <constraint firstItem="KUX-DX-2ga" firstAttribute="top" secondItem="ZD5-XR-4Bx" secondAttribute="bottom" constant="8" id="OFB-EC-3Lb"/>
+                            <constraint firstItem="Vy7-TG-dfN" firstAttribute="top" secondItem="MST-gP-KTc" secondAttribute="bottom" constant="8" id="XiU-Lc-G48"/>
+                            <constraint firstItem="KUX-DX-2ga" firstAttribute="top" secondItem="ZD5-XR-4Bx" secondAttribute="bottom" constant="8" id="bXn-na-YbE"/>
+                            <constraint firstItem="MST-gP-KTc" firstAttribute="top" secondItem="KUX-DX-2ga" secondAttribute="bottom" constant="8" id="hJ1-mk-D4g"/>
+                            <constraint firstItem="ZD5-XR-4Bx" firstAttribute="centerX" secondItem="MST-gP-KTc" secondAttribute="centerX" id="pYY-ag-GLD"/>
+                            <constraint firstItem="MST-gP-KTc" firstAttribute="width" secondItem="KUX-DX-2ga" secondAttribute="width" id="tqt-M1-40z"/>
+                            <constraint firstItem="ZD5-XR-4Bx" firstAttribute="centerX" secondItem="KUX-DX-2ga" secondAttribute="centerX" id="xRY-4f-w01"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <segue destination="Wf0-2u-5JN" kind="presentation" identifier="LoginSegue" modalTransitionStyle="flipHorizontal" id="jJU-Ja-Rwt"/>
+                        <segue destination="T60-4c-oJL" kind="unwind" identifier="LogoutFromSplitVC" unwindAction="logoutSegue:" id="iaC-k3-ygI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dLh-kQ-S8F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -360,35 +399,9 @@
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XVe-kE-JAq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="T60-4c-oJL" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-191" y="-532"/>
-        </scene>
-        <!--Root View Controller-->
-        <scene sceneID="WbV-U1-ZNY">
-            <objects>
-                <tableViewController id="bSO-Gc-2Rw" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="YCr-uI-szF">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="b2X-X0-37p">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="b2X-X0-37p" id="yFV-l6-3y6">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="bSO-Gc-2Rw" id="sI0-1T-9YQ"/>
-                            <outlet property="delegate" destination="bSO-Gc-2Rw" id="YI2-V7-cLo"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="NCG-lG-62G"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4eV-C3-6Tw" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-191" y="1236"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SJM-OR-ugD">
@@ -399,12 +412,57 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="bSO-Gc-2Rw" kind="relationship" relationship="rootViewController" id="h8j-So-0sE"/>
+                        <segue destination="jPw-5n-K95" kind="relationship" relationship="rootViewController" id="I7f-ao-muk"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="peR-7u-lTk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-191" y="428"/>
+        </scene>
+        <!--Empty Selection-->
+        <scene sceneID="9df-BP-v0C">
+            <objects>
+                <viewController title="Empty Selection" id="jPw-5n-K95" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rJu-Y3-Sfk"/>
+                        <viewControllerLayoutGuide type="bottom" id="nWg-uS-cYP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="H7i-OU-Zzt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hDT-O2-FHx" customClass="StyleKitView" customModule="Cerradura" customModuleProvider="target">
+                                <rect key="frame" x="180" y="180" width="240" height="240"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hDT-O2-FHx" secondAttribute="height" multiplier="1:1" id="ghW-Cj-pBC"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="canvasName" value="PunkuDoorLogo"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="hDT-O2-FHx" secondAttribute="centerY" id="A7B-2k-OAq"/>
+                            <constraint firstAttribute="centerY" secondItem="hDT-O2-FHx" secondAttribute="centerY" constant="95" id="LRu-dQ-WSh"/>
+                            <constraint firstAttribute="centerX" secondItem="hDT-O2-FHx" secondAttribute="centerX" constant="60.5" id="dCm-aI-aKQ"/>
+                            <constraint firstAttribute="centerX" secondItem="hDT-O2-FHx" secondAttribute="centerX" id="de1-Kn-DDq"/>
+                            <constraint firstAttribute="width" secondItem="hDT-O2-FHx" secondAttribute="height" multiplier="100:40" id="lYQ-DU-9Lc"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="LRu-dQ-WSh"/>
+                                <exclude reference="dCm-aI-aKQ"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="s60-sk-Ham"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mrx-4w-WhR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-191" y="1226"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="PGY-Qd-46y">
@@ -460,26 +518,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Searching for Locks" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GU0-D9-q3f">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Searching for Locks" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GU0-D9-q3f">
                                 <rect key="frame" x="223" y="370" width="154" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jQW-EG-QJn">
-                                <rect key="frame" x="203" y="206" width="195" height="156"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="jQW-EG-QJn" secondAttribute="height" multiplier="1:1" id="x0y-Gl-JwU"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="jQW-EG-QJn" firstAttribute="centerX" secondItem="GU0-D9-q3f" secondAttribute="centerX" id="1X0-dy-4qx"/>
-                            <constraint firstAttribute="centerY" secondItem="jQW-EG-QJn" secondAttribute="centerY" id="Y2K-Zm-f2F"/>
-                            <constraint firstItem="GU0-D9-q3f" firstAttribute="top" secondItem="jQW-EG-QJn" secondAttribute="bottom" constant="8" id="mEJ-4d-vMW"/>
-                            <constraint firstAttribute="centerX" secondItem="jQW-EG-QJn" secondAttribute="centerX" id="xoc-5W-99D"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ofM-MX-CnD"/>
                 </viewController>
