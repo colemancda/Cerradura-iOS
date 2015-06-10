@@ -59,11 +59,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AuthenticationControllerD
     
     func authenticationControllerDidLogout(controller: AuthenticationController) {
         
-        let loginVC = self.window!.rootViewController as! LoginViewController
-        
-        loginVC.dismissViewControllerAnimated(true, completion: { () -> Void in
+        NSOperationQueue.mainQueue().addOperationWithBlock { () -> Void in
             
+            let loginVC = self.window!.rootViewController as! LoginViewController
             
-        })
+            loginVC.dismissViewControllerAnimated(true, completion: { () -> Void in
+                
+                
+            })
+        }
     }
 }
