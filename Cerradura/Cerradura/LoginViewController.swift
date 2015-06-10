@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import NetworkObjects
 
 class LoginViewController: UIViewController {
     
@@ -38,7 +39,17 @@ class LoginViewController: UIViewController {
                 
                 if error != nil {
                     
-                    let errorText = NSLocalizedString("Invalid username or password.", value: "Invalid username or password.", comment: "Invalid username or password.")
+                    // override unauthorized error message
+                    let errorText: String = {
+                       
+                        if error!.domain == NetworkObjectsErrorDomain &&
+                            error!.code == NetworkObjects.ErrorCode.ServerStatusCodeUnauthorized.rawValue {
+                            
+                            return NSLocalizedString("Invalid username or password.", value: "Invalid username or password.", comment: "Invalid username or password.")
+                        }
+                        
+                        return error!.localizedDescription
+                    }()
                     
                     self.showErrorAlert(errorText, retryHandler: { () -> Void in
                         
