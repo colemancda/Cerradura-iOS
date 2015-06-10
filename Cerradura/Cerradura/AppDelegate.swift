@@ -27,7 +27,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AuthenticationControllerD
         // load data cache if the user is logged in
         
         
-        
         return true
     }
 
@@ -56,6 +55,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AuthenticationControllerD
     // MARK: - AuthenticationControllerDelegate
     
     func authenticationControllerDidLogout(controller: AuthenticationController) {
+        
+        let loginVC = self.window!.rootViewController as! LoginViewController
         
         
     }
