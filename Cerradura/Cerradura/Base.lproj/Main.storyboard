@@ -218,32 +218,37 @@
                             <rect key="frame" x="0.0" y="64" width="600" height="217"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="colemancda" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGq-eY-TJJ">
-                                    <rect key="frame" x="8" y="169" width="584" height="28"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="colemancda" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGq-eY-TJJ">
+                                    <rect key="frame" x="8" y="169" width="584" height="27.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z1y-dj-rfg" customClass="StyleKitView" customModule="Cerradura" customModuleProvider="target">
-                                    <rect key="frame" x="241" y="30" width="119" height="119"/>
+                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F68-7N-kgh">
+                                    <rect key="frame" x="240.5" y="30" width="119.5" height="119.5"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="UserProfile" translatesAutoresizingMaskIntoConstraints="NO" id="8Vq-yC-4jC">
+                                            <rect key="frame" x="0.0" y="0.0" width="119.5" height="119.5"/>
+                                        </imageView>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    <color key="tintColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" secondItem="z1y-dj-rfg" secondAttribute="height" multiplier="1:1" id="I5Y-u0-53b"/>
+                                        <constraint firstItem="8Vq-yC-4jC" firstAttribute="top" secondItem="F68-7N-kgh" secondAttribute="top" id="QZK-M7-wxL"/>
+                                        <constraint firstAttribute="trailing" secondItem="8Vq-yC-4jC" secondAttribute="trailing" id="Zwr-Su-wUD"/>
+                                        <constraint firstItem="8Vq-yC-4jC" firstAttribute="leading" secondItem="F68-7N-kgh" secondAttribute="leading" id="ldI-cJ-eNV"/>
+                                        <constraint firstAttribute="bottom" secondItem="8Vq-yC-4jC" secondAttribute="bottom" id="siD-6y-tyg"/>
+                                        <constraint firstAttribute="width" secondItem="F68-7N-kgh" secondAttribute="height" multiplier="1:1" id="z7b-jp-44a"/>
                                     </constraints>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="canvasName" value="PunkuDoorLogo"/>
-                                    </userDefinedRuntimeAttributes>
                                 </view>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="bottom" secondItem="uGq-eY-TJJ" secondAttribute="bottom" constant="20" id="4wG-av-2xy"/>
                                 <constraint firstItem="uGq-eY-TJJ" firstAttribute="leading" secondItem="qzU-o0-w4D" secondAttribute="leading" constant="8" id="M5H-al-wsm"/>
-                                <constraint firstItem="uGq-eY-TJJ" firstAttribute="top" secondItem="z1y-dj-rfg" secondAttribute="bottom" constant="20" id="Oi3-eQ-wIB"/>
                                 <constraint firstAttribute="trailing" secondItem="uGq-eY-TJJ" secondAttribute="trailing" constant="8" id="P1x-St-fiP"/>
-                                <constraint firstAttribute="centerX" secondItem="z1y-dj-rfg" secondAttribute="centerX" id="Yo5-DJ-eb0"/>
-                                <constraint firstItem="z1y-dj-rfg" firstAttribute="top" secondItem="qzU-o0-w4D" secondAttribute="top" constant="30" id="wap-Qi-alP"/>
+                                <constraint firstItem="F68-7N-kgh" firstAttribute="top" secondItem="qzU-o0-w4D" secondAttribute="top" constant="30" id="QNX-fD-OYd"/>
+                                <constraint firstItem="uGq-eY-TJJ" firstAttribute="top" secondItem="F68-7N-kgh" secondAttribute="bottom" constant="20" id="alt-PD-7al"/>
+                                <constraint firstAttribute="centerX" secondItem="F68-7N-kgh" secondAttribute="centerX" id="xvP-ci-u7c"/>
                             </constraints>
                         </view>
                         <sections>
@@ -579,6 +584,7 @@
         <image name="LockTabBarIconSelected" width="25" height="25"/>
         <image name="SettingsTabBarIcon" width="25" height="25"/>
         <image name="SettingsTabBarIconSelected" width="25" height="25"/>
+        <image name="UserProfile" width="336" height="334"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="FrZ-oe-pXO"/>
