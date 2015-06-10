@@ -24,6 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AuthenticationControllerD
         // load authentication manager
         AuthenticationController.sharedController.delegate = self
         
+        // set app appearance
+        ConfigureAppearance()
+        
         // load data cache if the user is logged in
         
         

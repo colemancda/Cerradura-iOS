@@ -15,8 +15,9 @@
                     <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoLarge" translatesAutoresizingMaskIntoConstraints="NO" id="fkU-2X-HS8">
-                            <rect key="frame" x="48" y="48" width="384" height="384"/>
+                            <rect key="frame" x="90" y="90" width="300" height="300"/>
                             <constraints>
+                                <constraint firstAttribute="height" constant="300" id="3Gi-OE-Rzg"/>
                                 <constraint firstAttribute="width" secondItem="fkU-2X-HS8" secondAttribute="height" id="5X5-QM-TI6"/>
                             </constraints>
                         </imageView>
@@ -27,6 +28,11 @@
                         <constraint firstAttribute="centerY" secondItem="fkU-2X-HS8" secondAttribute="centerY" id="Jd7-l6-n0C"/>
                         <constraint firstAttribute="width" secondItem="fkU-2X-HS8" secondAttribute="height" multiplier="20:16" id="pIy-hv-eV8"/>
                     </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="pIy-hv-eV8"/>
+                        </mask>
+                    </variation>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

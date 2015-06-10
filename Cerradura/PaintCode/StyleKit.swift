@@ -17,7 +17,8 @@ public class StyleKit : NSObject {
     //// Cache
 
     private struct Cache {
-        static var navigationItemTintColor: UIColor = UIColor(red: 0.098, green: 0.455, blue: 0.824, alpha: 1.000)
+        static var cerraduraBlue: UIColor = UIColor(red: 0.098, green: 0.455, blue: 0.824, alpha: 1.000)
+        static var hade: UIColor = UIColor(red: 0.361, green: 0.776, blue: 0.816, alpha: 1.000)
         static var imageOfLockTabBarIconSelected: UIImage?
         static var lockTabBarIconSelectedTargets: [AnyObject]?
         static var imageOfLockTabBarIcon: UIImage?
@@ -30,7 +31,8 @@ public class StyleKit : NSObject {
 
     //// Colors
 
-    public class var navigationItemTintColor: UIColor { return Cache.navigationItemTintColor }
+    public class var cerraduraBlue: UIColor { return Cache.cerraduraBlue }
+    public class var hade: UIColor { return Cache.hade }
 
     //// Drawing Methods
 
@@ -341,7 +343,7 @@ public class StyleKit : NSObject {
         bezierPath.closePath()
         bezierPath.usesEvenOddFillRule = true;
 
-        StyleKit.navigationItemTintColor.setFill()
+        StyleKit.cerraduraBlue.setFill()
         bezierPath.fill()
     }
 
@@ -731,10 +733,6 @@ public class StyleKit : NSObject {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()
 
-        //// Color Declarations
-        let fillColor2 = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000)
-        let strokeColor = UIColor(red: 0.000, green: 0.000, blue: 0.000, alpha: 1.000)
-
         //// Group 5
         CGContextSaveGState(context)
         CGContextScaleCTM(context, 0.66, 0.66)
@@ -784,7 +782,7 @@ public class StyleKit : NSObject {
         CGContextRotateCTM(context, 26 * CGFloat(M_PI) / 180)
 
         let rectanglePath = UIBezierPath(rect: CGRectMake(-12.88, -22.93, 25.75, 45.85))
-        fillColor2.setFill()
+        UIColor.redColor().setFill()
         rectanglePath.fill()
 
         CGContextRestoreGState(context)
@@ -823,7 +821,7 @@ public class StyleKit : NSObject {
         bezier2Path.closePath()
         bezier2Path.miterLimit = 10;
 
-        strokeColor.setStroke()
+        UIColor.redColor().setStroke()
         bezier2Path.lineWidth = 1
         bezier2Path.stroke()
 
@@ -870,7 +868,7 @@ public class StyleKit : NSObject {
         CGContextRotateCTM(context, 6 * CGFloat(M_PI) / 180)
 
         let rectangle2Path = UIBezierPath(rect: CGRectMake(-12.88, -22.93, 25.75, 45.85))
-        fillColor2.setFill()
+        UIColor.redColor().setFill()
         rectangle2Path.fill()
 
         CGContextRestoreGState(context)
@@ -909,7 +907,7 @@ public class StyleKit : NSObject {
         bezier4Path.closePath()
         bezier4Path.miterLimit = 10;
 
-        strokeColor.setStroke()
+        UIColor.redColor().setStroke()
         bezier4Path.lineWidth = 1
         bezier4Path.stroke()
 
@@ -962,7 +960,7 @@ public class StyleKit : NSObject {
         CGContextRotateCTM(context, -22 * CGFloat(M_PI) / 180)
 
         let rectangle3Path = UIBezierPath(rect: CGRectMake(-12.85, -22.93, 25.7, 45.85))
-        fillColor2.setFill()
+        UIColor.redColor().setFill()
         rectangle3Path.fill()
 
         CGContextRestoreGState(context)
@@ -1007,7 +1005,7 @@ public class StyleKit : NSObject {
         bezier6Path.closePath()
         bezier6Path.miterLimit = 10;
 
-        strokeColor.setStroke()
+        UIColor.redColor().setStroke()
         bezier6Path.lineWidth = 1
         bezier6Path.stroke()
 
@@ -1021,11 +1019,6 @@ public class StyleKit : NSObject {
     public class func drawKeysTabBarIcon() {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()
-
-        //// Color Declarations
-        let fillColor3 = UIColor(red: 0.022, green: 0.021, blue: 0.021, alpha: 1.000)
-        let strokeColor2 = UIColor(red: 0.040, green: 0.039, blue: 0.039, alpha: 1.000)
-        let fillColor4 = UIColor(red: 0.987, green: 0.987, blue: 0.987, alpha: 1.000)
 
         //// Group 7
         CGContextSaveGState(context)
@@ -1077,7 +1070,7 @@ public class StyleKit : NSObject {
         CGContextRotateCTM(context, 26 * CGFloat(M_PI) / 180)
 
         let rectanglePath = UIBezierPath(rect: CGRectMake(-12.88, -22.93, 25.75, 45.85))
-        fillColor3.setFill()
+        UIColor.redColor().setFill()
         rectanglePath.fill()
 
         CGContextRestoreGState(context)
@@ -1116,7 +1109,7 @@ public class StyleKit : NSObject {
         bezier2Path.closePath()
         bezier2Path.miterLimit = 10;
 
-        strokeColor2.setStroke()
+        UIColor.redColor().setStroke()
         bezier2Path.lineWidth = 1
         bezier2Path.stroke()
 
@@ -1165,7 +1158,7 @@ public class StyleKit : NSObject {
         CGContextRotateCTM(context, 6 * CGFloat(M_PI) / 180)
 
         let rectangle2Path = UIBezierPath(rect: CGRectMake(-12.88, -22.93, 25.75, 45.85))
-        fillColor3.setFill()
+        UIColor.redColor().setFill()
         rectangle2Path.fill()
 
         CGContextRestoreGState(context)
@@ -1204,7 +1197,7 @@ public class StyleKit : NSObject {
         bezier4Path.closePath()
         bezier4Path.miterLimit = 10;
 
-        strokeColor2.setStroke()
+        UIColor.redColor().setStroke()
         bezier4Path.lineWidth = 1
         bezier4Path.stroke()
 
@@ -1212,7 +1205,7 @@ public class StyleKit : NSObject {
         //// Group 5
         //// Oval Drawing
         var ovalPath = UIBezierPath(ovalInRect: CGRectMake(17, 2, 9, 9))
-        fillColor4.setFill()
+        UIColor.redColor().setFill()
         ovalPath.fill()
 
 
@@ -1264,7 +1257,7 @@ public class StyleKit : NSObject {
         CGContextRotateCTM(context, -22 * CGFloat(M_PI) / 180)
 
         let rectangle3Path = UIBezierPath(rect: CGRectMake(-12.85, -22.93, 25.7, 45.85))
-        fillColor3.setFill()
+        UIColor.redColor().setFill()
         rectangle3Path.fill()
 
         CGContextRestoreGState(context)
@@ -1311,7 +1304,7 @@ public class StyleKit : NSObject {
         bezier6Path.closePath()
         bezier6Path.miterLimit = 10;
 
-        strokeColor2.setStroke()
+        UIColor.redColor().setStroke()
         bezier6Path.lineWidth = 1
         bezier6Path.stroke()
 
