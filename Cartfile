@@ -1,0 +1,4 @@
+# Dependencies
+git "git@github.com:colemancda/CoreCerraduraClient.git" "develop"
+github "ColemanCDA/DZNEmptyDataSet"
+github "ColemanCDA/KeychainAccess"
