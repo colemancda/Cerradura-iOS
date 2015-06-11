@@ -364,7 +364,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Szn-hz-uxU">
-                                <rect key="frame" x="218" y="220" width="165" height="160"/>
+                                <rect key="frame" x="218" y="218" width="165" height="165"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="administrator" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZD5-XR-4Bx">
                                         <rect key="frame" x="0.0" y="8" width="165" height="30"/>
@@ -382,8 +382,10 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vy7-TG-dfN">
-                                        <rect key="frame" x="64" y="122" width="38" height="30"/>
+                                        <rect key="frame" x="59" y="122" width="47" height="35"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                         <state key="normal" title="Login">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -413,7 +415,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.098039215686274508" green="0.45490196078431372" blue="0.82352941176470584" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="Szn-hz-uxU" secondAttribute="centerX" id="Dkg-Zg-ths"/>
                             <constraint firstAttribute="centerX" secondItem="Szn-hz-uxU" secondAttribute="centerX" id="YlS-6m-5f9"/>
@@ -563,7 +565,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Lock" id="ofM-MX-CnD">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="bUA-KD-GPd">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="bUA-KD-GPd">
                             <connections>
                                 <segue destination="Nyg-pd-xzP" kind="presentation" identifier="NewLock" modalPresentationStyle="pageSheet" id="1Dk-z0-FAl"/>
                             </connections>
@@ -587,6 +589,6 @@
         <image name="UserProfile" width="337" height="345"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="FrZ-oe-pXO"/>
+        <segue reference="EFj-Mv-a8x"/>
     </inferredMetricsTieBreakers>
 </document>
