@@ -9,11 +9,12 @@
         <!--Keys-->
         <scene sceneID="wfq-Mr-9uh">
             <objects>
-                <tableViewController id="azA-Zn-ODa" sceneMemberID="viewController">
+                <tableViewController id="azA-Zn-ODa" customClass="PermissionsViewController" customModule="Cerradura" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="66" sectionHeaderHeight="22" sectionFooterHeight="22" id="me9-4d-V0H">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <inset key="separatorInset" minX="58" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="68" id="Oej-i9-HqW">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -63,6 +64,7 @@
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
+                                <inset key="separatorInset" minX="58" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <connections>
                                     <segue destination="YL3-U5-2m9" kind="showDetail" identifier="ShowPermissionDetail" id="FrZ-oe-pXO"/>
                                 </connections>
@@ -344,7 +346,7 @@
         <!--Navigation Controller-->
         <scene sceneID="ZVy-Zy-jQf">
             <objects>
-                <navigationController id="Gty-Ei-tv3" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="EmptySelection" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Gty-Ei-tv3" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="cWP-2X-3Sr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -603,7 +605,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="z6U-my-am0">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="Nyg-pd-xzP" kind="presentation" identifier="NewLock" modalPresentationStyle="pageSheet" id="dCG-GV-nxl"/>
+                                <segue destination="Nyg-pd-xzP" kind="presentation" identifier="NewLock" modalPresentationStyle="formSheet" id="dCG-GV-nxl"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -626,6 +628,6 @@
         <image name="UserProfile" width="337" height="345"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="EFj-Mv-a8x"/>
+        <segue reference="FrZ-oe-pXO"/>
     </inferredMetricsTieBreakers>
 </document>

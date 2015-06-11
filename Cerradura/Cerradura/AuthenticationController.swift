@@ -30,6 +30,8 @@ final class AuthenticationController {
         return (self.authentication.credentials != nil)
     }
     
+    private(set) var authenticatedUser: User?
+    
     /** Stored resource ID for the authenticated user. */
     private(set) var userResourceID: UInt? {
         

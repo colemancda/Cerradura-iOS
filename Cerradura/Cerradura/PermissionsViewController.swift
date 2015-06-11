@@ -13,7 +13,7 @@ import CoreCerradura
 import CoreCerraduraClient
 import DZNEmptyDataSet
 
-class PermissionsViewController: FetchedResultsViewController {
+class PermissionsViewController: FetchedResultsViewController, DZNEmptyDataSetDelegate, DZNEmptyDataSetSource {
     
     // MARK: - IB Outlets
     
@@ -21,10 +21,24 @@ class PermissionsViewController: FetchedResultsViewController {
     
     // MARK: - Initialization
     
+    deinit {
+        
+        self.tableView.emptyDataSetDelegate = nil
+        self.tableView.emptyDataSetSource = nil
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        self.tableView.emptyDataSetDelegate = self
+        self.tableView.emptyDataSetSource = self
+        
+        self.tableView.tableFooterView = UIView()
+        
+        self.tableView.reloadData()
+        
+        /*
         self.fetchRequest = {
             
             let fetchRequest = NSFetchRequest(entityName: "Permission")
@@ -33,9 +47,27 @@ class PermissionsViewController: FetchedResultsViewController {
             
             return fetchRequest
         }()
-        
+        */
         
     }
     
     // MARK: - Methods
+    
+    // MARK: - DZNEmptyDataSetSource
+    
+    func titleForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
+        
+        let text = NSLocalizedString("No Keys", comment: "No Keys")
+        
+        return NSAttributedString(string: text)
+    }
+    
+    func imageForEmptyDataSet(scrollView: UIScrollView!) -> UIImage! {
+        
+        return R.image.keysEmptyData
+    }
+    
+    // MARK: - DZNEmptyDataSetDelegate
+    
+    
 }

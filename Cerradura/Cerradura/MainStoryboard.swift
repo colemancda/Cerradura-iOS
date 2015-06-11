@@ -20,11 +20,11 @@ extension ManagedObjectViewController {
         if regularLayout {
             
             // show empty selection if root VC and visible detail VC
-            if self.navigationController!.viewControllers.first! as UIViewController == self &&
-                self.splitViewController!.viewControllers[1] as UIViewController == self.navigationController! {
+            if self.navigationController!.viewControllers.first! as! UIViewController == self &&
+                self.splitViewController!.viewControllers[1] as! UIViewController == self.navigationController! {
                     
                     // get detail navigation controller stack
-                    let detailNavigationController = self.storyboard!.instantiateViewControllerWithIdentifier(MainStoryboardDetailControllerIdentifier.EmptySelectionDetail.rawValue) as UINavigationController
+                    let detailNavigationController = self.storyboard!.instantiateViewControllerWithIdentifier("EmptySelection") as! UINavigationController
                     
                     // set detailVC
                     self.splitViewController!.showDetailViewController(detailNavigationController, sender: self)
