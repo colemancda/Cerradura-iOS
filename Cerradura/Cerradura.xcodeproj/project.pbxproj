@@ -27,6 +27,9 @@
 		6E225A641B2895AF00E80F99 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E225A631B2895AF00E80F99 /* SettingsViewController.swift */; };
 		6E5C5C451B27621000E9D549 /* StyleKitView.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5C5C441B27621000E9D549 /* StyleKitView.generated.swift */; };
 		6E5C5C471B27633700E9D549 /* StyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5C5C461B27633700E9D549 /* StyleKit.swift */; };
+		6E93CE731B29063C004C7D93 /* PermissionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E93CE721B29063C004C7D93 /* PermissionsViewController.swift */; };
+		6E93CE741B290FF3004C7D93 /* DZNEmptyDataSet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E5C5BD11B26011600E9D549 /* DZNEmptyDataSet.framework */; };
+		6E93CE751B290FF3004C7D93 /* DZNEmptyDataSet.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6E5C5BD11B26011600E9D549 /* DZNEmptyDataSet.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6EAED1701B21254C0049CC35 /* AuthenticationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAED16F1B21254C0049CC35 /* AuthenticationController.swift */; };
 		6EC4C1A51B1CB3A00068522E /* Crypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EFD2C6F1B18CAAC00DFDFF2 /* Crypto.framework */; };
 		6EC4C1A61B1CB3A00068522E /* Crypto.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6EFD2C6F1B18CAAC00DFDFF2 /* Crypto.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -92,6 +95,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = 6E5C5BB41B26011500E9D549;
 			remoteInfo = DZNEmptyDataSetTests;
+		};
+		6E93CE761B290FF3004C7D93 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E5C5BC51B26011500E9D549 /* DZNEmptyDataSet.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E5C5BA81B26011500E9D549;
+			remoteInfo = DZNEmptyDataSet;
 		};
 		6EC4C1A71B1CB3A10068522E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -342,6 +352,7 @@
 			files = (
 				6EFD2CF51B18CE5500DFDFF2 /* CoreCerraduraClient.framework in Embed Frameworks */,
 				6EC4C1A61B1CB3A00068522E /* Crypto.framework in Embed Frameworks */,
+				6E93CE751B290FF3004C7D93 /* DZNEmptyDataSet.framework in Embed Frameworks */,
 				6EFD2D111B18CE5600DFDFF2 /* NetworkObjects.framework in Embed Frameworks */,
 				6E062ED41B20E5CF004DBAB7 /* KeychainAccess.framework in Embed Frameworks */,
 				6EFD2CF91B18CE5500DFDFF2 /* IDZSwiftCommonCrypto.framework in Embed Frameworks */,
@@ -382,6 +393,7 @@
 		6E5C5BC51B26011500E9D549 /* DZNEmptyDataSet.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DZNEmptyDataSet.xcodeproj; path = ../DZNEmptyDataSet/DZNEmptyDataSet/DZNEmptyDataSet.xcodeproj; sourceTree = "<group>"; };
 		6E5C5C441B27621000E9D549 /* StyleKitView.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StyleKitView.generated.swift; path = PaintCode/StyleKitView.generated.swift; sourceTree = SOURCE_ROOT; };
 		6E5C5C461B27633700E9D549 /* StyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StyleKit.swift; path = PaintCode/StyleKit.swift; sourceTree = SOURCE_ROOT; };
+		6E93CE721B29063C004C7D93 /* PermissionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionsViewController.swift; sourceTree = "<group>"; };
 		6EAED16F1B21254C0049CC35 /* AuthenticationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationController.swift; sourceTree = "<group>"; };
 		6EFD2C201B18C22400DFDFF2 /* CoreCerradura.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CoreCerradura.xcodeproj; path = ../CoreCerraduraClient/CoreCerradura/CoreCerradura/CoreCerradura.xcodeproj; sourceTree = "<group>"; };
 		6EFD2C431B18CAAC00DFDFF2 /* IDZSwiftCommonCrypto.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = IDZSwiftCommonCrypto.xcodeproj; path = "/Users/Coleman/Developer/MyProjects/Cerradura-iOS/CoreCerraduraClient/CoreCerradura/CoreCerradura/../IDZSwiftCommonCrypto/IDZSwiftCommonCrypto/IDZSwiftCommonCrypto.xcodeproj"; sourceTree = "<absolute>"; };
@@ -402,6 +414,7 @@
 			files = (
 				6EFD2CF41B18CE5500DFDFF2 /* CoreCerraduraClient.framework in Frameworks */,
 				6EC4C1A51B1CB3A00068522E /* Crypto.framework in Frameworks */,
+				6E93CE741B290FF3004C7D93 /* DZNEmptyDataSet.framework in Frameworks */,
 				6EFD2D101B18CE5600DFDFF2 /* NetworkObjects.framework in Frameworks */,
 				6E062ED31B20E5CF004DBAB7 /* KeychainAccess.framework in Frameworks */,
 				6EFD2CF81B18CE5500DFDFF2 /* IDZSwiftCommonCrypto.framework in Frameworks */,
@@ -564,6 +577,7 @@
 			isa = PBXGroup;
 			children = (
 				6E062E3E1B209FDC004DBAB7 /* FetchedResultsViewController.swift */,
+				6E93CE721B29063C004C7D93 /* PermissionsViewController.swift */,
 			);
 			name = "Fetched Results View Controller";
 			sourceTree = "<group>";
@@ -710,6 +724,7 @@
 				6EFD2D131B18CE5600DFDFF2 /* PBXTargetDependency */,
 				6EC4C1A81B1CB3A10068522E /* PBXTargetDependency */,
 				6E062ED61B20E5D0004DBAB7 /* PBXTargetDependency */,
+				6E93CE771B290FF3004C7D93 /* PBXTargetDependency */,
 			);
 			name = Cerradura;
 			productName = Cerradura;
@@ -1095,6 +1110,7 @@
 				6E062ECD1B20DE92004DBAB7 /* SharedStore.swift in Sources */,
 				6E062E3A1B209FAC004DBAB7 /* ErrorAlert.swift in Sources */,
 				6E0C9BC51B1F3C540018450C /* LoginViewController.swift in Sources */,
+				6E93CE731B29063C004C7D93 /* PermissionsViewController.swift in Sources */,
 				6E062F011B21F45A004DBAB7 /* Error.swift in Sources */,
 				6EAED1701B21254C0049CC35 /* AuthenticationController.swift in Sources */,
 				6E062ED21B20E357004DBAB7 /* Authentication.swift in Sources */,
@@ -1128,6 +1144,11 @@
 			isa = PBXTargetDependency;
 			target = 6E11B2DF1AFE6A9400EEAF37 /* Cerradura */;
 			targetProxy = 6E11B2F61AFE6A9400EEAF37 /* PBXContainerItemProxy */;
+		};
+		6E93CE771B290FF3004C7D93 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DZNEmptyDataSet;
+			targetProxy = 6E93CE761B290FF3004C7D93 /* PBXContainerItemProxy */;
 		};
 		6EC4C1A81B1CB3A10068522E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

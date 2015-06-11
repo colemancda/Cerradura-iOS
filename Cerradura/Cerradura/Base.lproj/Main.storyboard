@@ -73,13 +73,7 @@
                             <outlet property="delegate" destination="azA-Zn-ODa" id="mYd-6U-jxy"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Keys" id="xJI-ei-lFj">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="WJc-Cu-lHj">
-                            <connections>
-                                <segue destination="Nyg-pd-xzP" kind="presentation" identifier="AddLock" modalPresentationStyle="formSheet" id="Vbc-V9-7Be"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Keys" id="xJI-ei-lFj"/>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="yEx-Rr-RmB">
                         <autoresizingMask key="autoresizingMask"/>
                     </refreshControl>
@@ -102,7 +96,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8hL-q6-Q0V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3085" y="-1304"/>
+            <point key="canvasLocation" x="3045" y="-1922"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="UH4-aw-YKy">
@@ -126,7 +120,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l1j-89-mw8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3853" y="-1304"/>
+            <point key="canvasLocation" x="3841" y="-1922"/>
         </scene>
         <!--Title-->
         <scene sceneID="zSe-Sl-5JA">
@@ -157,7 +151,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NJY-0g-nNy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3841" y="-500"/>
+            <point key="canvasLocation" x="3847" y="-532"/>
         </scene>
         <!--Activity-->
         <scene sceneID="P8F-Iv-W2g">
@@ -466,7 +460,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="peR-7u-lTk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3069" y="-500"/>
+            <point key="canvasLocation" x="3045" y="-532"/>
         </scene>
         <!--Empty Selection-->
         <scene sceneID="9df-BP-v0C">
@@ -555,7 +549,7 @@
             </objects>
             <point key="canvasLocation" x="1403" y="-1922"/>
         </scene>
-        <!--View Controller-->
+        <!--Lock-->
         <scene sceneID="K6N-oZ-jt8">
             <objects>
                 <viewController id="L1h-mz-fZa" sceneMemberID="viewController">
@@ -568,7 +562,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ofM-MX-CnD"/>
+                    <navigationItem key="navigationItem" title="Lock" id="ofM-MX-CnD">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="bUA-KD-GPd">
+                            <connections>
+                                <segue destination="Nyg-pd-xzP" kind="presentation" identifier="NewLock" modalPresentationStyle="pageSheet" id="1Dk-z0-FAl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="YL3-U5-2m9" kind="showDetail" identifier="ShowLocalLockDetail" id="EFj-Mv-a8x"/>
                     </connections>
@@ -584,9 +584,9 @@
         <image name="LockTabBarIconSelected" width="25" height="25"/>
         <image name="SettingsTabBarIcon" width="25" height="25"/>
         <image name="SettingsTabBarIconSelected" width="25" height="25"/>
-        <image name="UserProfile" width="336" height="334"/>
+        <image name="UserProfile" width="337" height="345"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="EFj-Mv-a8x"/>
+        <segue reference="FrZ-oe-pXO"/>
     </inferredMetricsTieBreakers>
 </document>
