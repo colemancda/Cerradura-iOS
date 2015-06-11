@@ -363,64 +363,93 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Szn-hz-uxU">
-                                <rect key="frame" x="218" y="218" width="165" height="165"/>
-                                <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="administrator" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZD5-XR-4Bx">
-                                        <rect key="frame" x="0.0" y="8" width="165" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="admin1234" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KUX-DX-2ga">
-                                        <rect key="frame" x="0.0" y="46" width="165" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="http://10.0.0.104:8080" borderStyle="roundedRect" placeholder="Server URL" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MST-gP-KTc">
-                                        <rect key="frame" x="0.0" y="84" width="165" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vy7-TG-dfN">
-                                        <rect key="frame" x="59" y="122" width="47" height="35"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                        <state key="normal" title="Login">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="login:" destination="VFM-uZ-k45" eventType="touchUpInside" id="k10-uh-ddW"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="KUX-DX-2ga" firstAttribute="top" secondItem="ZD5-XR-4Bx" secondAttribute="bottom" constant="8" id="2tk-b7-QFz"/>
-                                    <constraint firstItem="Vy7-TG-dfN" firstAttribute="top" secondItem="MST-gP-KTc" secondAttribute="bottom" constant="8" id="6H9-mg-POz"/>
-                                    <constraint firstAttribute="centerX" secondItem="ZD5-XR-4Bx" secondAttribute="centerX" id="9n0-5n-C67"/>
-                                    <constraint firstAttribute="trailing" secondItem="KUX-DX-2ga" secondAttribute="trailing" id="Aqj-Mp-pBX"/>
-                                    <constraint firstItem="MST-gP-KTc" firstAttribute="leading" secondItem="Szn-hz-uxU" secondAttribute="leading" id="DYv-aU-zw7"/>
-                                    <constraint firstItem="KUX-DX-2ga" firstAttribute="leading" secondItem="Szn-hz-uxU" secondAttribute="leading" id="IgR-Ev-d2c"/>
-                                    <constraint firstAttribute="bottom" secondItem="Vy7-TG-dfN" secondAttribute="bottom" constant="8" id="JSY-Aw-dGq"/>
-                                    <constraint firstAttribute="centerX" secondItem="KUX-DX-2ga" secondAttribute="centerX" id="N5h-04-Wjo"/>
-                                    <constraint firstAttribute="trailing" secondItem="MST-gP-KTc" secondAttribute="trailing" id="PSq-jA-gcy"/>
-                                    <constraint firstItem="KUX-DX-2ga" firstAttribute="top" secondItem="ZD5-XR-4Bx" secondAttribute="bottom" constant="8" id="UKi-EC-TPL"/>
-                                    <constraint firstItem="ZD5-XR-4Bx" firstAttribute="top" secondItem="Szn-hz-uxU" secondAttribute="top" constant="8" id="VAz-Ui-p6T"/>
-                                    <constraint firstItem="ZD5-XR-4Bx" firstAttribute="leading" secondItem="Szn-hz-uxU" secondAttribute="leading" id="WU4-VL-0mE"/>
-                                    <constraint firstAttribute="centerX" secondItem="Vy7-TG-dfN" secondAttribute="centerX" id="Wer-uT-Qi1"/>
-                                    <constraint firstItem="MST-gP-KTc" firstAttribute="top" secondItem="KUX-DX-2ga" secondAttribute="bottom" constant="8" id="gUF-zc-086"/>
-                                    <constraint firstAttribute="trailing" secondItem="ZD5-XR-4Bx" secondAttribute="trailing" id="kDO-ie-Bca"/>
-                                    <constraint firstItem="MST-gP-KTc" firstAttribute="top" secondItem="KUX-DX-2ga" secondAttribute="bottom" constant="8" id="tj9-dK-cC0"/>
-                                    <constraint firstAttribute="centerX" secondItem="MST-gP-KTc" secondAttribute="centerX" id="v8H-tM-unf"/>
-                                </constraints>
-                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppGradient" translatesAutoresizingMaskIntoConstraints="NO" id="95v-Wq-jnM">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ten-Jo-uC5">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="9GJ-kv-e0Q">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Szn-hz-uxU" userLabel="Login View">
+                                            <rect key="frame" x="217" y="218" width="165" height="165"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="administrator" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZD5-XR-4Bx">
+                                                    <rect key="frame" x="0.0" y="8" width="165" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                                </textField>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="admin1234" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KUX-DX-2ga">
+                                                    <rect key="frame" x="0.0" y="46" width="165" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                                                </textField>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="http://10.0.0.104:8080" borderStyle="roundedRect" placeholder="Server URL" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MST-gP-KTc">
+                                                    <rect key="frame" x="0.0" y="84" width="165" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vy7-TG-dfN">
+                                                    <rect key="frame" x="59" y="122" width="47" height="35"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                    <state key="normal" title="Login">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="login:" destination="VFM-uZ-k45" eventType="touchUpInside" id="k10-uh-ddW"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="KUX-DX-2ga" firstAttribute="top" secondItem="ZD5-XR-4Bx" secondAttribute="bottom" constant="8" id="2tk-b7-QFz"/>
+                                                <constraint firstItem="Vy7-TG-dfN" firstAttribute="top" secondItem="MST-gP-KTc" secondAttribute="bottom" constant="8" id="6H9-mg-POz"/>
+                                                <constraint firstAttribute="centerX" secondItem="ZD5-XR-4Bx" secondAttribute="centerX" id="9n0-5n-C67"/>
+                                                <constraint firstAttribute="trailing" secondItem="KUX-DX-2ga" secondAttribute="trailing" id="Aqj-Mp-pBX"/>
+                                                <constraint firstItem="MST-gP-KTc" firstAttribute="leading" secondItem="Szn-hz-uxU" secondAttribute="leading" id="DYv-aU-zw7"/>
+                                                <constraint firstItem="KUX-DX-2ga" firstAttribute="leading" secondItem="Szn-hz-uxU" secondAttribute="leading" id="IgR-Ev-d2c"/>
+                                                <constraint firstAttribute="bottom" secondItem="Vy7-TG-dfN" secondAttribute="bottom" constant="8" id="JSY-Aw-dGq"/>
+                                                <constraint firstAttribute="centerX" secondItem="KUX-DX-2ga" secondAttribute="centerX" id="N5h-04-Wjo"/>
+                                                <constraint firstAttribute="trailing" secondItem="MST-gP-KTc" secondAttribute="trailing" id="PSq-jA-gcy"/>
+                                                <constraint firstItem="KUX-DX-2ga" firstAttribute="top" secondItem="ZD5-XR-4Bx" secondAttribute="bottom" constant="8" id="UKi-EC-TPL"/>
+                                                <constraint firstItem="ZD5-XR-4Bx" firstAttribute="top" secondItem="Szn-hz-uxU" secondAttribute="top" constant="8" id="VAz-Ui-p6T"/>
+                                                <constraint firstItem="ZD5-XR-4Bx" firstAttribute="leading" secondItem="Szn-hz-uxU" secondAttribute="leading" id="WU4-VL-0mE"/>
+                                                <constraint firstAttribute="centerX" secondItem="Vy7-TG-dfN" secondAttribute="centerX" id="Wer-uT-Qi1"/>
+                                                <constraint firstItem="MST-gP-KTc" firstAttribute="top" secondItem="KUX-DX-2ga" secondAttribute="bottom" constant="8" id="gUF-zc-086"/>
+                                                <constraint firstAttribute="trailing" secondItem="ZD5-XR-4Bx" secondAttribute="trailing" id="kDO-ie-Bca"/>
+                                                <constraint firstItem="MST-gP-KTc" firstAttribute="top" secondItem="KUX-DX-2ga" secondAttribute="bottom" constant="8" id="tj9-dK-cC0"/>
+                                                <constraint firstAttribute="centerX" secondItem="MST-gP-KTc" secondAttribute="centerX" id="v8H-tM-unf"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="centerX" secondItem="Szn-hz-uxU" secondAttribute="centerX" id="3zA-zn-UQz"/>
+                                        <constraint firstAttribute="centerY" secondItem="Szn-hz-uxU" secondAttribute="centerY" id="TsX-3X-PM0"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
                         </subviews>
-                        <color key="backgroundColor" red="0.098039215686274508" green="0.45490196078431372" blue="0.82352941176470584" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="Szn-hz-uxU" secondAttribute="centerX" id="Dkg-Zg-ths"/>
-                            <constraint firstAttribute="centerX" secondItem="Szn-hz-uxU" secondAttribute="centerX" id="YlS-6m-5f9"/>
-                            <constraint firstAttribute="centerY" secondItem="Szn-hz-uxU" secondAttribute="centerY" id="aXN-TT-waf"/>
+                            <constraint firstAttribute="bottom" secondItem="95v-Wq-jnM" secondAttribute="bottom" id="1Jd-Y1-1NA"/>
+                            <constraint firstItem="95v-Wq-jnM" firstAttribute="top" secondItem="7zF-1z-Q88" secondAttribute="top" id="3z4-mJ-Id5"/>
+                            <constraint firstItem="N06-ve-3vm" firstAttribute="top" secondItem="Ten-Jo-uC5" secondAttribute="bottom" id="JYa-la-Zvn"/>
+                            <constraint firstAttribute="trailing" secondItem="Ten-Jo-uC5" secondAttribute="trailing" id="Lhb-PE-GhX"/>
+                            <constraint firstAttribute="trailing" secondItem="95v-Wq-jnM" secondAttribute="trailing" id="g0V-dN-Goi"/>
+                            <constraint firstItem="95v-Wq-jnM" firstAttribute="leading" secondItem="7zF-1z-Q88" secondAttribute="leading" id="hPR-Yw-DJB"/>
+                            <constraint firstItem="N06-ve-3vm" firstAttribute="top" secondItem="95v-Wq-jnM" secondAttribute="bottom" id="iu8-8p-zVm"/>
+                            <constraint firstItem="Ten-Jo-uC5" firstAttribute="top" secondItem="7zF-1z-Q88" secondAttribute="top" id="kkQ-Lw-3Ac"/>
+                            <constraint firstItem="Ten-Jo-uC5" firstAttribute="leading" secondItem="7zF-1z-Q88" secondAttribute="leading" id="pgG-uO-V64"/>
+                            <constraint firstItem="95v-Wq-jnM" firstAttribute="top" secondItem="jvd-uC-uqy" secondAttribute="bottom" id="umG-ai-Gkf"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="umG-ai-Gkf"/>
+                                <exclude reference="iu8-8p-zVm"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="passwordTextField" destination="KUX-DX-2ga" id="vvb-Nk-bX9"/>
@@ -581,6 +610,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="AppGradient" width="500" height="500"/>
         <image name="KeysTabBarIcon" width="25" height="25"/>
         <image name="LockTabBarIcon" width="25" height="25"/>
         <image name="LockTabBarIconSelected" width="25" height="25"/>
