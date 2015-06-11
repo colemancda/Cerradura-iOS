@@ -59,7 +59,7 @@ class PermissionsViewController: FetchedResultsViewController, DZNEmptyDataSetDe
         
         let text = NSLocalizedString("No Keys", comment: "No Keys")
         
-        return NSAttributedString(string: text)
+        return NSAttributedString(string: text, attributes: [NSForegroundColorAttributeName: StyleKit.placeholderGrey])
     }
     
     func imageForEmptyDataSet(scrollView: UIScrollView!) -> UIImage! {

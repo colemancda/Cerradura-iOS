@@ -18,6 +18,9 @@ public class StyleKit : NSObject {
 
     private struct Cache {
         static var cerraduraBlue: UIColor = UIColor(red: 0.098, green: 0.455, blue: 0.824, alpha: 1.000)
+        static var placeholderGrey: UIColor = UIColor(red: 0.902, green: 0.902, blue: 0.902, alpha: 1.000)
+        static var imageOfPunkuDoorWhiteLarge: UIImage?
+        static var punkuDoorWhiteLargeTargets: [AnyObject]?
         static var imageOfLockTabBarIconSelected: UIImage?
         static var lockTabBarIconSelectedTargets: [AnyObject]?
         static var imageOfLockTabBarIcon: UIImage?
@@ -31,6 +34,7 @@ public class StyleKit : NSObject {
     //// Colors
 
     public class var cerraduraBlue: UIColor { return Cache.cerraduraBlue }
+    public class var placeholderGrey: UIColor { return Cache.placeholderGrey }
 
     //// Drawing Methods
 
@@ -343,6 +347,76 @@ public class StyleKit : NSObject {
 
         StyleKit.cerraduraBlue.setFill()
         bezierPath.fill()
+    }
+
+    public class func drawPunkuDoorWhiteLarge() {
+        //// Color Declarations
+        let whiteFillColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000)
+
+        //// Bezier Drawing
+        var bezierPath = UIBezierPath()
+        bezierPath.moveToPoint(CGPointMake(169.58, -0))
+        bezierPath.addLineToPoint(CGPointMake(830.42, -0))
+        bezierPath.addCurveToPoint(CGPointMake(1000, 148.5), controlPoint1: CGPointMake(923.68, -0), controlPoint2: CGPointMake(1000, 66.84))
+        bezierPath.addLineToPoint(CGPointMake(1000, 1628.3))
+        bezierPath.addCurveToPoint(CGPointMake(830.42, 1776.8), controlPoint1: CGPointMake(1000, 1709.98), controlPoint2: CGPointMake(923.68, 1776.8))
+        bezierPath.addLineToPoint(CGPointMake(169.58, 1776.8))
+        bezierPath.addCurveToPoint(CGPointMake(0, 1628.3), controlPoint1: CGPointMake(76.32, 1776.8), controlPoint2: CGPointMake(0, 1709.98))
+        bezierPath.addLineToPoint(CGPointMake(0, 148.5))
+        bezierPath.addCurveToPoint(CGPointMake(169.58, -0), controlPoint1: CGPointMake(0, 66.84), controlPoint2: CGPointMake(76.32, -0))
+        bezierPath.addLineToPoint(CGPointMake(169.58, -0))
+        bezierPath.closePath()
+        bezierPath.moveToPoint(CGPointMake(369.08, 838.32))
+        bezierPath.addLineToPoint(CGPointMake(369.08, 838.32))
+        bezierPath.addCurveToPoint(CGPointMake(376.47, 845.59), controlPoint1: CGPointMake(373.15, 838.32), controlPoint2: CGPointMake(376.47, 841.58))
+        bezierPath.addLineToPoint(CGPointMake(376.47, 880.41))
+        bezierPath.addCurveToPoint(CGPointMake(369.08, 887.69), controlPoint1: CGPointMake(376.47, 884.42), controlPoint2: CGPointMake(373.15, 887.69))
+        bezierPath.addLineToPoint(CGPointMake(369.08, 887.69))
+        bezierPath.addCurveToPoint(CGPointMake(361.7, 880.41), controlPoint1: CGPointMake(365.02, 887.69), controlPoint2: CGPointMake(361.7, 884.42))
+        bezierPath.addLineToPoint(CGPointMake(361.7, 845.59))
+        bezierPath.addCurveToPoint(CGPointMake(369.08, 838.32), controlPoint1: CGPointMake(361.7, 841.58), controlPoint2: CGPointMake(365.02, 838.32))
+        bezierPath.addLineToPoint(CGPointMake(369.08, 838.32))
+        bezierPath.closePath()
+        bezierPath.moveToPoint(CGPointMake(488.89, 1622.21))
+        bezierPath.addCurveToPoint(CGPointMake(552.51, 1684.63), controlPoint1: CGPointMake(524.04, 1622.21), controlPoint2: CGPointMake(552.51, 1650.15))
+        bezierPath.addCurveToPoint(CGPointMake(488.89, 1747.05), controlPoint1: CGPointMake(552.51, 1719.09), controlPoint2: CGPointMake(524.04, 1747.05))
+        bezierPath.addCurveToPoint(CGPointMake(425.28, 1684.63), controlPoint1: CGPointMake(453.78, 1747.05), controlPoint2: CGPointMake(425.28, 1719.09))
+        bezierPath.addCurveToPoint(CGPointMake(488.89, 1622.21), controlPoint1: CGPointMake(425.28, 1650.15), controlPoint2: CGPointMake(453.78, 1622.21))
+        bezierPath.addLineToPoint(CGPointMake(488.89, 1622.21))
+        bezierPath.closePath()
+        bezierPath.moveToPoint(CGPointMake(300.62, 266.77))
+        bezierPath.addLineToPoint(CGPointMake(875.36, 209.95))
+        bezierPath.addLineToPoint(CGPointMake(64.33, 209.95))
+        bezierPath.addLineToPoint(CGPointMake(64.33, 1577.09))
+        bezierPath.addLineToPoint(CGPointMake(718.96, 1577.09))
+        bezierPath.addLineToPoint(CGPointMake(301.58, 1497.3))
+        bezierPath.addCurveToPoint(CGPointMake(261.56, 1452.4), controlPoint1: CGPointMake(279.98, 1493.16), controlPoint2: CGPointMake(261.56, 1477.09))
+        bezierPath.addLineToPoint(CGPointMake(261.78, 879.98))
+        bezierPath.addLineToPoint(CGPointMake(260.63, 311.64))
+        bezierPath.addCurveToPoint(CGPointMake(300.62, 266.77), controlPoint1: CGPointMake(260.58, 286.97), controlPoint2: CGPointMake(278.73, 268.92))
+        bezierPath.addLineToPoint(CGPointMake(300.62, 266.77))
+        bezierPath.closePath()
+        bezierPath.moveToPoint(CGPointMake(436.76, 109.13))
+        bezierPath.addLineToPoint(CGPointMake(574.94, 109.13))
+        bezierPath.addLineToPoint(CGPointMake(574.94, 121.94))
+        bezierPath.addLineToPoint(CGPointMake(436.76, 121.94))
+        bezierPath.addLineToPoint(CGPointMake(436.76, 109.13))
+        bezierPath.addLineToPoint(CGPointMake(436.76, 109.13))
+        bezierPath.closePath()
+        bezierPath.moveToPoint(CGPointMake(370.81, 102.58))
+        bezierPath.addCurveToPoint(CGPointMake(385.04, 115.46), controlPoint1: CGPointMake(378.66, 102.58), controlPoint2: CGPointMake(385.04, 108.34))
+        bezierPath.addCurveToPoint(CGPointMake(370.81, 128.35), controlPoint1: CGPointMake(385.04, 122.57), controlPoint2: CGPointMake(378.66, 128.35))
+        bezierPath.addCurveToPoint(CGPointMake(356.55, 115.46), controlPoint1: CGPointMake(362.93, 128.35), controlPoint2: CGPointMake(356.55, 122.57))
+        bezierPath.addCurveToPoint(CGPointMake(370.81, 102.58), controlPoint1: CGPointMake(356.55, 108.34), controlPoint2: CGPointMake(362.93, 102.58))
+        bezierPath.addLineToPoint(CGPointMake(370.81, 102.58))
+        bezierPath.closePath()
+        bezierPath.usesEvenOddFillRule = true;
+
+        whiteFillColor.setFill()
+        bezierPath.fill()
+        whiteFillColor.setStroke()
+        bezierPath.lineWidth = 0
+        bezierPath.stroke()
     }
 
     public class func drawLockTabBarIconSelected() {
@@ -1325,6 +1399,20 @@ public class StyleKit : NSObject {
         return imageOfPermissionBadgeAnytime
     }
 
+    public class var imageOfPunkuDoorWhiteLarge: UIImage {
+        if Cache.imageOfPunkuDoorWhiteLarge != nil {
+            return Cache.imageOfPunkuDoorWhiteLarge!
+        }
+
+        UIGraphicsBeginImageContextWithOptions(CGSizeMake(1000, 1777), false, 0)
+            StyleKit.drawPunkuDoorWhiteLarge()
+
+        Cache.imageOfPunkuDoorWhiteLarge = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+
+        return Cache.imageOfPunkuDoorWhiteLarge!
+    }
+
     public class var imageOfLockTabBarIconSelected: UIImage {
         if Cache.imageOfLockTabBarIconSelected != nil {
             return Cache.imageOfLockTabBarIconSelected!
@@ -1402,6 +1490,16 @@ public class StyleKit : NSObject {
     }
 
     //// Customization Infrastructure
+
+    @IBOutlet var punkuDoorWhiteLargeTargets: [AnyObject]! {
+        get { return Cache.punkuDoorWhiteLargeTargets }
+        set {
+            Cache.punkuDoorWhiteLargeTargets = newValue
+            for target: AnyObject in newValue {
+                target.setImage(StyleKit.imageOfPunkuDoorWhiteLarge)
+            }
+        }
+    }
 
     @IBOutlet var lockTabBarIconSelectedTargets: [AnyObject]! {
         get { return Cache.lockTabBarIconSelectedTargets }
