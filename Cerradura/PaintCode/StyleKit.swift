@@ -18,7 +18,6 @@ public class StyleKit : NSObject {
 
     private struct Cache {
         static var cerraduraBlue: UIColor = UIColor(red: 0.098, green: 0.455, blue: 0.824, alpha: 1.000)
-        static var cerraduraGreen: UIColor = UIColor(red: 0.820, green: 0.971, blue: 0.917, alpha: 1.000)
         static var imageOfLockTabBarIconSelected: UIImage?
         static var lockTabBarIconSelectedTargets: [AnyObject]?
         static var imageOfLockTabBarIcon: UIImage?
@@ -32,7 +31,6 @@ public class StyleKit : NSObject {
     //// Colors
 
     public class var cerraduraBlue: UIColor { return Cache.cerraduraBlue }
-    public class var cerraduraGreen: UIColor { return Cache.cerraduraGreen }
 
     //// Drawing Methods
 
@@ -286,60 +284,60 @@ public class StyleKit : NSObject {
 
         //// Bezier Drawing
         var bezierPath = UIBezierPath()
-        bezierPath.moveToPoint(CGPointMake(260.72, 0.02))
-        bezierPath.addLineToPoint(CGPointMake(1274.91, 0.02))
-        bezierPath.addCurveToPoint(CGPointMake(1535.17, 232.27), controlPoint1: CGPointMake(1418.05, 0.02), controlPoint2: CGPointMake(1535.17, 104.56))
-        bezierPath.addLineToPoint(CGPointMake(1535.17, 2546.66))
-        bezierPath.addCurveToPoint(CGPointMake(1274.91, 2778.91), controlPoint1: CGPointMake(1535.17, 2674.41), controlPoint2: CGPointMake(1418.05, 2778.91))
-        bezierPath.addLineToPoint(CGPointMake(260.72, 2778.91))
-        bezierPath.addCurveToPoint(CGPointMake(0.46, 2546.66), controlPoint1: CGPointMake(117.59, 2778.91), controlPoint2: CGPointMake(0.46, 2674.41))
-        bezierPath.addLineToPoint(CGPointMake(0.46, 232.27))
-        bezierPath.addCurveToPoint(CGPointMake(260.72, 0.02), controlPoint1: CGPointMake(0.46, 104.56), controlPoint2: CGPointMake(117.59, 0.02))
-        bezierPath.addLineToPoint(CGPointMake(260.72, 0.02))
+        bezierPath.moveToPoint(CGPointMake(18.99, 0))
+        bezierPath.addLineToPoint(CGPointMake(93.01, 0))
+        bezierPath.addCurveToPoint(CGPointMake(112, 16.63), controlPoint1: CGPointMake(103.45, 0), controlPoint2: CGPointMake(112, 7.49))
+        bezierPath.addLineToPoint(CGPointMake(112, 182.37))
+        bezierPath.addCurveToPoint(CGPointMake(93.01, 199), controlPoint1: CGPointMake(112, 191.52), controlPoint2: CGPointMake(103.45, 199))
+        bezierPath.addLineToPoint(CGPointMake(18.99, 199))
+        bezierPath.addCurveToPoint(CGPointMake(0, 182.37), controlPoint1: CGPointMake(8.55, 199), controlPoint2: CGPointMake(0, 191.52))
+        bezierPath.addLineToPoint(CGPointMake(0, 16.63))
+        bezierPath.addCurveToPoint(CGPointMake(18.99, 0), controlPoint1: CGPointMake(0, 7.49), controlPoint2: CGPointMake(8.55, 0))
+        bezierPath.addLineToPoint(CGPointMake(18.99, 0))
         bezierPath.closePath()
-        bezierPath.moveToPoint(CGPointMake(566.9, 1311.14))
-        bezierPath.addLineToPoint(CGPointMake(566.9, 1311.14))
-        bezierPath.addCurveToPoint(CGPointMake(578.23, 1322.51), controlPoint1: CGPointMake(573.13, 1311.14), controlPoint2: CGPointMake(578.23, 1316.24))
-        bezierPath.addLineToPoint(CGPointMake(578.23, 1376.98))
-        bezierPath.addCurveToPoint(CGPointMake(566.9, 1388.35), controlPoint1: CGPointMake(578.23, 1383.25), controlPoint2: CGPointMake(573.13, 1388.35))
-        bezierPath.addLineToPoint(CGPointMake(566.9, 1388.35))
-        bezierPath.addCurveToPoint(CGPointMake(555.56, 1376.98), controlPoint1: CGPointMake(560.66, 1388.35), controlPoint2: CGPointMake(555.56, 1383.25))
-        bezierPath.addLineToPoint(CGPointMake(555.56, 1322.51))
-        bezierPath.addCurveToPoint(CGPointMake(566.9, 1311.14), controlPoint1: CGPointMake(555.56, 1316.24), controlPoint2: CGPointMake(560.66, 1311.14))
-        bezierPath.addLineToPoint(CGPointMake(566.9, 1311.14))
+        bezierPath.moveToPoint(CGPointMake(41.34, 93.89))
+        bezierPath.addLineToPoint(CGPointMake(41.34, 93.89))
+        bezierPath.addCurveToPoint(CGPointMake(42.16, 94.71), controlPoint1: CGPointMake(41.79, 93.89), controlPoint2: CGPointMake(42.16, 94.26))
+        bezierPath.addLineToPoint(CGPointMake(42.16, 98.61))
+        bezierPath.addCurveToPoint(CGPointMake(41.34, 99.42), controlPoint1: CGPointMake(42.16, 99.05), controlPoint2: CGPointMake(41.79, 99.42))
+        bezierPath.addLineToPoint(CGPointMake(41.34, 99.42))
+        bezierPath.addCurveToPoint(CGPointMake(40.51, 98.61), controlPoint1: CGPointMake(40.88, 99.42), controlPoint2: CGPointMake(40.51, 99.05))
+        bezierPath.addLineToPoint(CGPointMake(40.51, 94.71))
+        bezierPath.addCurveToPoint(CGPointMake(41.34, 93.89), controlPoint1: CGPointMake(40.51, 94.26), controlPoint2: CGPointMake(40.88, 93.89))
+        bezierPath.addLineToPoint(CGPointMake(41.34, 93.89))
         bezierPath.closePath()
-        bezierPath.moveToPoint(CGPointMake(750.77, 2537.14))
-        bezierPath.addCurveToPoint(CGPointMake(848.39, 2634.76), controlPoint1: CGPointMake(804.7, 2537.14), controlPoint2: CGPointMake(848.39, 2580.83))
-        bezierPath.addCurveToPoint(CGPointMake(750.77, 2732.39), controlPoint1: CGPointMake(848.39, 2688.66), controlPoint2: CGPointMake(804.7, 2732.39))
-        bezierPath.addCurveToPoint(CGPointMake(653.14, 2634.76), controlPoint1: CGPointMake(696.87, 2732.39), controlPoint2: CGPointMake(653.14, 2688.66))
-        bezierPath.addCurveToPoint(CGPointMake(750.77, 2537.14), controlPoint1: CGPointMake(653.14, 2580.83), controlPoint2: CGPointMake(696.87, 2537.14))
-        bezierPath.addLineToPoint(CGPointMake(750.77, 2537.14))
+        bezierPath.moveToPoint(CGPointMake(54.76, 181.69))
+        bezierPath.addCurveToPoint(CGPointMake(61.88, 188.68), controlPoint1: CGPointMake(58.69, 181.69), controlPoint2: CGPointMake(61.88, 184.81))
+        bezierPath.addCurveToPoint(CGPointMake(54.76, 195.67), controlPoint1: CGPointMake(61.88, 192.54), controlPoint2: CGPointMake(58.69, 195.67))
+        bezierPath.addCurveToPoint(CGPointMake(47.63, 188.68), controlPoint1: CGPointMake(50.82, 195.67), controlPoint2: CGPointMake(47.63, 192.54))
+        bezierPath.addCurveToPoint(CGPointMake(54.76, 181.69), controlPoint1: CGPointMake(47.63, 184.81), controlPoint2: CGPointMake(50.82, 181.69))
+        bezierPath.addLineToPoint(CGPointMake(54.76, 181.69))
         bezierPath.closePath()
-        bezierPath.moveToPoint(CGPointMake(461.82, 417.24))
-        bezierPath.addLineToPoint(CGPointMake(1343.89, 328.38))
-        bezierPath.addLineToPoint(CGPointMake(99.18, 328.38))
-        bezierPath.addLineToPoint(CGPointMake(99.18, 2466.57))
-        bezierPath.addLineToPoint(CGPointMake(1103.85, 2466.57))
-        bezierPath.addLineToPoint(CGPointMake(463.3, 2341.77))
-        bezierPath.addCurveToPoint(CGPointMake(401.88, 2271.55), controlPoint1: CGPointMake(430.15, 2335.31), controlPoint2: CGPointMake(401.88, 2310.18))
-        bezierPath.addLineToPoint(CGPointMake(402.22, 1376.29))
-        bezierPath.addLineToPoint(CGPointMake(400.45, 487.43))
-        bezierPath.addCurveToPoint(CGPointMake(461.82, 417.24), controlPoint1: CGPointMake(400.37, 448.84), controlPoint2: CGPointMake(428.22, 420.6))
-        bezierPath.addLineToPoint(CGPointMake(461.82, 417.24))
+        bezierPath.moveToPoint(CGPointMake(33.67, 29.88))
+        bezierPath.addLineToPoint(CGPointMake(98.04, 23.51))
+        bezierPath.addLineToPoint(CGPointMake(7.2, 23.51))
+        bezierPath.addLineToPoint(CGPointMake(7.2, 176.63))
+        bezierPath.addLineToPoint(CGPointMake(80.52, 176.63))
+        bezierPath.addLineToPoint(CGPointMake(33.78, 167.7))
+        bezierPath.addCurveToPoint(CGPointMake(29.29, 162.67), controlPoint1: CGPointMake(31.36, 167.23), controlPoint2: CGPointMake(29.29, 165.43))
+        bezierPath.addLineToPoint(CGPointMake(29.32, 98.56))
+        bezierPath.addLineToPoint(CGPointMake(29.19, 34.9))
+        bezierPath.addCurveToPoint(CGPointMake(33.67, 29.88), controlPoint1: CGPointMake(29.18, 32.14), controlPoint2: CGPointMake(31.22, 30.12))
+        bezierPath.addLineToPoint(CGPointMake(33.67, 29.88))
         bezierPath.closePath()
-        bezierPath.moveToPoint(CGPointMake(670.76, 170.7))
-        bezierPath.addLineToPoint(CGPointMake(882.83, 170.7))
-        bezierPath.addLineToPoint(CGPointMake(882.83, 190.73))
-        bezierPath.addLineToPoint(CGPointMake(670.76, 190.73))
-        bezierPath.addLineToPoint(CGPointMake(670.76, 170.7))
-        bezierPath.addLineToPoint(CGPointMake(670.76, 170.7))
+        bezierPath.moveToPoint(CGPointMake(48.92, 12.22))
+        bezierPath.addLineToPoint(CGPointMake(64.39, 12.22))
+        bezierPath.addLineToPoint(CGPointMake(64.39, 13.66))
+        bezierPath.addLineToPoint(CGPointMake(48.92, 13.66))
+        bezierPath.addLineToPoint(CGPointMake(48.92, 12.22))
+        bezierPath.addLineToPoint(CGPointMake(48.92, 12.22))
         bezierPath.closePath()
-        bezierPath.moveToPoint(CGPointMake(569.54, 160.46))
-        bezierPath.addCurveToPoint(CGPointMake(591.39, 180.6), controlPoint1: CGPointMake(581.6, 160.46), controlPoint2: CGPointMake(591.39, 169.45))
-        bezierPath.addCurveToPoint(CGPointMake(569.54, 200.75), controlPoint1: CGPointMake(591.39, 191.72), controlPoint2: CGPointMake(581.6, 200.75))
-        bezierPath.addCurveToPoint(CGPointMake(547.66, 180.6), controlPoint1: CGPointMake(557.45, 200.75), controlPoint2: CGPointMake(547.66, 191.72))
-        bezierPath.addCurveToPoint(CGPointMake(569.54, 160.46), controlPoint1: CGPointMake(547.66, 169.45), controlPoint2: CGPointMake(557.45, 160.46))
-        bezierPath.addLineToPoint(CGPointMake(569.54, 160.46))
+        bezierPath.moveToPoint(CGPointMake(41.53, 11.49))
+        bezierPath.addCurveToPoint(CGPointMake(43.12, 12.93), controlPoint1: CGPointMake(42.41, 11.49), controlPoint2: CGPointMake(43.12, 12.13))
+        bezierPath.addCurveToPoint(CGPointMake(41.53, 14.37), controlPoint1: CGPointMake(43.12, 13.73), controlPoint2: CGPointMake(42.41, 14.37))
+        bezierPath.addCurveToPoint(CGPointMake(39.93, 12.93), controlPoint1: CGPointMake(40.65, 14.37), controlPoint2: CGPointMake(39.93, 13.73))
+        bezierPath.addCurveToPoint(CGPointMake(41.53, 11.49), controlPoint1: CGPointMake(39.93, 12.13), controlPoint2: CGPointMake(40.65, 11.49))
+        bezierPath.addLineToPoint(CGPointMake(41.53, 11.49))
         bezierPath.closePath()
         bezierPath.usesEvenOddFillRule = true;
 
@@ -349,7 +347,7 @@ public class StyleKit : NSObject {
 
     public class func drawLockTabBarIconSelected() {
         //// Color Declarations
-        let fillColor = UIColor(red: 0.000, green: 0.000, blue: 0.000, alpha: 1.000)
+        let blackFillColor = UIColor(red: 0.000, green: 0.000, blue: 0.000, alpha: 1.000)
 
         //// Bezier Drawing
         var bezierPath = UIBezierPath()
@@ -370,7 +368,7 @@ public class StyleKit : NSObject {
         bezierPath.closePath()
         bezierPath.usesEvenOddFillRule = true;
 
-        fillColor.setFill()
+        blackFillColor.setFill()
         bezierPath.fill()
     }
 
@@ -700,12 +698,12 @@ public class StyleKit : NSObject {
 
     public class func drawLockTabBarIcon() {
         //// Color Declarations
-        let fillColor = UIColor(red: 0.000, green: 0.000, blue: 0.000, alpha: 1.000)
+        let blackFillColor = UIColor(red: 0.000, green: 0.000, blue: 0.000, alpha: 1.000)
 
         //// Group
         //// Oval Drawing
         var ovalPath = UIBezierPath(ovalInRect: CGRectMake(0.5, 0.5, 24, 24))
-        fillColor.setStroke()
+        blackFillColor.setStroke()
         ovalPath.lineWidth = 1
         ovalPath.stroke()
 
@@ -725,7 +723,7 @@ public class StyleKit : NSObject {
         bezierPath.closePath()
         bezierPath.usesEvenOddFillRule = true;
 
-        fillColor.setFill()
+        blackFillColor.setFill()
         bezierPath.fill()
     }
 
@@ -1445,6 +1443,23 @@ public class StyleKit : NSObject {
         }
     }
 
+}
+
+
+
+extension UIColor {
+    func blendedColorWithFraction(fraction: CGFloat, ofColor color: UIColor) -> UIColor {
+        var r1: CGFloat = 1.0, g1: CGFloat = 1.0, b1: CGFloat = 1.0, a1: CGFloat = 1.0
+        var r2: CGFloat = 1.0, g2: CGFloat = 1.0, b2: CGFloat = 1.0, a2: CGFloat = 1.0
+
+        self.getRed(&r1, green: &g1, blue: &b1, alpha: &a1)
+        color.getRed(&r2, green: &g2, blue: &b2, alpha: &a2)
+
+        return UIColor(red: r1 * (1 - fraction) + r2 * fraction,
+            green: g1 * (1 - fraction) + g2 * fraction,
+            blue: b1 * (1 - fraction) + b2 * fraction,
+            alpha: a1 * (1 - fraction) + a2 * fraction);
+    }
 }
 
 @objc protocol StyleKitSettableImage {

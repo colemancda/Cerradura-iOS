@@ -8,11 +8,12 @@
 
 import Foundation
 import UIKit
+import CoreData
 import CoreCerradura
 import CoreCerraduraClient
 import DZNEmptyDataSet
 
-class PermissionsViewController: UITableViewController {
+class PermissionsViewController: FetchedResultsViewController {
     
     // MARK: - IB Outlets
     
@@ -23,7 +24,18 @@ class PermissionsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        self.fetchRequest = {
+            
+            let fetchRequest = NSFetchRequest(entityName: "Permission")
+            
+            fetchRequest.predicate = NSPredicate(format: "archived == NO && user == %@", argumentArray: [])
+            
+            return fetchRequest
+        }()
+        
+        
     }
     
-    
+    // MARK: - Methods
 }

@@ -489,7 +489,8 @@
 				6EAED16F1B21254C0049CC35 /* AuthenticationController.swift */,
 				6E0C9BC41B1F3C540018450C /* LoginViewController.swift */,
 				6E225A631B2895AF00E80F99 /* SettingsViewController.swift */,
-				6E93CE601B29022D004C7D93 /* Fetched Results View Controller */,
+				6E93CE781B2910FB004C7D93 /* Managed Object View Controllers */,
+				6E93CE601B29022D004C7D93 /* Fetched Results View Controllers */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -573,13 +574,20 @@
 			name = View;
 			sourceTree = "<group>";
 		};
-		6E93CE601B29022D004C7D93 /* Fetched Results View Controller */ = {
+		6E93CE601B29022D004C7D93 /* Fetched Results View Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				6E062E3E1B209FDC004DBAB7 /* FetchedResultsViewController.swift */,
 				6E93CE721B29063C004C7D93 /* PermissionsViewController.swift */,
 			);
-			name = "Fetched Results View Controller";
+			name = "Fetched Results View Controllers";
+			sourceTree = "<group>";
+		};
+		6E93CE781B2910FB004C7D93 /* Managed Object View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Managed Object View Controllers";
 			sourceTree = "<group>";
 		};
 		6EFD2C1F1B18C06E00DFDFF2 /* Frameworks */ = {
