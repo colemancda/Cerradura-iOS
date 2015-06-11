@@ -201,7 +201,11 @@
         <scene sceneID="Ma0-8u-brX">
             <objects>
                 <navigationController id="ROh-1w-oKR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Keys" image="KeysTabBarIcon" selectedImage="KeysTabBarIconSelected" id="LJf-uI-0kG"/>
+                    <tabBarItem key="tabBarItem" title="Keys" image="KeysTabBarIcon" id="LJf-uI-0kG">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="KeysTabBarIconSelected"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XuK-hS-kos">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
