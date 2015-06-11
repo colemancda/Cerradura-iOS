@@ -23,7 +23,6 @@ class PermissionsViewController: FetchedResultsViewController, DZNEmptyDataSetSo
     
     deinit {
         
-        self.tableView.emptyDataSetDelegate = nil
         self.tableView.emptyDataSetSource = nil
     }
     
@@ -31,12 +30,13 @@ class PermissionsViewController: FetchedResultsViewController, DZNEmptyDataSetSo
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        //self.tableView.emptyDataSetDelegate = self
-        //self.tableView.emptyDataSetSource = self
+        self.store = Store.sharedStore
         
-        self.tableView.tableFooterView = UIView()
+        self.tableView.emptyDataSetSource = self
         
         self.tableView.reloadData()
+        
+        self.localSortDescriptors = [NSSortDescriptor(key: "lock.name", ascending: true)]
         
         self.fetchRequest = {
             
@@ -59,6 +59,69 @@ class PermissionsViewController: FetchedResultsViewController, DZNEmptyDataSetSo
         return self.tableView.dequeueReusableCellWithIdentifier(R.reuseIdentifier.permissionCell, forIndexPath: indexPath)!
     }
     
+    override func configureCell(cell: UITableViewCell, atIndexPath indexPath: NSIndexPath, withError error: NSError?) {
+        
+        if error != nil {
+            
+            // TODO: Configure cell for error
+            
+        }
+        
+        let permissionCell = cell as! PermissionCell
+        
+        // get model object
+        let permission = self.searchResults[indexPath.row] as! Permission
+        
+        let dateCached = permission.valueForKey(Store.sharedStore.dateCachedAttributeName!) as? NSDate
+        
+        // not cached
+        
+        if dateCached == nil {
+            
+            // configure empty cell...
+            
+            permissionCell.permissionLockNameLabel!.text = NSLocalizedString("Loading...", comment: "Loading...")
+            
+            cell.userInteractionEnabled = false
+            
+            return
+        }
+        
+        // configure cell...
+        
+        cell.userInteractionEnabled = true
+        
+        // permissionCell.permissionLockNameLabel!.text = permission.lock.name
+        
+        permissionCell.permissionTypeLabel.text = {
+            
+            return "AnyTime"
+            
+        }()
+        
+        // fix detail text label not showing
+        cell.layoutIfNeeded()
+    }
+    
+    // MARK: - UITableViewDataSource
+    
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        
+        let count = super.numberOfSectionsInTableView(tableView)
+        
+        // hide separators for empty table view
+        if count == 0 {
+            
+            tableView.tableFooterView = UIView()
+        }
+        else {
+            
+            tableView.tableFooterView = nil
+        }
+        
+        return count
+    }
+    
     // MARK: - DZNEmptyDataSetSource
     
     func titleForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
@@ -72,8 +135,16 @@ class PermissionsViewController: FetchedResultsViewController, DZNEmptyDataSetSo
         
         return R.image.keysEmptyData
     }
-    
-    // MARK: - DZNEmptyDataSetDelegate
-    
-    
 }
+
+// MARK: - Table View Cell
+
+class PermissionCell: UITableViewCell {
+    
+    @IBOutlet weak var permissionImageView: StyleKitView!
+    
+    @IBOutlet weak var permissionLockNameLabel: UILabel!
+    
+    @IBOutlet weak var permissionTypeLabel: UILabel!
+}
+

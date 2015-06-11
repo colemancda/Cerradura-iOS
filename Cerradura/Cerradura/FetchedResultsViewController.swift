@@ -9,15 +9,19 @@
 import Foundation
 import UIKit
 import CoreData
-import CoreCerradura
-import CoreCerraduraClient
+import NetworkObjects
+import ExSwift
 
-/** Fetches instances of an entity on the server and displays them in a table view. */
-class FetchedResultsViewController: UITableViewController, NSFetchedResultsControllerDelegate {
+/** Fetches instances of an entity on the server and displays them in a table view. Supports single section only. */
+public class FetchedResultsViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
     // MARK: - Properties
     
-    var fetchRequest: NSFetchRequest? {
+    /** NetworkObjects Store that this view controller will use. Make sure to set this value before loading this class. */
+    public var store: Store!
+    
+    /** The fetch request that will be converted into a search request. Also used to created a fetched results controller to display content. */
+    public var fetchRequest: NSFetchRequest? {
         
         didSet {
             
@@ -28,9 +32,23 @@ class FetchedResultsViewController: UITableViewController, NSFetchedResultsContr
                 return
             }
             
+            let searchRequest = fetchRequest!.copy() as! NSFetchRequest
+            
+            assert(searchRequest.sortDescriptors != nil, "The fetched request for the seach operation must specify sort descriptors")
+            
+            // add additional sort descriptors
+            if let additionalSortDescriptors = self.localSortDescriptors {
+                
+                var sortDescriptors = additionalSortDescriptors
+                
+                sortDescriptors += searchRequest.sortDescriptors as! [NSSortDescriptor]
+                
+                searchRequest.sortDescriptors = sortDescriptors
+            }
+            
             // create new fetched results controller
             
-            let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest!, managedObjectContext: Store.sharedStore.managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
+            let fetchedResultsController = NSFetchedResultsController(fetchRequest: searchRequest, managedObjectContext: self.store.managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
             
             fetchedResultsController.delegate = self
             
@@ -51,13 +69,22 @@ class FetchedResultsViewController: UITableViewController, NSFetchedResultsContr
         }
     }
     
-    private(set) var datedRefreshed: NSDate?
+    /** Sort descriptors that are additionally applied to the search results. Not sent with requests. Must set before setting fetch request. */
+    public var localSortDescriptors: [NSSortDescriptor]?
     
-    private(set) var fetchedResultsController: NSFetchedResultsController?
+    /** Date the data was last pulled from the server. */
+    public private(set) var datedRefreshed: NSDate?
+    
+    /** Managed objects fetched from the server. Do not modify. */
+    public private(set) var searchResults = [NSManagedObject]()
+    
+    // MARK: - Private Properties
+    
+    private var fetchedResultsController: NSFetchedResultsController?
     
     // MARK: - Initialization
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
@@ -68,7 +95,7 @@ class FetchedResultsViewController: UITableViewController, NSFetchedResultsContr
         assert(error == nil, "Could not execute -performFetch: on NSFetchedResultsController. (\(error!.localizedDescription))")
     }
     
-    override func viewWillAppear(animated: Bool) {
+    public override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
         // start reloading data before view appears
@@ -78,7 +105,7 @@ class FetchedResultsViewController: UITableViewController, NSFetchedResultsContr
     // MARK: - Methods
     
     /** Subclasses should overrride this to provide custom cells. */
-    func dequeueReusableCellForIndexPath(indexPath: NSIndexPath) -> UITableViewCell {
+    public func dequeueReusableCellForIndexPath(indexPath: NSIndexPath) -> UITableViewCell {
         
         let CellIdentifier = NSStringFromClass(UITableViewCell)
         
@@ -92,8 +119,8 @@ class FetchedResultsViewController: UITableViewController, NSFetchedResultsContr
         return cell!
     }
     
-    /** Subclasses should overrride this to configure custom cells. */
-    func configureCell(cell: UITableViewCell, atIndexPath indexPath: NSIndexPath, withError error: NSError? = nil) {
+    /** Subclasses should override this to configure custom cells. */
+    public func configureCell(cell: UITableViewCell, atIndexPath indexPath: NSIndexPath, withError error: NSError? = nil) {
         
         if error != nil {
             
@@ -103,9 +130,9 @@ class FetchedResultsViewController: UITableViewController, NSFetchedResultsContr
         }
         
         // get model object
-        let managedObject = self.fetchedResultsController!.objectAtIndexPath(indexPath) as! NSManagedObject
+        let managedObject = self.searchResults[indexPath.row]
         
-        let dateCached = managedObject.valueForKey(Store.sharedStore.dateCachedAttributeName!) as? NSDate
+        let dateCached = managedObject.valueForKey(self.store.dateCachedAttributeName!) as? NSDate
         
         // not cached
         
@@ -113,9 +140,9 @@ class FetchedResultsViewController: UITableViewController, NSFetchedResultsContr
             
             // configure empty cell...
             
-            cell.textLabel!.text = NSLocalizedString("Loading...", comment: "Loading...")
+            cell.textLabel?.text = NSLocalizedString("Loading...", comment: "Loading...")
             
-            cell.detailTextLabel!.text = ""
+            cell.detailTextLabel?.text = ""
             
             cell.userInteractionEnabled = false
             
@@ -127,12 +154,12 @@ class FetchedResultsViewController: UITableViewController, NSFetchedResultsContr
         cell.userInteractionEnabled = true
         
         // Entity name + resource ID
-        cell.textLabel!.text = "\(managedObject.entity)" + "\(managedObject.valueForKey(Store.sharedStore.resourceIDAttributeName))"
+        cell.textLabel!.text = "\(managedObject.entity)" + "\(managedObject.valueForKey(self.store.resourceIDAttributeName))"
     }
     
     // MARK: - Actions
     
-    @IBAction func refresh(sender: AnyObject) {
+    @IBAction public func refresh(sender: AnyObject) {
         
         if self.fetchRequest == nil {
             
@@ -143,7 +170,7 @@ class FetchedResultsViewController: UITableViewController, NSFetchedResultsContr
         
         self.datedRefreshed = NSDate()
         
-        Store.sharedStore.performSearch(self.fetchRequest!, completionBlock: { (error, results) -> Void in
+        self.store.performSearch(self.fetchRequest!, completionBlock: { (error: NSError?, results: [NSManagedObject]?) -> Void in
             
             NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
                 
@@ -160,6 +187,24 @@ class FetchedResultsViewController: UITableViewController, NSFetchedResultsContr
                     return
                 }
                 
+                let sortedResults: [NSManagedObject]
+                
+                if let additionalSortDescriptors = self.localSortDescriptors {
+                    
+                    var sortDescriptors = additionalSortDescriptors
+                    
+                    sortDescriptors += self.fetchedResultsController!.fetchRequest.sortDescriptors as! [NSSortDescriptor]
+                    
+                    sortedResults = (results! as NSArray).sortedArrayUsingDescriptors(sortDescriptors) as! [NSManagedObject]
+                }
+                
+                else {
+                    
+                    sortedResults = results!
+                }
+                
+                self.searchResults = sortedResults
+                
                 self.tableView.reloadData()
             })
         })
@@ -169,7 +214,7 @@ class FetchedResultsViewController: UITableViewController, NSFetchedResultsContr
     
     private func deleteManagedObject(managedObject: NSManagedObject) {
         
-        Store.sharedStore.deleteManagedObject(managedObject, completionBlock: { (error) -> Void in
+        self.store.deleteManagedObject(managedObject, completionBlock: { (error) -> Void in
             
             NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
                 
@@ -190,17 +235,17 @@ class FetchedResultsViewController: UITableViewController, NSFetchedResultsContr
     
     // MARK: - UITableViewDataSource
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    public override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         
         return 1
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return self.fetchedResultsController?.fetchedObjects?.count ?? 0
+        return self.searchResults.count
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    public override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = self.dequeueReusableCellForIndexPath(indexPath) as UITableViewCell
         
@@ -212,15 +257,15 @@ class FetchedResultsViewController: UITableViewController, NSFetchedResultsContr
         if self.datedRefreshed != nil {
             
             // get model object
-            let managedObject = self.fetchedResultsController!.objectAtIndexPath(indexPath) as! NSManagedObject
+            let managedObject = self.searchResults[indexPath.row]
             
             // get date cached
-            let dateCached = managedObject.valueForKey(Store.sharedStore.dateCachedAttributeName!) as? NSDate
+            let dateCached = managedObject.valueForKey(self.store.dateCachedAttributeName!) as? NSDate
             
             // fetch if older than refresh date or not fetched yet
             if dateCached == nil || dateCached?.compare(self.datedRefreshed!) == NSComparisonResult.OrderedAscending {
                 
-                Store.sharedStore.fetchEntity(managedObject.entity.name!, resourceID: managedObject.valueForKey(Store.sharedStore.resourceIDAttributeName) as! UInt, completionBlock: { (error, managedObject) -> Void in
+                self.store.fetchEntity(managedObject.entity.name!, resourceID: managedObject.valueForKey(self.store.resourceIDAttributeName) as! UInt, completionBlock: { (error, managedObject) -> Void in
                     
                     // configure error cell
                     NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
@@ -243,10 +288,10 @@ class FetchedResultsViewController: UITableViewController, NSFetchedResultsContr
     
     // MARK: - UITableViewDelegate
     
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+    public override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         
         // get model object
-        let managedObject = self.fetchedResultsController!.objectAtIndexPath(indexPath) as! NSManagedObject
+        let managedObject = self.searchResults[indexPath.row]
         
         switch editingStyle {
             
@@ -262,11 +307,11 @@ class FetchedResultsViewController: UITableViewController, NSFetchedResultsContr
     
     // MARK: - NSFetchedResultsControllerDelegate
     
-    func controllerWillChangeContent(controller: NSFetchedResultsController) {
+    public func controllerWillChangeContent(controller: NSFetchedResultsController) {
         self.tableView.beginUpdates()
     }
     
-    func controller(controller: NSFetchedResultsController,
+    public func controller(controller: NSFetchedResultsController,
         didChangeObject object: AnyObject,
         atIndexPath indexPath: NSIndexPath?,
         forChangeType type: NSFetchedResultsChangeType,
@@ -290,7 +335,7 @@ class FetchedResultsViewController: UITableViewController, NSFetchedResultsContr
             }
     }
     
-    func controllerDidChangeContent(controller: NSFetchedResultsController) {
+    public func controllerDidChangeContent(controller: NSFetchedResultsController) {
         self.tableView.endUpdates()
     }
 }
