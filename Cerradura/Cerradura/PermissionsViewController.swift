@@ -13,7 +13,7 @@ import CoreCerradura
 import CoreCerraduraClient
 import DZNEmptyDataSet
 
-class PermissionsViewController: FetchedResultsViewController, DZNEmptyDataSetDelegate, DZNEmptyDataSetSource {
+class PermissionsViewController: FetchedResultsViewController, DZNEmptyDataSetSource {
     
     // MARK: - IB Outlets
     
@@ -31,27 +31,33 @@ class PermissionsViewController: FetchedResultsViewController, DZNEmptyDataSetDe
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        self.tableView.emptyDataSetDelegate = self
-        self.tableView.emptyDataSetSource = self
+        //self.tableView.emptyDataSetDelegate = self
+        //self.tableView.emptyDataSetSource = self
         
         self.tableView.tableFooterView = UIView()
         
         self.tableView.reloadData()
         
-        /*
         self.fetchRequest = {
             
             let fetchRequest = NSFetchRequest(entityName: "Permission")
             
-            fetchRequest.predicate = NSPredicate(format: "archived == NO && user == %@", argumentArray: [])
+            fetchRequest.predicate = NSPredicate(format: "archived == NO && user == %@", argumentArray: [AuthenticationController.sharedController.authenticatedUser!])
+            
+            fetchRequest.sortDescriptors = [NSSortDescriptor(key: "id", ascending: true)]
             
             return fetchRequest
         }()
-        */
+        
         
     }
     
     // MARK: - Methods
+    
+    override func dequeueReusableCellForIndexPath(indexPath: NSIndexPath) -> UITableViewCell {
+        
+        return self.tableView.dequeueReusableCellWithIdentifier(R.reuseIdentifier.permissionCell, forIndexPath: indexPath)!
+    }
     
     // MARK: - DZNEmptyDataSetSource
     

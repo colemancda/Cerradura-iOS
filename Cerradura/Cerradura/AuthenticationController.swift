@@ -99,6 +99,8 @@ final class AuthenticationController {
             
             let user = (results as! [User]).first!
             
+            self.authenticatedUser = user
+            
             // save credentials
             
             self.userResourceID = user.valueForKey("id") as? UInt
@@ -107,7 +109,7 @@ final class AuthenticationController {
             
             // register for notifications
             
-            NSNotificationCenter.defaultCenter().addObserver(self, selector: "authenticationDidFail", name: StoreNotification.AuthenticationDidFail.rawValue, object: Store.sharedStore)
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: "authenticationDidFail:", name: StoreNotification.AuthenticationDidFail.rawValue, object: Store.sharedStore)
             
             completion(nil)
         })
@@ -121,7 +123,7 @@ final class AuthenticationController {
         
         // deregister for notifications
         
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: "authenticationDidFail", object: Store.sharedStore)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: "authenticationDidFail:", object: Store.sharedStore)
         
         Store.removeSharedStore()
         

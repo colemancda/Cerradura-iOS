@@ -27,8 +27,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AuthenticationControllerD
         // set app appearance
         ConfigureAppearance()
         
-        // load data cache if the user is logged in
-        
+        // show logged in UI cache if the user is logged in
+        if AuthenticationController.sharedController.isAuthenticated {
+            
+            let loginVC = self.window!.rootViewController as! LoginViewController
+            
+            loginVC.performSegueWithIdentifier(R.segue.loginSegue, sender: self)
+        }
         
         return true
     }
