@@ -1,0 +1,3 @@
+git "git@github.com:colemancda/CoreCerraduraClient.git" "develop""
+github "ColemanCDA/DZNEmptyDataSet" "master"
+github "ColemanCDA/KeychainAccess" "master"
