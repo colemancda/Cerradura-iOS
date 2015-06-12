@@ -15,6 +15,26 @@
 		6E062ECD1B20DE92004DBAB7 /* SharedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E062ECC1B20DE92004DBAB7 /* SharedStore.swift */; };
 		6E062ED21B20E357004DBAB7 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E062ED11B20E357004DBAB7 /* Authentication.swift */; };
 		6E062F011B21F45A004DBAB7 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E062F001B21F45A004DBAB7 /* Error.swift */; };
+		6E093B0E1B2B644400DB7C76 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E093AE21B2B641E00DB7C76 /* CocoaAsyncSocket.framework */; };
+		6E093B0F1B2B644400DB7C76 /* CocoaAsyncSocket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6E093AE21B2B641E00DB7C76 /* CocoaAsyncSocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6E093B101B2B644400DB7C76 /* CocoaHTTPServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E093AE31B2B641E00DB7C76 /* CocoaHTTPServer.framework */; };
+		6E093B111B2B644400DB7C76 /* CocoaHTTPServer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6E093AE31B2B641E00DB7C76 /* CocoaHTTPServer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6E093B121B2B644400DB7C76 /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E093AE41B2B641E00DB7C76 /* CocoaLumberjack.framework */; };
+		6E093B131B2B644400DB7C76 /* CocoaLumberjack.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6E093AE41B2B641E00DB7C76 /* CocoaLumberjack.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6E093B141B2B644400DB7C76 /* CoreCerradura.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E093AE61B2B641E00DB7C76 /* CoreCerradura.framework */; };
+		6E093B151B2B644400DB7C76 /* CoreCerradura.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6E093AE61B2B641E00DB7C76 /* CoreCerradura.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6E093B161B2B644400DB7C76 /* CoreCerraduraClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E093AE71B2B641E00DB7C76 /* CoreCerraduraClient.framework */; };
+		6E093B171B2B644400DB7C76 /* CoreCerraduraClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6E093AE71B2B641E00DB7C76 /* CoreCerraduraClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6E093B181B2B644400DB7C76 /* DZNEmptyDataSet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E093AE81B2B641E00DB7C76 /* DZNEmptyDataSet.framework */; };
+		6E093B191B2B644400DB7C76 /* DZNEmptyDataSet.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6E093AE81B2B641E00DB7C76 /* DZNEmptyDataSet.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6E093B1A1B2B644400DB7C76 /* ExSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E093AE91B2B641E00DB7C76 /* ExSwift.framework */; };
+		6E093B1B1B2B644400DB7C76 /* ExSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6E093AE91B2B641E00DB7C76 /* ExSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6E093B1C1B2B644400DB7C76 /* IDZSwiftCommonCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E093AEA1B2B641E00DB7C76 /* IDZSwiftCommonCrypto.framework */; };
+		6E093B1D1B2B644400DB7C76 /* IDZSwiftCommonCrypto.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6E093AEA1B2B641E00DB7C76 /* IDZSwiftCommonCrypto.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6E093B1E1B2B644400DB7C76 /* NetworkObjects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E093AEB1B2B641E00DB7C76 /* NetworkObjects.framework */; };
+		6E093B1F1B2B644400DB7C76 /* NetworkObjects.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6E093AEB1B2B641E00DB7C76 /* NetworkObjects.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6E093B201B2B644400DB7C76 /* RoutingHTTPServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E093AEC1B2B641E00DB7C76 /* RoutingHTTPServer.framework */; };
+		6E093B211B2B644400DB7C76 /* RoutingHTTPServer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6E093AEC1B2B641E00DB7C76 /* RoutingHTTPServer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6E0C9BC51B1F3C540018450C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0C9BC41B1F3C540018450C /* LoginViewController.swift */; };
 		6E11B2E61AFE6A9400EEAF37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E11B2E51AFE6A9400EEAF37 /* AppDelegate.swift */; };
 		6E11B2EB1AFE6A9400EEAF37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E11B2E91AFE6A9400EEAF37 /* Main.storyboard */; };
@@ -42,12 +62,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		6EFD2D141B18CE5600DFDFF2 /* Embed Frameworks */ = {
+		6E093B221B2B644400DB7C76 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				6E093B1D1B2B644400DB7C76 /* IDZSwiftCommonCrypto.framework in Embed Frameworks */,
+				6E093B1F1B2B644400DB7C76 /* NetworkObjects.framework in Embed Frameworks */,
+				6E093B211B2B644400DB7C76 /* RoutingHTTPServer.framework in Embed Frameworks */,
+				6E093B0F1B2B644400DB7C76 /* CocoaAsyncSocket.framework in Embed Frameworks */,
+				6E093B151B2B644400DB7C76 /* CoreCerradura.framework in Embed Frameworks */,
+				6E093B191B2B644400DB7C76 /* DZNEmptyDataSet.framework in Embed Frameworks */,
+				6E093B171B2B644400DB7C76 /* CoreCerraduraClient.framework in Embed Frameworks */,
+				6E093B131B2B644400DB7C76 /* CocoaLumberjack.framework in Embed Frameworks */,
+				6E093B1B1B2B644400DB7C76 /* ExSwift.framework in Embed Frameworks */,
+				6E093B111B2B644400DB7C76 /* CocoaHTTPServer.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -63,6 +93,17 @@
 		6E062ECC1B20DE92004DBAB7 /* SharedStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedStore.swift; sourceTree = "<group>"; };
 		6E062ED11B20E357004DBAB7 /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		6E062F001B21F45A004DBAB7 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		6E093AE21B2B641E00DB7C76 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaAsyncSocket.framework; path = ../Carthage/Build/iOS/CocoaAsyncSocket.framework; sourceTree = "<group>"; };
+		6E093AE31B2B641E00DB7C76 /* CocoaHTTPServer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaHTTPServer.framework; path = ../Carthage/Build/iOS/CocoaHTTPServer.framework; sourceTree = "<group>"; };
+		6E093AE41B2B641E00DB7C76 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjack.framework; path = ../Carthage/Build/iOS/CocoaLumberjack.framework; sourceTree = "<group>"; };
+		6E093AE51B2B641E00DB7C76 /* CommonCrypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CommonCrypto.framework; path = ../Carthage/Build/iOS/CommonCrypto.framework; sourceTree = "<group>"; };
+		6E093AE61B2B641E00DB7C76 /* CoreCerradura.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreCerradura.framework; path = ../Carthage/Build/iOS/CoreCerradura.framework; sourceTree = "<group>"; };
+		6E093AE71B2B641E00DB7C76 /* CoreCerraduraClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreCerraduraClient.framework; path = ../Carthage/Build/iOS/CoreCerraduraClient.framework; sourceTree = "<group>"; };
+		6E093AE81B2B641E00DB7C76 /* DZNEmptyDataSet.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DZNEmptyDataSet.framework; path = ../Carthage/Build/iOS/DZNEmptyDataSet.framework; sourceTree = "<group>"; };
+		6E093AE91B2B641E00DB7C76 /* ExSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExSwift.framework; path = ../Carthage/Build/iOS/ExSwift.framework; sourceTree = "<group>"; };
+		6E093AEA1B2B641E00DB7C76 /* IDZSwiftCommonCrypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IDZSwiftCommonCrypto.framework; path = ../Carthage/Build/iOS/IDZSwiftCommonCrypto.framework; sourceTree = "<group>"; };
+		6E093AEB1B2B641E00DB7C76 /* NetworkObjects.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkObjects.framework; path = ../Carthage/Build/iOS/NetworkObjects.framework; sourceTree = "<group>"; };
+		6E093AEC1B2B641E00DB7C76 /* RoutingHTTPServer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RoutingHTTPServer.framework; path = ../Carthage/Build/iOS/RoutingHTTPServer.framework; sourceTree = "<group>"; };
 		6E0C9BC41B1F3C540018450C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6E11B2E01AFE6A9400EEAF37 /* Cerradura.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cerradura.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E11B2E41AFE6A9400EEAF37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -88,6 +129,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E093B1C1B2B644400DB7C76 /* IDZSwiftCommonCrypto.framework in Frameworks */,
+				6E093B1E1B2B644400DB7C76 /* NetworkObjects.framework in Frameworks */,
+				6E093B201B2B644400DB7C76 /* RoutingHTTPServer.framework in Frameworks */,
+				6E093B0E1B2B644400DB7C76 /* CocoaAsyncSocket.framework in Frameworks */,
+				6E093B141B2B644400DB7C76 /* CoreCerradura.framework in Frameworks */,
+				6E093B181B2B644400DB7C76 /* DZNEmptyDataSet.framework in Frameworks */,
+				6E093B161B2B644400DB7C76 /* CoreCerraduraClient.framework in Frameworks */,
+				6E093B121B2B644400DB7C76 /* CocoaLumberjack.framework in Frameworks */,
+				6E093B1A1B2B644400DB7C76 /* ExSwift.framework in Frameworks */,
+				6E093B101B2B644400DB7C76 /* CocoaHTTPServer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +292,17 @@
 		6EFD2C1F1B18C06E00DFDFF2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6E093AE21B2B641E00DB7C76 /* CocoaAsyncSocket.framework */,
+				6E093AE31B2B641E00DB7C76 /* CocoaHTTPServer.framework */,
+				6E093AE41B2B641E00DB7C76 /* CocoaLumberjack.framework */,
+				6E093AE51B2B641E00DB7C76 /* CommonCrypto.framework */,
+				6E093AE61B2B641E00DB7C76 /* CoreCerradura.framework */,
+				6E093AE71B2B641E00DB7C76 /* CoreCerraduraClient.framework */,
+				6E093AE81B2B641E00DB7C76 /* DZNEmptyDataSet.framework */,
+				6E093AE91B2B641E00DB7C76 /* ExSwift.framework */,
+				6E093AEA1B2B641E00DB7C76 /* IDZSwiftCommonCrypto.framework */,
+				6E093AEB1B2B641E00DB7C76 /* NetworkObjects.framework */,
+				6E093AEC1B2B641E00DB7C76 /* RoutingHTTPServer.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -257,8 +319,8 @@
 				6E11B2DC1AFE6A9400EEAF37 /* Sources */,
 				6E11B2DD1AFE6A9400EEAF37 /* Frameworks */,
 				6E11B2DE1AFE6A9400EEAF37 /* Resources */,
-				6EFD2D141B18CE5600DFDFF2 /* Embed Frameworks */,
 				6E062EC81B20B9C4004DBAB7 /* Increment Build */,
+				6E093B221B2B644400DB7C76 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -546,7 +608,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/Coleman/Developer/MyProjects/Cerradura-iOS/CoreCerraduraClient/CoreCerradura/IDZSwiftCommonCrypto/CommonCrypto/CommonCrypto/build/Debug",
+					$SRCROOT/../Carthage/Build/iOS,
 				);
 				INFOPLIST_FILE = Cerradura/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
@@ -565,7 +627,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/Coleman/Developer/MyProjects/Cerradura-iOS/CoreCerraduraClient/CoreCerradura/IDZSwiftCommonCrypto/CommonCrypto/CommonCrypto/build/Debug",
+					$SRCROOT/../Carthage/Build/iOS,
 				);
 				INFOPLIST_FILE = Cerradura/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
