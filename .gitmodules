@@ -1,0 +1,36 @@
+[submodule "Carthage/Checkouts/CoreCerradura"]
+	path = Carthage/Checkouts/CoreCerradura
+	url = git@github.com:colemancda/CoreCerradura.git
+[submodule "Carthage/Checkouts/CoreCerraduraClient"]
+	path = Carthage/Checkouts/CoreCerraduraClient
+	url = git@github.com:colemancda/CoreCerraduraClient.git
+[submodule "Carthage/Checkouts/CocoaLumberjack"]
+	path = Carthage/Checkouts/CocoaLumberjack
+	url = https://github.com/ColemanCDA/CocoaLumberjack.git
+[submodule "Carthage/Checkouts/RoutingHTTPServer"]
+	path = Carthage/Checkouts/RoutingHTTPServer
+	url = https://github.com/ColemanCDA/RoutingHTTPServer.git
+[submodule "Carthage/Checkouts/ExSwift"]
+	path = Carthage/Checkouts/ExSwift
+	url = https://github.com/ColemanCDA/ExSwift.git
+[submodule "Carthage/Checkouts/CocoaAsyncSocket"]
+	path = Carthage/Checkouts/CocoaAsyncSocket
+	url = https://github.com/ColemanCDA/CocoaAsyncSocket.git
+[submodule "Carthage/Checkouts/DZNEmptyDataSet"]
+	path = Carthage/Checkouts/DZNEmptyDataSet
+	url = https://github.com/ColemanCDA/DZNEmptyDataSet.git
+[submodule "Carthage/Checkouts/NetworkObjects"]
+	path = Carthage/Checkouts/NetworkObjects
+	url = https://github.com/ColemanCDA/NetworkObjects.git
+[submodule "Carthage/Checkouts/CommonCrypto"]
+	path = Carthage/Checkouts/CommonCrypto
+	url = https://github.com/ColemanCDA/CommonCrypto.git
+[submodule "Carthage/Checkouts/CocoaHTTPServer"]
+	path = Carthage/Checkouts/CocoaHTTPServer
+	url = https://github.com/ColemanCDA/CocoaHTTPServer.git
+[submodule "Carthage/Checkouts/KeychainAccess"]
+	path = Carthage/Checkouts/KeychainAccess
+	url = https://github.com/ColemanCDA/KeychainAccess.git
+[submodule "Carthage/Checkouts/IDZSwiftCommonCrypto"]
+	path = Carthage/Checkouts/IDZSwiftCommonCrypto
+	url = https://github.com/ColemanCDA/IDZSwiftCommonCrypto.git
