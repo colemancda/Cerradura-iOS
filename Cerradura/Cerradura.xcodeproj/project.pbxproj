@@ -198,6 +198,34 @@
 			remoteGlobalIDString = 140C8F141A4EBE3100F85556;
 			remoteInfo = "KeychainAccess-MacTests";
 		};
+		6EB585FF1B2BDCA2009E7250 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6EB585F81B2BDCA1009E7250 /* NetworkObjects.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6EAD584619C3B58300DC080A;
+			remoteInfo = "NetworkObjects OS X";
+		};
+		6EB586011B2BDCA2009E7250 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6EB585F81B2BDCA1009E7250 /* NetworkObjects.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6EAD585119C3B58300DC080A;
+			remoteInfo = "NetworkObjectsTests OS X";
+		};
+		6EB586031B2BDCA2009E7250 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6EB585F81B2BDCA1009E7250 /* NetworkObjects.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6E95D1801B2B14A3000DD4DA;
+			remoteInfo = "NetworkObjects iOS";
+		};
+		6EB586051B2BDCA2009E7250 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6EB585F81B2BDCA1009E7250 /* NetworkObjects.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6E95D1AA1B2B25B9000DD4DA;
+			remoteInfo = "NetworkObjectsTests iOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -275,6 +303,7 @@
 		6EB585AE1B2BCF9E009E7250 /* NetworkObjects.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkObjects.framework; path = ../Carthage/Build/iOS/NetworkObjects.framework; sourceTree = "<group>"; };
 		6EB585AF1B2BCF9E009E7250 /* RoutingHTTPServer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RoutingHTTPServer.framework; path = ../Carthage/Build/iOS/RoutingHTTPServer.framework; sourceTree = "<group>"; };
 		6EB585E31B2BDC3D009E7250 /* ArchivableFetchedResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchivableFetchedResultsViewController.swift; sourceTree = "<group>"; };
+		6EB585F81B2BDCA1009E7250 /* NetworkObjects.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NetworkObjects.xcodeproj; path = ../../Carthage/Checkouts/NetworkObjects/NetworkObjects/NetworkObjects.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -422,6 +451,7 @@
 		6E4F727A1B2BA117002EA01F /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				6EB585F81B2BDCA1009E7250 /* NetworkObjects.xcodeproj */,
 				6EB585541B2BB79E009E7250 /* KeychainAccess.xcodeproj */,
 				6EB585481B2BB78E009E7250 /* IDZSwiftCommonCrypto.xcodeproj */,
 				6EB5853F1B2BB780009E7250 /* ExSwift.xcodeproj */,
@@ -551,6 +581,17 @@
 			name = Framework;
 			sourceTree = "<group>";
 		};
+		6EB585F91B2BDCA1009E7250 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6EB586001B2BDCA2009E7250 /* NetworkObjects.framework */,
+				6EB586021B2BDCA2009E7250 /* NetworkObjectsTests.xctest */,
+				6EB586041B2BDCA2009E7250 /* NetworkObjects.framework */,
+				6EB586061B2BDCA2009E7250 /* NetworkObjectsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -650,6 +691,10 @@
 				{
 					ProductGroup = 6EB585551B2BB79E009E7250 /* Products */;
 					ProjectRef = 6EB585541B2BB79E009E7250 /* KeychainAccess.xcodeproj */;
+				},
+				{
+					ProductGroup = 6EB585F91B2BDCA1009E7250 /* Products */;
+					ProjectRef = 6EB585F81B2BDCA1009E7250 /* NetworkObjects.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -792,6 +837,34 @@
 			fileType = wrapper.cfbundle;
 			path = "KeychainAccess-MacTests.xctest";
 			remoteRef = 6EB585611B2BB79E009E7250 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6EB586001B2BDCA2009E7250 /* NetworkObjects.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = NetworkObjects.framework;
+			remoteRef = 6EB585FF1B2BDCA2009E7250 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6EB586021B2BDCA2009E7250 /* NetworkObjectsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = NetworkObjectsTests.xctest;
+			remoteRef = 6EB586011B2BDCA2009E7250 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6EB586041B2BDCA2009E7250 /* NetworkObjects.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = NetworkObjects.framework;
+			remoteRef = 6EB586031B2BDCA2009E7250 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6EB586061B2BDCA2009E7250 /* NetworkObjectsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = NetworkObjectsTests.xctest;
+			remoteRef = 6EB586051B2BDCA2009E7250 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
