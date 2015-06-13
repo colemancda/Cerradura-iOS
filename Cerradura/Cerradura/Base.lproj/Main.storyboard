@@ -69,7 +69,7 @@
                                     <outlet property="permissionImageView" destination="y72-si-ye1" id="atA-pO-6qN"/>
                                     <outlet property="permissionLockNameLabel" destination="z83-QU-93C" id="lHm-jI-8sJ"/>
                                     <outlet property="permissionTypeLabel" destination="dzc-X2-HVb" id="sbY-Ug-jCQ"/>
-                                    <segue destination="DPL-a1-c8t" kind="showDetail" id="oms-Y3-UJa"/>
+                                    <segue destination="YL3-U5-2m9" kind="showDetail" identifier="ShowPermissionDetail" id="rUI-wO-mQl"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -639,6 +639,6 @@
         <image name="UserProfile" width="337" height="345"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="oms-Y3-UJa"/>
+        <segue reference="rUI-wO-mQl"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -13,11 +13,7 @@ import CoreCerradura
 import CoreCerraduraClient
 import DZNEmptyDataSet
 
-class PermissionsViewController: FetchedResultsViewController, DZNEmptyDataSetSource {
-    
-    // MARK: - IB Outlets
-    
-    
+class PermissionsViewController: ArchivableFetchedResultsViewController, DZNEmptyDataSetSource {
     
     // MARK: - Initialization
     
@@ -98,9 +94,6 @@ class PermissionsViewController: FetchedResultsViewController, DZNEmptyDataSetSo
             return "AnyTime"
             
         }()
-        
-        // fix detail text label not showing
-        cell.layoutIfNeeded()
     }
     
     // MARK: - UITableViewDataSource
@@ -133,7 +126,7 @@ class PermissionsViewController: FetchedResultsViewController, DZNEmptyDataSetSo
     
     func imageForEmptyDataSet(scrollView: UIScrollView!) -> UIImage! {
         
-        return R.image.keysEmptyData
+        return R.image.keysEmpty
     }
 }
 
