@@ -16,7 +16,7 @@ internal func ConfigureAppearance() {
     UINavigationBar.appearance().barTintColor = StyleKit.cerraduraBlue
     
     UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
-    
+        
     UITabBar.appearance().tintColor = StyleKit.cerraduraBlue
     
     UIButton.appearance().tintColor = StyleKit.cerraduraBlue
