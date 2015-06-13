@@ -3,4 +3,4 @@ iOS app for Cerradura System
 
 # Fetch Dependencies
     carthage checkout --use-submodules
-    carthage build --plaform "iphoneos"
+    carthage build --platform "iphoneos"
