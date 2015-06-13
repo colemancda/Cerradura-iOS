@@ -27,12 +27,6 @@
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Front Door" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z83-QU-93C">
-                                            <rect key="frame" x="67" y="8" width="525" height="23"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y72-si-ye1" customClass="StyleKitView" customModule="Cerradura" customModuleProvider="target">
                                             <rect key="frame" x="8" y="8" width="51" height="51"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -43,6 +37,12 @@
                                                 <userDefinedRuntimeAttribute type="string" keyPath="canvasName" value="PermissionBadgeAnytime"/>
                                             </userDefinedRuntimeAttributes>
                                         </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Front Door" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z83-QU-93C">
+                                            <rect key="frame" x="67" y="8" width="525" height="23"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="dzc-X2-HVb" firstAttribute="top" secondItem="z83-QU-93C" secondAttribute="bottom" constant="8" id="36d-mt-9oc"/>
@@ -69,7 +69,7 @@
                                     <outlet property="permissionImageView" destination="y72-si-ye1" id="atA-pO-6qN"/>
                                     <outlet property="permissionLockNameLabel" destination="z83-QU-93C" id="lHm-jI-8sJ"/>
                                     <outlet property="permissionTypeLabel" destination="dzc-X2-HVb" id="sbY-Ug-jCQ"/>
-                                    <segue destination="YL3-U5-2m9" kind="show" identifier="ShowPermissionDetail" id="FrZ-oe-pXO"/>
+                                    <segue destination="DPL-a1-c8t" kind="showDetail" id="oms-Y3-UJa"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -639,6 +639,6 @@
         <image name="UserProfile" width="337" height="345"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="FrZ-oe-pXO"/>
+        <segue reference="oms-Y3-UJa"/>
     </inferredMetricsTieBreakers>
 </document>

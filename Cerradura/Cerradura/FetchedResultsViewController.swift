@@ -78,9 +78,7 @@ public class FetchedResultsViewController: UITableViewController, NSFetchedResul
     /** Managed objects fetched from the server. Do not modify. */
     public private(set) var searchResults = [NSManagedObject]()
     
-    // MARK: - Private Properties
-    
-    private var fetchedResultsController: NSFetchedResultsController?
+    public private(set) var fetchedResultsController: NSFetchedResultsController?
     
     // MARK: - Initialization
     
@@ -242,7 +240,7 @@ public class FetchedResultsViewController: UITableViewController, NSFetchedResul
     
     public override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return self.searchResults.count
+        return self.fetchedResultsController?.fetchedObjects?.count ?? 0
     }
     
     public override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -257,7 +255,7 @@ public class FetchedResultsViewController: UITableViewController, NSFetchedResul
         if self.datedRefreshed != nil {
             
             // get model object
-            let managedObject = self.searchResults[indexPath.row]
+            let managedObject = self.fetchedResultsController!.objectAtIndexPath(indexPath) as! NSManagedObject
             
             // get date cached
             let dateCached = managedObject.valueForKey(self.store.dateCachedAttributeName!) as? NSDate
@@ -291,7 +289,7 @@ public class FetchedResultsViewController: UITableViewController, NSFetchedResul
     public override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         
         // get model object
-        let managedObject = self.searchResults[indexPath.row]
+        let managedObject = self.fetchedResultsController!.objectAtIndexPath(indexPath) as! NSManagedObject
         
         switch editingStyle {
             
@@ -303,6 +301,11 @@ public class FetchedResultsViewController: UITableViewController, NSFetchedResul
             
             return
         }
+    }
+    
+    public override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
     // MARK: - NSFetchedResultsControllerDelegate

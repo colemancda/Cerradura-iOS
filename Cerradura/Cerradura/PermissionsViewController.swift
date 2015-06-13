@@ -70,7 +70,7 @@ class PermissionsViewController: FetchedResultsViewController, DZNEmptyDataSetSo
         let permissionCell = cell as! PermissionCell
         
         // get model object
-        let permission = self.searchResults[indexPath.row] as! Permission
+        let permission = self.fetchedResultsController!.objectAtIndexPath(indexPath) as! Permission
         
         let dateCached = permission.valueForKey(Store.sharedStore.dateCachedAttributeName!) as? NSDate
         
