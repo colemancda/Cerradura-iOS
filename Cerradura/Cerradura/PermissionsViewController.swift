@@ -99,8 +99,12 @@ class PermissionsViewController: ArchivableFetchedResultsViewController, DZNEmpt
         
         permissionCell.permissionTypeLabel.text = {
             
-            return "Admin"
-            
+            switch PermissionType(rawValue: permission.permissionType)! {
+                
+            case .Admin: return NSLocalizedString("Admin", comment: "Admin Permission Text")
+            case .Anytime: return NSLocalizedString("Anytime", comment: "Anytime Permission Text")
+            case .Scheduled: return NSLocalizedString("Scheduled", comment: "Scheduled Permission Text")
+            }
         }()
         
         permissionCell.permissionImageView.hidden = false
@@ -108,9 +112,13 @@ class PermissionsViewController: ArchivableFetchedResultsViewController, DZNEmpt
         permissionCell.activityIndicatorView.stopAnimating()
         
         permissionCell.permissionImageView.canvasName = {
-           
-            return StyleKitCanvas.PermissionBadgeAdmin.rawValue
             
+            switch PermissionType(rawValue: permission.permissionType)! {
+                
+            case .Admin: return StyleKitCanvas.PermissionBadgeAdmin.rawValue
+            case .Anytime: return StyleKitCanvas.PermissionBadgeAnytime.rawValue
+            case .Scheduled: return StyleKitCanvas.PermissionBadgeScheduled.rawValue
+            }
         }()
         
         // load lock info
