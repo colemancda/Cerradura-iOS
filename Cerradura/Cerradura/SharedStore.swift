@@ -17,6 +17,8 @@ internal extension Store {
     /** Shared store that may be nil. App must ensure that this class property is initialized before use. */
     private(set) static var sharedStore: Store!
     
+    private static var persistentStore: NSPersistentStore!
+    
     /** Creates a Store for use with the Cerradura App. */
     class func loadSharedStore(username: String, password: String, server serverURL: NSURL) {
         
@@ -34,7 +36,7 @@ internal extension Store {
         
         var addPersistentStoreError: NSError?
         
-        let persistentStore = self.sharedStore.managedObjectContext.persistentStoreCoordinator!.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: SharedStoreFileURL, options: nil, error: &addPersistentStoreError)
+        self.persistentStore = self.sharedStore.managedObjectContext.persistentStoreCoordinator!.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: SharedStoreFileURL, options: nil, error: &addPersistentStoreError)
         
         // Log error, try to delete file, and crash
         if persistentStore == nil {
@@ -49,6 +51,13 @@ internal extension Store {
     
     class func removeSharedStore() {
         
+        var removeStoreError: NSError?
+        
+        if !self.sharedStore.managedObjectContext.persistentStoreCoordinator!.removePersistentStore(self.persistentStore, error: &removeStoreError) {
+            
+            fatalError("Could not remove old persistent store.\n\(removeStoreError!)")
+        }
+        
         if NSFileManager.defaultManager().fileExistsAtPath(SharedStoreFileURL.path!) {
             
             // delete file
@@ -59,10 +68,8 @@ internal extension Store {
             
             if deleteError != nil {
                 
-                fatalError("Could not delete old SQLite file.\n\(deleteError)")
+                fatalError("Could not delete old SQLite file.\n\(deleteError!)")
             }
-            
-            println("Deleted old SQLite file")
         }
         
         self.sharedStore = nil

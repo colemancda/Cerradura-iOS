@@ -25,7 +25,7 @@ class PermissionViewController: UIViewController {
         
         didSet {
             
-            self.permissionManagedObjectController = ManagedObjectController<Permission>(managedObject: self.permission, store: Store.sharedStore)
+            self.permissionManagedObjectController = ManagedObjectController(managedObject: self.permission, store: Store.sharedStore)
             
             self.configurePermissionManagedObjectController()
         }
@@ -33,9 +33,9 @@ class PermissionViewController: UIViewController {
     
     // MARK: - Private Properties
     
-    private var permissionManagedObjectController: ManagedObjectController<Permission>!
+    private var permissionManagedObjectController: ManagedObjectController!
     
-    private var lockManagedObjectController: ManagedObjectController<Lock>?
+    private var lockManagedObjectController: ManagedObjectController?
     
     // MARK: - Initialization
     
@@ -111,7 +111,7 @@ class PermissionViewController: UIViewController {
             
             if let lock = change.value {
                 
-                self.lockManagedObjectController = ManagedObjectController<Lock>(managedObject: self.permission.lock, store: Store.sharedStore)
+                self.lockManagedObjectController = ManagedObjectController(managedObject: self.permission.lock, store: Store.sharedStore)
             }
             
             

@@ -96,25 +96,6 @@ class PermissionsViewController: ArchivableFetchedResultsViewController, DZNEmpt
         }()
     }
     
-    // MARK: - UITableViewDataSource
-    
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        
-        let fetchedObjectsCount = self.fetchedResultsController?.fetchedObjects?.count ?? 0
-        
-        // hide separators for empty table view
-        if fetchedObjectsCount == 0 {
-            
-            tableView.tableFooterView = UIView()
-        }
-        else {
-            
-            tableView.tableFooterView = nil
-        }
-        
-        return 1
-    }
-    
     // MARK: - UITableViewDelegate
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -148,6 +129,27 @@ class PermissionsViewController: ArchivableFetchedResultsViewController, DZNEmpt
     func imageForEmptyDataSet(scrollView: UIScrollView!) -> UIImage! {
         
         return R.image.keysEmpty
+    }
+    
+    // MARK: - NSFetchedResultsController
+    
+    override func controllerWillChangeContent(controller: NSFetchedResultsController) {
+        
+        super.controllerWillChangeContent(controller)
+        
+        self.tableView.reloadEmptyDataSet()
+        
+        let fetchedObjectsCount = controller.fetchedObjects?.count ?? 0
+        
+        // hide separators for empty table view
+        if fetchedObjectsCount == 0 {
+            
+            tableView.tableFooterView = UIView()
+        }
+        else {
+            
+            tableView.tableFooterView = nil
+        }
     }
 }
 

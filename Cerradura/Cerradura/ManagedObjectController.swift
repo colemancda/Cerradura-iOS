@@ -11,11 +11,11 @@ import CoreData
 import NetworkObjects
 
 /** Observes and controls a managed object. */
-final public class ManagedObjectController<ManagedObjectClass: NSManagedObject>: NSObject {
+final public class ManagedObjectController: NSObject {
     
     // MARK: - Properties
     
-    public let managedObject: ManagedObjectClass
+    public let managedObject: NSManagedObject
     
     public let store: Store
     
@@ -78,7 +78,7 @@ final public class ManagedObjectController<ManagedObjectClass: NSManagedObject>:
         self.cachedHandler = nil
     }
     
-    public init(managedObject: ManagedObjectClass, store: Store) {
+    public init(managedObject: NSManagedObject, store: Store) {
         
         self.managedObject = managedObject
         self.store = store
@@ -108,16 +108,16 @@ final public class ManagedObjectController<ManagedObjectClass: NSManagedObject>:
     
     public func stopObservingProperty(propertyName: String) {
         
-        self.removeObserver(self, forKeyPath: propertyName, context: self.KVOContext)
+        self.managedObject.removeObserver(self, forKeyPath: propertyName, context: self.KVOContext)
         
         self.observedProperties[propertyName] = nil
     }
     
     // MARK: - KVO
     
-    public override func observeValueForKeyPath(keyPath: String, ofObject object: AnyObject, change: [NSObject : AnyObject], context: UnsafeMutablePointer<Void>) {
+    @objc public override func observeValueForKeyPath(keyPath: String, ofObject object: AnyObject, change: [NSObject : AnyObject], context: UnsafeMutablePointer<Void>) {
         
-        if context != self.KVOContext {
+        if context == self.KVOContext {
             
             // managed Object changes
             if object as? NSManagedObject == self.managedObject {

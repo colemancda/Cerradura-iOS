@@ -185,25 +185,16 @@ public class FetchedResultsViewController: UITableViewController, NSFetchedResul
                     return
                 }
                 
-                let sortedResults: [NSManagedObject]
+                // load all objects
                 
-                if let additionalSortDescriptors = self.localSortDescriptors {
+                for managedObject in results! {
                     
-                    var sortDescriptors = additionalSortDescriptors
-                    
-                    sortDescriptors += self.fetchedResultsController!.fetchRequest.sortDescriptors as! [NSSortDescriptor]
-                    
-                    sortedResults = (results! as NSArray).sortedArrayUsingDescriptors(sortDescriptors) as! [NSManagedObject]
+                    self.store.fetchResource(managedObject, completionBlock: { (error) -> Void in
+                        
+                        
+                        
+                    })
                 }
-                
-                else {
-                    
-                    sortedResults = results!
-                }
-                
-                self.searchResults = sortedResults
-                
-                self.tableView.reloadData()
             })
         })
     }
