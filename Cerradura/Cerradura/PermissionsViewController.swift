@@ -100,10 +100,10 @@ class PermissionsViewController: ArchivableFetchedResultsViewController, DZNEmpt
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         
-        let count = super.numberOfSectionsInTableView(tableView)
+        let fetchedObjectsCount = self.fetchedResultsController?.fetchedObjects?.count ?? 0
         
         // hide separators for empty table view
-        if count == 0 {
+        if fetchedObjectsCount == 0 {
             
             tableView.tableFooterView = UIView()
         }
@@ -112,7 +112,7 @@ class PermissionsViewController: ArchivableFetchedResultsViewController, DZNEmpt
             tableView.tableFooterView = nil
         }
         
-        return count
+        return 1
     }
     
     // MARK: - UITableViewDelegate

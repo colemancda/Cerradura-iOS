@@ -1116,8 +1116,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/../Carthage/Build/iOS,
-					"/Users/Coleman/Developer/MyProjects/Cerradura-iOS/Carthage/Build/iOS",
+					$SRCROOT/../Carthage/Build/iOS,
 				);
 				INFOPLIST_FILE = Cerradura/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1139,8 +1138,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/../Carthage/Build/iOS,
-					"/Users/Coleman/Developer/MyProjects/Cerradura-iOS/Carthage/Build/iOS",
+					$SRCROOT/../Carthage/Build/iOS,
 				);
 				INFOPLIST_FILE = Cerradura/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
