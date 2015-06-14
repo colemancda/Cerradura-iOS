@@ -327,6 +327,12 @@ public class FetchedResultsViewController: UITableViewController, NSFetchedResul
                 
             case .Insert:
                 
+                // already inserted
+                if (self.searchResults as NSArray).containsObject(managedObject) {
+                    
+                    return
+                }
+                
                 self.searchResults.append(managedObject)
                 
                 self.searchResults = (self.searchResults as NSArray).sortedArrayUsingDescriptors(self.fetchRequest!.sortDescriptors!) as! [NSManagedObject]
@@ -365,6 +371,12 @@ public class FetchedResultsViewController: UITableViewController, NSFetchedResul
                 
                 return
             case .Delete:
+                
+                // already deleted
+                if !(self.searchResults as NSArray).containsObject(managedObject) {
+                    
+                    return
+                }
                 
                 let row = (self.searchResults as NSArray).indexOfObject(managedObject)
                 
