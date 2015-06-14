@@ -66,7 +66,7 @@ class PermissionsViewController: ArchivableFetchedResultsViewController, DZNEmpt
         let permissionCell = cell as! PermissionCell
         
         // get model object
-        let permission = self.fetchedResultsController!.objectAtIndexPath(indexPath) as! Permission
+        let permission = self.objectAtIndexPath(indexPath) as! Permission
         
         let dateCached = permission.valueForKey(Store.sharedStore.dateCachedAttributeName!) as? NSDate
         
@@ -110,46 +110,11 @@ class PermissionsViewController: ArchivableFetchedResultsViewController, DZNEmpt
         
         // set permission
         
-        let permission = self.fetchedResultsController!.objectAtIndexPath(indexPath) as! Permission
+        let permission = self.objectAtIndexPath(indexPath) as! Permission
         
         let permissionVC = permissionNavigationStack.topViewController as! PermissionViewController
         
         permissionVC.permission = permission
-    }
-    
-    // MARK: - DZNEmptyDataSetSource
-    
-    func titleForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
-        
-        let text = NSLocalizedString("No Keys", comment: "No Keys")
-        
-        return NSAttributedString(string: text)
-    }
-    
-    func imageForEmptyDataSet(scrollView: UIScrollView!) -> UIImage! {
-        
-        return R.image.keysEmpty
-    }
-    
-    // MARK: - NSFetchedResultsController
-    
-    override func controllerWillChangeContent(controller: NSFetchedResultsController) {
-        
-        super.controllerWillChangeContent(controller)
-        
-        self.tableView.reloadEmptyDataSet()
-        
-        let fetchedObjectsCount = controller.fetchedObjects?.count ?? 0
-        
-        // hide separators for empty table view
-        if fetchedObjectsCount == 0 {
-            
-            tableView.tableFooterView = UIView()
-        }
-        else {
-            
-            tableView.tableFooterView = nil
-        }
     }
 }
 
