@@ -13,7 +13,7 @@ import NetworkObjects
 import CoreCerraduraClient
 
 /** Abstract class for editing a managed object. */
-class ManagedObjectViewController: UITableViewController {
+class ManagedObjectEditorViewController: UITableViewController {
     
     // MARK: - Properties
     

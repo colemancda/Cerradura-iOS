@@ -14,7 +14,7 @@ import CoreCerraduraClient
 import DZNEmptyDataSet
 
 class PermissionsViewController: ArchivableFetchedResultsViewController, DZNEmptyDataSetSource {
-    
+        
     // MARK: - Initialization
     
     deinit {
@@ -113,6 +113,27 @@ class PermissionsViewController: ArchivableFetchedResultsViewController, DZNEmpt
         }
         
         return count
+    }
+    
+    // MARK: - UITableViewDelegate
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        // show detail controller
+        
+        let permissionNavigationStack = R.storyboard.permission.initialViewController!
+        
+        self.showAdaptiveDetailController(permissionNavigationStack)
+        
+        // set permission
+        
+        let permission = self.fetchedResultsController!.objectAtIndexPath(indexPath) as! Permission
+        
+        let permissionVC = permissionNavigationStack.topViewController as! PermissionViewController
+        
+        permissionVC.permission = permission
     }
     
     // MARK: - DZNEmptyDataSetSource

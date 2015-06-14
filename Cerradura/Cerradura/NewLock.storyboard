@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="axp-cO-Bhv">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Uft-wX-dNG">
+            <objects>
+                <navigationController modalPresentationStyle="formSheet" id="axp-cO-Bhv" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fJ0-SQ-xaI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="iFW-YP-ybl" kind="relationship" relationship="rootViewController" id="slg-N7-3ZF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BVC-x4-hrG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3045" y="-1922"/>
+        </scene>
+        <!--New Lock-->
+        <scene sceneID="NWx-JS-XTR">
+            <objects>
+                <viewController id="iFW-YP-ybl" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ci9-jO-Xvs"/>
+                        <viewControllerLayoutGuide type="bottom" id="PtK-JS-WtS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hUQ-fS-60b">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="ZD5-bv-q91">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="ZD5-bv-q91" secondAttribute="centerY" id="OzM-Vh-Qp2"/>
+                            <constraint firstAttribute="centerX" secondItem="ZD5-bv-q91" secondAttribute="centerX" id="Vbc-cx-APV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Lock" id="kSl-XP-PeB">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="E6L-rX-P02"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cSi-dc-YaR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3841" y="-1922"/>
+        </scene>
+    </scenes>
+</document>

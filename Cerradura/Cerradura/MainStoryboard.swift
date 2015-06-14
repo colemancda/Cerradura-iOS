@@ -8,10 +8,31 @@
 
 import Foundation
 import UIKit
+import CoreData
 
-extension ManagedObjectViewController {
+extension UIViewController {
     
-    func handleManagedObjectDeletionForViewControllerInMainStoryboard() {
+    func showAdaptiveDetailController(detailController: UINavigationController) {
+        
+        // show navigation stack based on splitVC setup
+        if self.splitViewController!.viewControllers.count == 2 {
+            
+            // set detailVC
+            self.splitViewController!.showDetailViewController(detailController, sender: self)
+            
+            // no edit handler
+        }
+        else {
+            
+            // set detailVC
+            self.showViewController(detailController, sender: self)
+        }
+    }
+}
+
+extension UIViewController {
+    
+    func handleManagedObjectDeletionInMainStoryboard() {
         
         // Detect if contained in splitViewController
         let regularLayout: Bool = (self.splitViewController?.viewControllers.count == 2) ?? false
@@ -23,11 +44,8 @@ extension ManagedObjectViewController {
             if self.navigationController!.viewControllers.first! as! UIViewController == self &&
                 self.splitViewController!.viewControllers[1] as! UIViewController == self.navigationController! {
                     
-                    // get detail navigation controller stack
-                    let detailNavigationController = self.storyboard!.instantiateViewControllerWithIdentifier("EmptySelection") as! UINavigationController
-                    
                     // set detailVC
-                    self.splitViewController!.showDetailViewController(detailNavigationController, sender: self)
+                    self.splitViewController!.showDetailViewController(R.storyboard.main.emptySelectionNavigationStack!, sender: self)
             }
         }
             

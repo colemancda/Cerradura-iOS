@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="nkq-vX-hB6">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="4UF-xl-TPE">
+            <objects>
+                <navigationController id="nkq-vX-hB6" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="koa-Iz-usn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="24k-Tx-VKJ" kind="relationship" relationship="rootViewController" id="IjN-V3-dCI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t26-Zg-Keh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3390" y="-692"/>
+        </scene>
+        <!--Lock Name-->
+        <scene sceneID="dpx-Oz-DOa">
+            <objects>
+                <viewController id="24k-Tx-VKJ" customClass="PermissionViewController" customModule="Cerradura" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Nun-pO-Xt0"/>
+                        <viewControllerLayoutGuide type="bottom" id="fnv-jU-gry"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qfr-Vn-gGA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cty-Iw-rf4">
+                                <rect key="frame" x="276" y="285" width="48" height="30"/>
+                                <state key="normal" title="Unlock">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="cty-Iw-rf4" secondAttribute="centerY" id="0ki-fo-6j5"/>
+                            <constraint firstAttribute="centerX" secondItem="cty-Iw-rf4" secondAttribute="centerX" id="3j1-PY-M2b"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Lock Name" id="v7Z-Bk-634">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="daW-aS-IAb"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OFx-fK-Fph" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4218" y="-692"/>
+        </scene>
+    </scenes>
+</document>
