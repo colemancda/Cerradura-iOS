@@ -49,7 +49,7 @@ extension UIViewController {
             }
         }
             
-            // Compact layout
+        // Compact layout
         else {
             
             // pop to root VC if top if second VC

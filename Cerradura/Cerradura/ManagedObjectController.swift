@@ -12,14 +12,14 @@ import NetworkObjects
 
 /** Observes and controls a managed object. */
 final public class ManagedObjectController<T: NSManagedObject>: NSObject {
-    
+
     // MARK: - Properties
     
     public let managedObject: T
     
     public let store: Store
     
-    public weak var delegate: ManagedObjectControllerDelegate<T>? {
+    public weak var delegate: ManagedObjectControllerDelegate? {
     
         didSet {
             
@@ -149,11 +149,9 @@ public struct ManagedObjectPropertyValueChange<T> {
 
 public protocol ManagedObjectControllerDelegate: class {
     
-    typealias ManagedObjectClass: NSManagedObject
+    func managedObjectController<T: NSManagedObject>(controller: ManagedObjectController<T>, managedObjectWasDeleted: NSManagedObject)
     
-    func managedObjectController(controller: ManagedObjectController<ManagedObjectClass>, managedObjectWasDeleted: NSManagedObject)
-    
-    func managedObjectController(controller: ManagedObjectController<ManagedObjectClass>, managedObjectWasCached cacheDate: NSDate)
+    func managedObjectController<T: NSManagedObject>(controller: ManagedObjectController<T>, managedObjectWasCached cacheDate: NSDate)
 }
 
 // MARK: - Private Types
