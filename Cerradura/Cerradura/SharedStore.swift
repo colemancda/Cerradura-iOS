@@ -51,13 +51,6 @@ internal extension Store {
     
     class func removeSharedStore() {
         
-        var removeStoreError: NSError?
-        
-        if !self.sharedStore.managedObjectContext.persistentStoreCoordinator!.removePersistentStore(self.persistentStore, error: &removeStoreError) {
-            
-            fatalError("Could not remove old persistent store.\n\(removeStoreError!)")
-        }
-        
         if NSFileManager.defaultManager().fileExistsAtPath(SharedStoreFileURL.path!) {
             
             // delete file
