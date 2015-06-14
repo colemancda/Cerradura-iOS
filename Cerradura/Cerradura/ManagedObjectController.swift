@@ -11,38 +11,47 @@ import CoreData
 import NetworkObjects
 
 /** Observes and controls a managed object. */
-final public class ManagedObjectController<T: NSManagedObject>: NSObject {
-
+final public class ManagedObjectController<ManagedObjectClass: NSManagedObject>: NSObject {
+    
     // MARK: - Properties
     
-    public let managedObject: T
+    public let managedObject: ManagedObjectClass
     
     public let store: Store
     
-    public weak var delegate: ManagedObjectControllerDelegate? {
-    
+    public var deletionHandler: (() -> Void)? {
+        
         didSet {
             
             // register for notifications
             
-            if delegate != nil {
+            if deletionHandler != nil {
                 
                 self.managedObject.addObserver(self, forKeyPath: ManagedObjectKey.Deleted.rawValue, options: .Initial | .New, context: self.KVOContext)
-                
-                if self.store.dateCachedAttributeName != nil {
-                    
-                    self.managedObject.addObserver(self, forKeyPath: self.store.dateCachedAttributeName!, options: .Initial | .New, context: self.KVOContext)
-                }
             }
             else {
                 
                 self.managedObject.removeObserver(self, forKeyPath: ManagedObjectKey.Deleted.rawValue, context: self.KVOContext)
-                
-                if self.store.dateCachedAttributeName != nil {
-                    
-                    self.managedObject.removeObserver(self, forKeyPath: self.store.dateCachedAttributeName!, context: self.KVOContext)
-                }
             }
+        }
+    }
+    
+    /** Handler called when managedObject is cached from server. Do not set if your Store's dateCachedAttributeName is set to nil. */
+    public var cachedHandler: ((firstCache: Bool) -> Void)? {
+        
+        didSet {
+            
+            assert(store.dateCachedAttributeName != nil, "dateCachedAttributeName must not be nil")
+            
+            if cachedHandler != nil {
+                
+                self.managedObject.addObserver(self, forKeyPath: self.store.dateCachedAttributeName!, options: .Initial | .New, context: self.KVOContext)
+            }
+            else {
+                
+                self.managedObject.removeObserver(self, forKeyPath: self.store.dateCachedAttributeName!, context: self.KVOContext)
+            }
+        
         }
     }
     
@@ -63,10 +72,10 @@ final public class ManagedObjectController<T: NSManagedObject>: NSObject {
             self.stopObservingProperty(property)
         }
         
-        self.delegate = nil
+        self.deletionHandler = nil
     }
     
-    public init(managedObject: T, store: Store) {
+    public init(managedObject: ManagedObjectClass, store: Store) {
         
         self.managedObject = managedObject
         self.store = store
@@ -109,16 +118,16 @@ final public class ManagedObjectController<T: NSManagedObject>: NSObject {
                     
                     if self.managedObject.deleted {
                         
-                        self.delegate?.managedObjectController(self, managedObjectWasDeleted: self.managedObject)
+                        self.deletionHandler?()
                     }
                     
                     return
                 }
                 
                 if keyPath == self.store.dateCachedAttributeName {
-                    
-                    
-                }
+
+
+}
                 
                 // check for registered key paths
                 
@@ -143,15 +152,6 @@ public struct ManagedObjectPropertyValueChange<T> {
     let oldValue: T?
     
     let newValue: T?
-}
-
-// MARK: - Protocol
-
-public protocol ManagedObjectControllerDelegate: class {
-    
-    func managedObjectController<T: NSManagedObject>(controller: ManagedObjectController<T>, managedObjectWasDeleted: NSManagedObject)
-    
-    func managedObjectController<T: NSManagedObject>(controller: ManagedObjectController<T>, managedObjectWasCached cacheDate: NSDate)
 }
 
 // MARK: - Private Types

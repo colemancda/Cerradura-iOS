@@ -42,31 +42,31 @@
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>12F38FB327716B7895CF61666B41920A578D627D</key>
-		<string>../../../Carthage/Checkouts/CoreCerradura/</string>
+		<string>../../../Carthage/Checkouts/CoreCerradura</string>
 		<key>18E0B2BF6E713AFC803F52709F0520675E0ABA1A</key>
-		<string>../../../Carthage/Checkouts/CoreCerraduraClient/</string>
+		<string>../../../Carthage/Checkouts/CoreCerraduraClient</string>
 		<key>1C75F1C5CFCB95B3702F6F632FA05ED5244B519E</key>
-		<string>../../../Carthage/Checkouts/CocoaAsyncSocket/</string>
+		<string>../../../Carthage/Checkouts/CocoaAsyncSocket</string>
 		<key>35B5C9A93714EC9BEB56BAE809C5551E5C66E52D</key>
-		<string>../../../Carthage/Checkouts/CocoaLumberjack/</string>
+		<string>../../../Carthage/Checkouts/CocoaLumberjack</string>
 		<key>71CFC0DE1DEFC877B0C5B9F98B971EBA2921D608</key>
-		<string>../../../Carthage/Checkouts/CocoaHTTPServer/</string>
+		<string>../../../Carthage/Checkouts/CocoaHTTPServer</string>
 		<key>9D8E50737BD1955BFF09EC27A96CDD52A2431CCE</key>
-		<string>../../../Carthage/Checkouts/RoutingHTTPServer/</string>
+		<string>../../../Carthage/Checkouts/RoutingHTTPServer</string>
 		<key>A5260C930E0CFC29BE4E638F3BCB24458F4E5121</key>
-		<string>../../../Carthage/Checkouts/NetworkObjects/</string>
+		<string>../../../Carthage/Checkouts/NetworkObjects</string>
 		<key>ACFD7193FD9E2A3F48E6D0863F74951FF595FC16</key>
 		<string>../../..</string>
 		<key>AFADF01AFBA46DFD7A5AFD980110E89E8E63AACD</key>
-		<string>../../../Carthage/Checkouts/KeychainAccess/</string>
+		<string>../../../Carthage/Checkouts/KeychainAccess</string>
 		<key>CA0F008EE3879A49D4AD08C803AC26CAC131963A</key>
 		<string>../../../../IDZSwiftCommonCrypto</string>
 		<key>D9420E81D6A438210B7B3BBEADC7A0283866D9A2</key>
-		<string>../../../Carthage/Checkouts/CommonCrypto/</string>
+		<string>../../../Carthage/Checkouts/CommonCrypto</string>
 		<key>DD091C5D03D23C2F1EC054BC9C018DF9A9125FD6</key>
-		<string>../../../Carthage/Checkouts/DZNEmptyDataSet/</string>
+		<string>../../../Carthage/Checkouts/DZNEmptyDataSet</string>
 		<key>E2F476CE895D3596DBE8080E8F363F8F94823E70</key>
-		<string>../../../Carthage/Checkouts/ExSwift/</string>
+		<string>../../../Carthage/Checkouts/ExSwift</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/colemancda/Cerradura-iOS.git</string>

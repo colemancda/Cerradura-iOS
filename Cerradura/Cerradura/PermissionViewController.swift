@@ -9,7 +9,6 @@
 import Foundation
 import CoreData
 import UIKit
-import NetworkObjects
 import CoreCerraduraClient
 import CoreCerradura
 
@@ -18,7 +17,19 @@ class PermissionViewController: UIViewController {
     // MARK: - Properties
     
     /** The permission that this view controller will display. */
-    var permission: Permission!
+    var permission: Permission! {
+        
+        didSet {
+            
+            self.managedObjectController = ManagedObjectController<Permission>(managedObject: self.permission, store: Store.sharedStore)
+            
+            self.configureManagedObjectController()
+        }
+    }
+    
+    // MARK: - Private Properties
+    
+    var managedObjectController: ManagedObjectController<Permission>!
     
     // MARK: - Initialization
     
@@ -33,6 +44,25 @@ class PermissionViewController: UIViewController {
     
     @IBAction func unlock(sender: UIButton) {
         
+        
+    }
+    
+    // MARK: - Private Methods
+    
+    private func configureManagedObjectController() {
+        
+        self.managedObjectController.deletionHandler = {
+            
+            self.handleManagedObjectDeletionInMainStoryboard()
+        }
+        
+        self.managedObjectController.observeProperty("archived", changeHandler: { (change: ManagedObjectPropertyValueChange<Bool>) -> Void in
+            
+            if change.newValue == true {
+                
+                self.handleManagedObjectDeletionInMainStoryboard()
+            }
+        })
         
     }
     
