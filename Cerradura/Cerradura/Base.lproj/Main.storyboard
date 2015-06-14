@@ -29,9 +29,16 @@
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y72-si-ye1" customClass="StyleKitView" customModule="Cerradura" customModuleProvider="target">
                                             <rect key="frame" x="8" y="8" width="51" height="51"/>
+                                            <subviews>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="xqD-P9-uHW">
+                                                    <rect key="frame" x="15" y="16" width="20" height="20"/>
+                                                </activityIndicatorView>
+                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="y72-si-ye1" secondAttribute="height" multiplier="1:1" id="CVf-xh-fyx"/>
+                                                <constraint firstAttribute="centerY" secondItem="xqD-P9-uHW" secondAttribute="centerY" id="WMg-yn-KZR"/>
+                                                <constraint firstAttribute="centerX" secondItem="xqD-P9-uHW" secondAttribute="centerX" id="ej0-gl-ezb"/>
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="string" keyPath="canvasName" value="PermissionBadgeAnytime"/>
@@ -66,6 +73,7 @@
                                 </tableViewCellContentView>
                                 <inset key="separatorInset" minX="67" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <connections>
+                                    <outlet property="activityIndicatorView" destination="xqD-P9-uHW" id="Snl-u4-cNY"/>
                                     <outlet property="permissionImageView" destination="y72-si-ye1" id="atA-pO-6qN"/>
                                     <outlet property="permissionLockNameLabel" destination="z83-QU-93C" id="lHm-jI-8sJ"/>
                                     <outlet property="permissionTypeLabel" destination="dzc-X2-HVb" id="sbY-Ug-jCQ"/>

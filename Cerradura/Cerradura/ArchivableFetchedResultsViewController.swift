@@ -43,7 +43,7 @@ class ArchivableFetchedResultsViewController: FetchedResultsViewController {
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         
         // get model object
-        let managedObject = self.fetchedResultsController!.objectAtIndexPath(indexPath) as! NSManagedObject
+        let managedObject = self.objectAtIndexPath(indexPath)
         
         switch editingStyle {
             

@@ -78,22 +78,87 @@ class PermissionsViewController: ArchivableFetchedResultsViewController, DZNEmpt
             
             permissionCell.permissionLockNameLabel!.text = NSLocalizedString("Loading...", comment: "Loading...")
             
+            permissionCell.activityIndicatorView.hidden = false
+            
+            permissionCell.permissionImageView.hidden = true
+            
+            permissionCell.activityIndicatorView.startAnimating()
+            
+            permissionCell.permissionTypeLabel.text = ""
+            
             cell.userInteractionEnabled = false
             
             return
         }
         
+        // permission cached
+        
         // configure cell...
         
         cell.userInteractionEnabled = true
         
-        // permissionCell.permissionLockNameLabel!.text = permission.lock.name
-        
         permissionCell.permissionTypeLabel.text = {
             
-            return "AnyTime"
+            return "Admin"
             
         }()
+        
+        permissionCell.permissionImageView.hidden = false
+        
+        permissionCell.activityIndicatorView.stopAnimating()
+        
+        permissionCell.permissionImageView.canvasName = {
+           
+            return StyleKitCanvas.PermissionBadgeAdmin.rawValue
+            
+        }()
+        
+        // load lock info
+        
+        let lockDateCached = permission.lock.valueForKey(Store.sharedStore.dateCachedAttributeName!) as? NSDate
+        
+        if lockDateCached == nil {
+            
+            permissionCell.permissionLockNameLabel!.text = NSLocalizedString("Loading...", comment: "Loading...")
+            
+            self.store.fetchResource(permission.lock, completionBlock: {[weak self] (error: NSError?) -> Void in
+                
+                NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                    
+                    if self == nil {
+                        
+                        return
+                    }
+                    
+                    // out of bounds
+                    if indexPath.row > (self!.tableView.numberOfRowsInSection(0) - 1) {
+                        
+                        return
+                    }
+                    
+                    let currentPermissionForCell = self!.objectAtIndexPath(indexPath)
+                    
+                    if currentPermissionForCell != permission {
+                        
+                        return
+                    }
+                    
+                    if error != nil {
+                        
+                        permissionCell.permissionLockNameLabel.text = NSLocalizedString("Error", comment: "Error")
+                        
+                        return
+                    }
+                    
+                    permissionCell.permissionLockNameLabel!.text = permission.lock.name
+                    
+                })
+            })
+        }
+        else {
+            
+            permissionCell.permissionLockNameLabel!.text = permission.lock.name
+        }
     }
     
     // MARK: - UITableViewDelegate
@@ -123,6 +188,8 @@ class PermissionsViewController: ArchivableFetchedResultsViewController, DZNEmpt
 class PermissionCell: UITableViewCell {
     
     @IBOutlet weak var permissionImageView: StyleKitView!
+    
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
     @IBOutlet weak var permissionLockNameLabel: UILabel!
     
