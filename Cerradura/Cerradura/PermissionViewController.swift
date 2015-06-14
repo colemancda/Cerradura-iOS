@@ -14,6 +14,10 @@ import CoreCerradura
 
 class PermissionViewController: UIViewController {
     
+    // MARK: - IB Outlets
+    
+    
+    
     // MARK: - Properties
     
     /** The permission that this view controller will display. */
@@ -21,15 +25,17 @@ class PermissionViewController: UIViewController {
         
         didSet {
             
-            self.managedObjectController = ManagedObjectController<Permission>(managedObject: self.permission, store: Store.sharedStore)
+            self.permissionManagedObjectController = ManagedObjectController<Permission>(managedObject: self.permission, store: Store.sharedStore)
             
-            self.configureManagedObjectController()
+            self.configurePermissionManagedObjectController()
         }
     }
     
     // MARK: - Private Properties
     
-    var managedObjectController: ManagedObjectController<Permission>!
+    private var permissionManagedObjectController: ManagedObjectController<Permission>!
+    
+    private var lockManagedObjectController: ManagedObjectController<Lock>?
     
     // MARK: - Initialization
     
@@ -40,30 +46,88 @@ class PermissionViewController: UIViewController {
         
     }
     
+    // MARK: - Transition
+    
+    override func viewWillAppear(animated: Bool) {
+        
+        // reload
+    }
+    
     // MARK: - Actions
     
-    @IBAction func unlock(sender: UIButton) {
+    @IBAction func unlock(sender: AnyObject) {
         
         
     }
     
+    @IBAction func refresh(sender: AnyObject) {
+        
+        weak var weakSelf = self
+        
+        Store.sharedStore.fetchEntity("Permission", resourceID: self.permission.valueForKey("id") as! UInt, completionBlock: { (error: NSError?, managedObject: NSManagedObject?) -> Void in
+            
+            if weakSelf == nil {
+                
+                return
+            }
+            
+            NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                
+                if error != nil {
+                    
+                    weakSelf!.showErrorAlert(error!.localizedDescription, retryHandler: {
+                        
+                        weakSelf!.refresh(weakSelf!)
+                    })
+        
+                    return
+                }
+                
+                
+                
+            })
+            
+        })
+    }
+    
     // MARK: - Private Methods
     
-    private func configureManagedObjectController() {
+    private func configurePermissionManagedObjectController() {
         
-        self.managedObjectController.deletionHandler = {
+        self.permissionManagedObjectController.deletionHandler = {
             
             self.handleManagedObjectDeletionInMainStoryboard()
         }
         
-        self.managedObjectController.observeProperty("archived", changeHandler: { (change: ManagedObjectPropertyValueChange<Bool>) -> Void in
+        self.permissionManagedObjectController.observeProperty("archived", changeHandler: { (change: ManagedObjectPropertyValueChange<Bool>) -> Void in
             
-            if change.newValue == true {
+            if change.value == true {
                 
                 self.handleManagedObjectDeletionInMainStoryboard()
             }
         })
         
+        self.permissionManagedObjectController.observeProperty("lock", changeHandler: { (change: ManagedObjectPropertyValueChange<Lock>) -> Void in
+            
+            if let lock = change.value {
+                
+                self.lockManagedObjectController = ManagedObjectController<Lock>(managedObject: self.permission.lock, store: Store.sharedStore)
+            }
+            
+            
+            
+        })
+    }
+    
+    private func configureLockManagedObjectController() {
+        
+        self.lockManagedObjectController!.observeProperty("name", changeHandler: { (change: ManagedObjectPropertyValueChange<String>) -> Void in
+            
+            if let name = change.value {
+                
+                self.navigationItem.title = name
+            }
+        })
     }
     
 }

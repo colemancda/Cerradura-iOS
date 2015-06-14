@@ -61,6 +61,8 @@ final public class ManagedObjectController<ManagedObjectClass: NSManagedObject>:
     
     private var observedProperties = [String: ChangeHandler]()
     
+    private var cached: Bool = false
+    
     // MARK: - Initialization
     
     deinit {
@@ -73,12 +75,18 @@ final public class ManagedObjectController<ManagedObjectClass: NSManagedObject>:
         }
         
         self.deletionHandler = nil
+        self.cachedHandler = nil
     }
     
     public init(managedObject: ManagedObjectClass, store: Store) {
         
         self.managedObject = managedObject
         self.store = store
+        
+        if let dateCachedAttributeName = self.store.dateCachedAttributeName {
+        
+            self.cached = (managedObject.valueForKey(self.store.dateCachedAttributeName!) != nil)
+        }
     }
     
     // MARK: - Methods
@@ -92,7 +100,7 @@ final public class ManagedObjectController<ManagedObjectClass: NSManagedObject>:
         // set handler
         self.observedProperties[propertyName] = {(oldValue: Any?, newValue: Any?) -> Void in
             
-            let change = ManagedObjectPropertyValueChange<ValueType>(oldValue: oldValue as? ValueType, newValue: newValue as? ValueType)
+            let change = ManagedObjectPropertyValueChange<ValueType>(oldValue: oldValue as? ValueType, value: newValue as? ValueType)
             
             changeHandler(change: change)
         }
@@ -125,9 +133,20 @@ final public class ManagedObjectController<ManagedObjectClass: NSManagedObject>:
                 }
                 
                 if keyPath == self.store.dateCachedAttributeName {
-
-
-}
+                    
+                    if self.managedObject.valueForKey(self.store.dateCachedAttributeName!) != nil {
+                        
+                        self.cachedHandler?(firstCache: !self.cached)
+                        
+                        // set cached value
+                        if self.cached == false {
+                            
+                            self.cached = true
+                        }
+                    }
+                    
+                    return
+                }
                 
                 // check for registered key paths
                 
@@ -135,7 +154,7 @@ final public class ManagedObjectController<ManagedObjectClass: NSManagedObject>:
                     
                     if property == keyPath {
                         
-                        handler(oldValue: change[NSKeyValueChangeOldKey], NewValue: change[NSKeyValueChangeNewKey])
+                        handler(oldValue: change[NSKeyValueChangeOldKey], newValue: object.valueForKey(keyPath))
                     
                         return
                     }
@@ -151,12 +170,12 @@ public struct ManagedObjectPropertyValueChange<T> {
     
     let oldValue: T?
     
-    let newValue: T?
+    let value: T?
 }
 
 // MARK: - Private Types
 
-private typealias ChangeHandler = (oldValue: Any?, NewValue: Any?) -> Void
+private typealias ChangeHandler = (oldValue: Any?, newValue: Any?) -> Void
 
 private enum ManagedObjectKey: String {
     
