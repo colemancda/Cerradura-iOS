@@ -1,3 +1,4 @@
 git "git@github.com:colemancda/CoreCerraduraClient.git" "develop"
+github "ColemanCDA/NetworkObjectsUI" “develop”
 github "ColemanCDA/DZNEmptyDataSet" "master"
 github "ColemanCDA/KeychainAccess" "master"
