@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import NetworkObjects
+import NetworkObjectsUI
 
 class LoginViewController: UIViewController {
     

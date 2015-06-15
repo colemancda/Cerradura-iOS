@@ -11,6 +11,7 @@ import CoreData
 import UIKit
 import CoreCerraduraClient
 import CoreCerradura
+import NetworkObjectsUI
 
 class PermissionViewController: UIViewController {
     

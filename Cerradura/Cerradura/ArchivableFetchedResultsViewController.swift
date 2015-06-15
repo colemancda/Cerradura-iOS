@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import CoreData
 import NetworkObjects
+import NetworkObjectsUI
 import CoreCerradura
 
 /** Subclass of FetchedResultsViewController that archives objects instead of deleting them. */

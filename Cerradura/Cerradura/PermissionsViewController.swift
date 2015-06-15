@@ -12,6 +12,7 @@ import CoreData
 import CoreCerradura
 import CoreCerraduraClient
 import DZNEmptyDataSet
+import NetworkObjectsUI
 
 class PermissionsViewController: ArchivableFetchedResultsViewController, DZNEmptyDataSetSource {
         

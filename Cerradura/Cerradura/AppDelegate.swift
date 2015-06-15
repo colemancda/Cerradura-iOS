@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import NetworkObjectsUI
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, AuthenticationControllerDelegate {
