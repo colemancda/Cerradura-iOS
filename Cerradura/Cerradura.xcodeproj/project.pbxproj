@@ -21,7 +21,8 @@
 		6E11F2C91B2D3AA8004C53D9 /* LocalLockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E11F2C81B2D3AA8004C53D9 /* LocalLockViewController.swift */; };
 		6E13AC001B27D95900858F8E /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E13ABFF1B27D95900858F8E /* Appearance.swift */; };
 		6E225A641B2895AF00E80F99 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E225A631B2895AF00E80F99 /* SettingsViewController.swift */; };
-		6E5C37611B2F8CA800E8E5C6 /* NetworkObjectsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E5C37601B2F8CA800E8E5C6 /* NetworkObjectsUI.framework */; };
+		6E5C37821B2F918A00E8E5C6 /* NetworkObjectsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E5C37601B2F8CA800E8E5C6 /* NetworkObjectsUI.framework */; };
+		6E5C37831B2F918A00E8E5C6 /* NetworkObjectsUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6E5C37601B2F8CA800E8E5C6 /* NetworkObjectsUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6E5C5C451B27621000E9D549 /* StyleKitView.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5C5C441B27621000E9D549 /* StyleKitView.generated.swift */; };
 		6E5C5C471B27633700E9D549 /* StyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5C5C461B27633700E9D549 /* StyleKit.swift */; };
 		6E921A5F1B29264D0034E4D9 /* MainStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E921A5E1B29264D0034E4D9 /* MainStoryboard.swift */; };
@@ -256,6 +257,7 @@
 				6EB585C51B2BCFAE009E7250 /* CoreCerradura.framework in Embed Frameworks */,
 				6EB585C91B2BCFAE009E7250 /* DZNEmptyDataSet.framework in Embed Frameworks */,
 				6EB585BD1B2BCFAD009E7250 /* CocoaAsyncSocket.framework in Embed Frameworks */,
+				6E5C37831B2F918A00E8E5C6 /* NetworkObjectsUI.framework in Embed Frameworks */,
 				6EB585CF1B2BCFAE009E7250 /* KeychainAccess.framework in Embed Frameworks */,
 				6EB585CD1B2BCFAE009E7250 /* IDZSwiftCommonCrypto.framework in Embed Frameworks */,
 				6EB585C11B2BCFAD009E7250 /* CocoaLumberjack.framework in Embed Frameworks */,
@@ -334,7 +336,7 @@
 				6EB585C41B2BCFAE009E7250 /* CoreCerradura.framework in Frameworks */,
 				6EB585C81B2BCFAE009E7250 /* DZNEmptyDataSet.framework in Frameworks */,
 				6EB585BC1B2BCFAD009E7250 /* CocoaAsyncSocket.framework in Frameworks */,
-				6E5C37611B2F8CA800E8E5C6 /* NetworkObjectsUI.framework in Frameworks */,
+				6E5C37821B2F918A00E8E5C6 /* NetworkObjectsUI.framework in Frameworks */,
 				6EB585CE1B2BCFAE009E7250 /* KeychainAccess.framework in Frameworks */,
 				6EB585CC1B2BCFAE009E7250 /* IDZSwiftCommonCrypto.framework in Frameworks */,
 				6EB585C01B2BCFAD009E7250 /* CocoaLumberjack.framework in Frameworks */,
@@ -591,6 +593,7 @@
 		6EB585A31B2BC924009E7250 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				6EB585AE1B2BCF9E009E7250 /* NetworkObjects.framework */,
 				6E5C37601B2F8CA800E8E5C6 /* NetworkObjectsUI.framework */,
 				6EB585A41B2BCF9E009E7250 /* CocoaAsyncSocket.framework */,
 				6EB585A51B2BCF9E009E7250 /* CocoaHTTPServer.framework */,
@@ -602,11 +605,10 @@
 				6EB585AB1B2BCF9E009E7250 /* ExSwift.framework */,
 				6EB585AC1B2BCF9E009E7250 /* IDZSwiftCommonCrypto.framework */,
 				6EB585AD1B2BCF9E009E7250 /* KeychainAccess.framework */,
-				6EB585AE1B2BCF9E009E7250 /* NetworkObjects.framework */,
 				6EB585AF1B2BCF9E009E7250 /* RoutingHTTPServer.framework */,
 			);
 			name = Framework;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		6EB585F91B2BDCA1009E7250 /* Products */ = {
 			isa = PBXGroup;
@@ -1152,7 +1154,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					$SRCROOT/../Carthage/Build/iOS,
-					"/Users/Coleman/Developer/MyProjects/Cerradura-iOS/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Cerradura/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1175,7 +1176,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					$SRCROOT/../Carthage/Build/iOS,
-					"/Users/Coleman/Developer/MyProjects/Cerradura-iOS/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Cerradura/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

@@ -34,3 +34,6 @@
 [submodule "Carthage/Checkouts/IDZSwiftCommonCrypto"]
 	path = Carthage/Checkouts/IDZSwiftCommonCrypto
 	url = https://github.com/ColemanCDA/IDZSwiftCommonCrypto.git
+[submodule "Carthage/Checkouts/NetworkObjectsUI"]
+	path = Carthage/Checkouts/NetworkObjectsUI
+	url = https://github.com/ColemanCDA/NetworkObjectsUI.git

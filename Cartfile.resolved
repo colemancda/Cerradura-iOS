@@ -9,5 +9,5 @@ git "git@github.com:colemancda/CoreCerraduraClient.git" "c7928df81cb0350472f622d
 github "ColemanCDA/IDZSwiftCommonCrypto" "46e5e88522f1fb663c0726e061fb6fdfd46a8f22"
 github "ColemanCDA/RoutingHTTPServer" "f8252cca2d2864a04e5b116264028ebd95df73bd"
 github "ColemanCDA/NetworkObjects" "6018e354d742ade5c77351a09b170f5327d9c99b"
-github "ColemanCDA/NetworkObjectsUI" "beed9febf36969a03451324bb7726b3e8f6122f0"
+github "ColemanCDA/NetworkObjectsUI" "2c566689529d97a294e9435a5b6cf4d4529a7d69"
 git "git@github.com:colemancda/CoreCerradura.git" "a648da54e8d5efb78a407f65f7bfa4e0ac56978b"
