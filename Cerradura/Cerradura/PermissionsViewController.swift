@@ -11,25 +11,16 @@ import UIKit
 import CoreData
 import CoreCerradura
 import CoreCerraduraClient
-import DZNEmptyDataSet
 import NetworkObjectsUI
 
-class PermissionsViewController: ArchivableFetchedResultsViewController, DZNEmptyDataSetSource {
+class PermissionsViewController: ArchivableFetchedResultsViewController {
         
     // MARK: - Initialization
-    
-    deinit {
-        
-        self.tableView.emptyDataSetSource = nil
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         self.store = Store.sharedStore
-        
-        self.tableView.emptyDataSetSource = self
         
         self.tableView.reloadData()
         
