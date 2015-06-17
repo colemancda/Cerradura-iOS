@@ -4,3 +4,6 @@
 [submodule "NetworkObjectsUI"]
 	path = NetworkObjectsUI
 	url = https://github.com/colemancda/NetworkObjectsUI.git
+[submodule "KeychainAccess"]
+	path = KeychainAccess
+	url = https://github.com/colemancda/KeychainAccess.git
