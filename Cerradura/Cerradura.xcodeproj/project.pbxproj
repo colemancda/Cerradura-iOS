@@ -25,6 +25,26 @@
 		6E5C5C471B27633700E9D549 /* StyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5C5C461B27633700E9D549 /* StyleKit.swift */; };
 		6E921A5F1B29264D0034E4D9 /* MainStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E921A5E1B29264D0034E4D9 /* MainStoryboard.swift */; };
 		6E93CE731B29063C004C7D93 /* PermissionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E93CE721B29063C004C7D93 /* PermissionsViewController.swift */; };
+		6E9465191B3135440093111F /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9464F71B3133CB0093111F /* CocoaAsyncSocket.framework */; };
+		6E94651A1B3135440093111F /* CocoaAsyncSocket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9464F71B3133CB0093111F /* CocoaAsyncSocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6E94651D1B3135440093111F /* CocoaHTTPServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9464FD1B3133CB0093111F /* CocoaHTTPServer.framework */; };
+		6E94651E1B3135440093111F /* CocoaHTTPServer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9464FD1B3133CB0093111F /* CocoaHTTPServer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6E9465211B3135450093111F /* RoutingHTTPServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9464EB1B3133BD0093111F /* RoutingHTTPServer.framework */; };
+		6E9465221B3135450093111F /* RoutingHTTPServer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9464EB1B3133BD0093111F /* RoutingHTTPServer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6E9465261B31354F0093111F /* IDZSwiftCommonCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9464D61B3133B30093111F /* IDZSwiftCommonCrypto.framework */; };
+		6E9465271B31354F0093111F /* IDZSwiftCommonCrypto.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9464D61B3133B30093111F /* IDZSwiftCommonCrypto.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6E94652A1B31355B0093111F /* CoreCerradura.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9464C71B3133A80093111F /* CoreCerradura.framework */; };
+		6E94652B1B31355B0093111F /* CoreCerradura.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9464C71B3133A80093111F /* CoreCerradura.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6E94652E1B3135680093111F /* NetworkObjects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9464DC1B3133B30093111F /* NetworkObjects.framework */; };
+		6E94652F1B3135680093111F /* NetworkObjects.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9464DC1B3133B30093111F /* NetworkObjects.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6E9465321B3135780093111F /* CoreCerraduraClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EE732BC1B312DDB005ED4D9 /* CoreCerraduraClient.framework */; };
+		6E9465331B3135780093111F /* CoreCerraduraClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6EE732BC1B312DDB005ED4D9 /* CoreCerraduraClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6E9465361B3135790093111F /* NetworkObjectsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EE732B21B312DD4005ED4D9 /* NetworkObjectsUI.framework */; };
+		6E9465371B3135790093111F /* NetworkObjectsUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6EE732B21B312DD4005ED4D9 /* NetworkObjectsUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6E94653A1B31358D0093111F /* ExSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9464E71B3133BD0093111F /* ExSwift.framework */; };
+		6E94653B1B31358D0093111F /* ExSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9464E71B3133BD0093111F /* ExSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6E94653E1B3135C60093111F /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EE732A31B312DCD005ED4D9 /* KeychainAccess.framework */; };
+		6E94653F1B3135C60093111F /* KeychainAccess.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6EE732A31B312DCD005ED4D9 /* KeychainAccess.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6EAED1701B21254C0049CC35 /* AuthenticationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAED16F1B21254C0049CC35 /* AuthenticationController.swift */; };
 		6EB585E41B2BDC3D009E7250 /* ArchivableFetchedResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB585E31B2BDC3D009E7250 /* ArchivableFetchedResultsViewController.swift */; };
 		6EB586081B2C8131009E7250 /* Permission.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EB586071B2C8131009E7250 /* Permission.storyboard */; };
@@ -32,12 +52,6 @@
 		6EB5860C1B2C843A009E7250 /* NewPermission.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EB5860B1B2C843A009E7250 /* NewPermission.storyboard */; };
 		6EB586331B2CD9E7009E7250 /* PermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB586321B2CD9E7009E7250 /* PermissionViewController.swift */; };
 		6EB586351B2CE4AE009E7250 /* ManagedObjectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB586341B2CE4AE009E7250 /* ManagedObjectController.swift */; };
-		6EE732C51B312E35005ED4D9 /* CoreCerraduraClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EE732BC1B312DDB005ED4D9 /* CoreCerraduraClient.framework */; };
-		6EE732C61B312E35005ED4D9 /* CoreCerraduraClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6EE732BC1B312DDB005ED4D9 /* CoreCerraduraClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6EE732C91B312E55005ED4D9 /* NetworkObjectsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EE732B21B312DD4005ED4D9 /* NetworkObjectsUI.framework */; };
-		6EE732CA1B312E55005ED4D9 /* NetworkObjectsUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6EE732B21B312DD4005ED4D9 /* NetworkObjectsUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6EE732EE1B312EF3005ED4D9 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EE732A31B312DCD005ED4D9 /* KeychainAccess.framework */; };
-		6EE732EF1B312EF3005ED4D9 /* KeychainAccess.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6EE732A31B312DCD005ED4D9 /* KeychainAccess.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,6 +153,76 @@
 			remoteGlobalIDString = 6EF631F019C4178D006FBD89;
 			remoteInfo = CocoaHTTPServerTests;
 		};
+		6E94651B1B3135440093111F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E9464EE1B3133CB0093111F /* CocoaAsyncSocket.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6EC7513F19C4116E009F0E00;
+			remoteInfo = CocoaAsyncSocket;
+		};
+		6E94651F1B3135450093111F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E9464F11B3133CB0093111F /* CocoaHTTPServer.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6EF631E419C4178D006FBD89;
+			remoteInfo = CocoaHTTPServer;
+		};
+		6E9465231B3135450093111F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E9464DF1B3133BD0093111F /* RoutingHTTPServer.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6EC750FE19C40645009F0E00;
+			remoteInfo = RoutingHTTPServer;
+		};
+		6E9465281B31354F0093111F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E9464D01B3133B30093111F /* IDZSwiftCommonCrypto.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 0CCB89AA19CE05F800068ED6;
+			remoteInfo = IDZSwiftCommonCrypto;
+		};
+		6E94652C1B31355B0093111F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E9464C11B3133A60093111F /* CoreCerradura.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E4642ED1AD9E045005BDBA7;
+			remoteInfo = CoreCerradura;
+		};
+		6E9465301B3135690093111F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E9464CD1B3133B30093111F /* NetworkObjects.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6EAD584519C3B58300DC080A;
+			remoteInfo = NetworkObjects;
+		};
+		6E9465341B3135790093111F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6EE732B51B312DDB005ED4D9 /* CoreCerraduraClient.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6EFD2CA21B18CAF500DFDFF2;
+			remoteInfo = CoreCerraduraClient;
+		};
+		6E9465381B3135790093111F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6EE732A61B312DD3005ED4D9 /* NetworkObjectsUI.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E0268BE1B2F4E0A0035A643;
+			remoteInfo = NetworkObjectsUI;
+		};
+		6E94653C1B31358D0093111F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E9464E21B3133BD0093111F /* ExSwift.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 24D9BBE51AC54B30000FDBB8;
+			remoteInfo = ExSwift;
+		};
+		6E9465401B3135C60093111F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6EE7329D1B312DCD005ED4D9 /* KeychainAccess.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 140F195B1A49D79400B0016A;
+			remoteInfo = KeychainAccess;
+		};
 		6EE732A21B312DCD005ED4D9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6EE7329D1B312DCD005ED4D9 /* KeychainAccess.xcodeproj */;
@@ -181,39 +265,25 @@
 			remoteGlobalIDString = 6EFD2CAE1B18CAF500DFDFF2;
 			remoteInfo = CoreCerraduraClientTests;
 		};
-		6EE732C71B312E35005ED4D9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6EE732B51B312DDB005ED4D9 /* CoreCerraduraClient.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 6EFD2CA21B18CAF500DFDFF2;
-			remoteInfo = CoreCerraduraClient;
-		};
-		6EE732CB1B312E55005ED4D9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6EE732A61B312DD3005ED4D9 /* NetworkObjectsUI.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 6E0268BE1B2F4E0A0035A643;
-			remoteInfo = NetworkObjectsUI;
-		};
-		6EE732F01B312EF3005ED4D9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6EE7329D1B312DCD005ED4D9 /* KeychainAccess.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 140F195B1A49D79400B0016A;
-			remoteInfo = KeychainAccess;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		6EB585D41B2BCFAE009E7250 /* Embed Frameworks */ = {
+		6E9465251B3135450093111F /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				6EE732EF1B312EF3005ED4D9 /* KeychainAccess.framework in Embed Frameworks */,
-				6EE732CA1B312E55005ED4D9 /* NetworkObjectsUI.framework in Embed Frameworks */,
-				6EE732C61B312E35005ED4D9 /* CoreCerraduraClient.framework in Embed Frameworks */,
+				6E9465371B3135790093111F /* NetworkObjectsUI.framework in Embed Frameworks */,
+				6E9465271B31354F0093111F /* IDZSwiftCommonCrypto.framework in Embed Frameworks */,
+				6E9465331B3135780093111F /* CoreCerraduraClient.framework in Embed Frameworks */,
+				6E94652B1B31355B0093111F /* CoreCerradura.framework in Embed Frameworks */,
+				6E94653F1B3135C60093111F /* KeychainAccess.framework in Embed Frameworks */,
+				6E94651A1B3135440093111F /* CocoaAsyncSocket.framework in Embed Frameworks */,
+				6E9465221B3135450093111F /* RoutingHTTPServer.framework in Embed Frameworks */,
+				6E94653B1B31358D0093111F /* ExSwift.framework in Embed Frameworks */,
+				6E94652F1B3135680093111F /* NetworkObjects.framework in Embed Frameworks */,
+				6E94651E1B3135440093111F /* CocoaHTTPServer.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,9 +338,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6EE732EE1B312EF3005ED4D9 /* KeychainAccess.framework in Frameworks */,
-				6EE732C91B312E55005ED4D9 /* NetworkObjectsUI.framework in Frameworks */,
-				6EE732C51B312E35005ED4D9 /* CoreCerraduraClient.framework in Frameworks */,
+				6E9465361B3135790093111F /* NetworkObjectsUI.framework in Frameworks */,
+				6E9465261B31354F0093111F /* IDZSwiftCommonCrypto.framework in Frameworks */,
+				6E9465321B3135780093111F /* CoreCerraduraClient.framework in Frameworks */,
+				6E94652A1B31355B0093111F /* CoreCerradura.framework in Frameworks */,
+				6E94653E1B3135C60093111F /* KeychainAccess.framework in Frameworks */,
+				6E9465191B3135440093111F /* CocoaAsyncSocket.framework in Frameworks */,
+				6E9465211B3135450093111F /* RoutingHTTPServer.framework in Frameworks */,
+				6E94653A1B31358D0093111F /* ExSwift.framework in Frameworks */,
+				6E94652E1B3135680093111F /* NetworkObjects.framework in Frameworks */,
+				6E94651D1B3135440093111F /* CocoaHTTPServer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,14 +630,21 @@
 				6E11B2DD1AFE6A9400EEAF37 /* Frameworks */,
 				6E11B2DE1AFE6A9400EEAF37 /* Resources */,
 				6E062EC81B20B9C4004DBAB7 /* Increment Build */,
-				6EB585D41B2BCFAE009E7250 /* Embed Frameworks */,
+				6E9465251B3135450093111F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				6EE732C81B312E35005ED4D9 /* PBXTargetDependency */,
-				6EE732CC1B312E55005ED4D9 /* PBXTargetDependency */,
-				6EE732F11B312EF3005ED4D9 /* PBXTargetDependency */,
+				6E94651C1B3135440093111F /* PBXTargetDependency */,
+				6E9465201B3135450093111F /* PBXTargetDependency */,
+				6E9465241B3135450093111F /* PBXTargetDependency */,
+				6E9465291B31354F0093111F /* PBXTargetDependency */,
+				6E94652D1B31355B0093111F /* PBXTargetDependency */,
+				6E9465311B3135690093111F /* PBXTargetDependency */,
+				6E9465351B3135790093111F /* PBXTargetDependency */,
+				6E9465391B3135790093111F /* PBXTargetDependency */,
+				6E94653D1B31358D0093111F /* PBXTargetDependency */,
+				6E9465411B3135C60093111F /* PBXTargetDependency */,
 			);
 			name = Cerradura;
 			productName = Cerradura;
@@ -910,20 +994,55 @@
 			target = 6E11B2DF1AFE6A9400EEAF37 /* Cerradura */;
 			targetProxy = 6E11B2F61AFE6A9400EEAF37 /* PBXContainerItemProxy */;
 		};
-		6EE732C81B312E35005ED4D9 /* PBXTargetDependency */ = {
+		6E94651C1B3135440093111F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CocoaAsyncSocket;
+			targetProxy = 6E94651B1B3135440093111F /* PBXContainerItemProxy */;
+		};
+		6E9465201B3135450093111F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CocoaHTTPServer;
+			targetProxy = 6E94651F1B3135450093111F /* PBXContainerItemProxy */;
+		};
+		6E9465241B3135450093111F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RoutingHTTPServer;
+			targetProxy = 6E9465231B3135450093111F /* PBXContainerItemProxy */;
+		};
+		6E9465291B31354F0093111F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = IDZSwiftCommonCrypto;
+			targetProxy = 6E9465281B31354F0093111F /* PBXContainerItemProxy */;
+		};
+		6E94652D1B31355B0093111F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CoreCerradura;
+			targetProxy = 6E94652C1B31355B0093111F /* PBXContainerItemProxy */;
+		};
+		6E9465311B3135690093111F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = NetworkObjects;
+			targetProxy = 6E9465301B3135690093111F /* PBXContainerItemProxy */;
+		};
+		6E9465351B3135790093111F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CoreCerraduraClient;
-			targetProxy = 6EE732C71B312E35005ED4D9 /* PBXContainerItemProxy */;
+			targetProxy = 6E9465341B3135790093111F /* PBXContainerItemProxy */;
 		};
-		6EE732CC1B312E55005ED4D9 /* PBXTargetDependency */ = {
+		6E9465391B3135790093111F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = NetworkObjectsUI;
-			targetProxy = 6EE732CB1B312E55005ED4D9 /* PBXContainerItemProxy */;
+			targetProxy = 6E9465381B3135790093111F /* PBXContainerItemProxy */;
 		};
-		6EE732F11B312EF3005ED4D9 /* PBXTargetDependency */ = {
+		6E94653D1B31358D0093111F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ExSwift;
+			targetProxy = 6E94653C1B31358D0093111F /* PBXContainerItemProxy */;
+		};
+		6E9465411B3135C60093111F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = KeychainAccess;
-			targetProxy = 6EE732F01B312EF3005ED4D9 /* PBXContainerItemProxy */;
+			targetProxy = 6E9465401B3135C60093111F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -983,7 +1102,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1023,7 +1142,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_WHOLE_MODULE_OPTIMIZATION = YES;
