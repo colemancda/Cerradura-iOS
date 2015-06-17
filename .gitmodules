@@ -1,3 +1,6 @@
 [submodule "CoreCerraduraClient"]
 	path = CoreCerraduraClient
 	url = https://github.com/colemancda/CoreCerraduraClient.git
+[submodule "NetworkObjectsUI"]
+	path = NetworkObjectsUI
+	url = https://github.com/colemancda/NetworkObjectsUI.git
