@@ -17,8 +17,8 @@ class PermissionsViewController: ArchivableFetchedResultsViewController {
         
     // MARK: - Initialization
     override func viewDidLoad() {
-        super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        super.viewDidLoad()
         
         self.store = Store.sharedStore
         
@@ -36,8 +36,6 @@ class PermissionsViewController: ArchivableFetchedResultsViewController {
             
             return fetchRequest
         }()
-        
-        
     }
     
     // MARK: - Methods

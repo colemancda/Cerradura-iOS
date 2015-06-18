@@ -64,6 +64,20 @@
 			remoteGlobalIDString = 6E11B2DF1AFE6A9400EEAF37;
 			remoteInfo = Cerradura;
 		};
+		6E3F07F21B3387FA0040CBAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E3F07ED1B3387FA0040CBAB /* NetworkObjectsUI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6E0268BF1B2F4E0A0035A643;
+			remoteInfo = NetworkObjectsUI;
+		};
+		6E3F07F41B3387FA0040CBAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E3F07ED1B3387FA0040CBAB /* NetworkObjectsUI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6E0268CA1B2F4E0A0035A643;
+			remoteInfo = NetworkObjectsUITests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -109,6 +123,7 @@
 		6E11F2C81B2D3AA8004C53D9 /* LocalLockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalLockViewController.swift; sourceTree = "<group>"; };
 		6E13ABFF1B27D95900858F8E /* Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
 		6E225A631B2895AF00E80F99 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		6E3F07ED1B3387FA0040CBAB /* NetworkObjectsUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NetworkObjectsUI.xcodeproj; path = ../../Carthage/Checkouts/NetworkObjectsUI/NetworkObjectsUI/NetworkObjectsUI.xcodeproj; sourceTree = "<group>"; };
 		6E5C5C441B27621000E9D549 /* StyleKitView.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StyleKitView.generated.swift; path = PaintCode/StyleKitView.generated.swift; sourceTree = SOURCE_ROOT; };
 		6E5C5C461B27633700E9D549 /* StyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StyleKit.swift; path = PaintCode/StyleKit.swift; sourceTree = SOURCE_ROOT; };
 		6E921A5E1B29264D0034E4D9 /* MainStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainStoryboard.swift; sourceTree = "<group>"; };
@@ -275,9 +290,19 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		6E3F07EE1B3387FA0040CBAB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6E3F07F31B3387FA0040CBAB /* NetworkObjectsUI.framework */,
+				6E3F07F51B3387FA0040CBAB /* NetworkObjectsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		6E4F727A1B2BA117002EA01F /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				6E3F07ED1B3387FA0040CBAB /* NetworkObjectsUI.xcodeproj */,
 			);
 			name = Dependencies;
 			path = Cerradura.xcodeproj;
@@ -410,6 +435,12 @@
 			mainGroup = 6E11B2D71AFE6A9400EEAF37;
 			productRefGroup = 6E11B2E11AFE6A9400EEAF37 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 6E3F07EE1B3387FA0040CBAB /* Products */;
+					ProjectRef = 6E3F07ED1B3387FA0040CBAB /* NetworkObjectsUI.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				6E11B2DF1AFE6A9400EEAF37 /* Cerradura */,
@@ -417,6 +448,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		6E3F07F31B3387FA0040CBAB /* NetworkObjectsUI.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = NetworkObjectsUI.framework;
+			remoteRef = 6E3F07F21B3387FA0040CBAB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6E3F07F51B3387FA0040CBAB /* NetworkObjectsUITests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = NetworkObjectsUITests.xctest;
+			remoteRef = 6E3F07F41B3387FA0040CBAB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		6E11B2DE1AFE6A9400EEAF37 /* Resources */ = {
