@@ -7,62 +7,18 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>BC82D3C5-CAA8-4E99-A97E-3A8A0B4D8E24</string>
 	<key>IDESourceControlProjectName</key>
-	<string>Cerradura</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>12F38FB327716B7895CF61666B41920A578D627D</key>
-		<string>github.com:colemancda/CoreCerradura.git</string>
-		<key>18E0B2BF6E713AFC803F52709F0520675E0ABA1A</key>
-		<string>github.com:colemancda/CoreCerraduraClient.git</string>
-		<key>1C75F1C5CFCB95B3702F6F632FA05ED5244B519E</key>
-		<string>https://github.com/colemancda/CocoaAsyncSocket.git</string>
-		<key>71CFC0DE1DEFC877B0C5B9F98B971EBA2921D608</key>
-		<string>https://github.com/colemancda/CocoaHTTPServer.git</string>
-		<key>9D8E50737BD1955BFF09EC27A96CDD52A2431CCE</key>
-		<string>https://github.com/colemancda/RoutingHTTPServer.git</string>
-		<key>A5260C930E0CFC29BE4E638F3BCB24458F4E5121</key>
-		<string>https://github.com/colemancda/NetworkObjects.git</string>
-		<key>A68612D16629ED34AF576BD1E5D94391B7182E11</key>
-		<string>https://github.com/colemancda/NetworkObjectsUI.git</string>
 		<key>ACFD7193FD9E2A3F48E6D0863F74951FF595FC16</key>
 		<string>https://github.com/colemancda/Cerradura-iOS.git</string>
-		<key>AFADF01AFBA46DFD7A5AFD980110E89E8E63AACD</key>
-		<string>github.com:colemancda/KeychainAccess.git</string>
-		<key>CA0F008EE3879A49D4AD08C803AC26CAC131963A</key>
-		<string>https://github.com/colemancda/IDZSwiftCommonCrypto.git</string>
-		<key>D9420E81D6A438210B7B3BBEADC7A0283866D9A2</key>
-		<string>https://github.com/colemancda/CommonCrypto.git</string>
-		<key>E2F476CE895D3596DBE8080E8F363F8F94823E70</key>
-		<string>https://github.com/colemancda/ExSwift.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Cerradura/Cerradura.xcodeproj</string>
+	<string>Cerradura/Cerradura.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>12F38FB327716B7895CF61666B41920A578D627D</key>
-		<string>../../../CoreCerraduraClient/CoreCerradura</string>
-		<key>18E0B2BF6E713AFC803F52709F0520675E0ABA1A</key>
-		<string>../../../CoreCerraduraClient</string>
-		<key>1C75F1C5CFCB95B3702F6F632FA05ED5244B519E</key>
-		<string>../../..NetworkObjectsUI/NetworkObjects/RoutingHTTPServer/External/CocoaHTTPServer/CocoaAsyncSocket</string>
-		<key>71CFC0DE1DEFC877B0C5B9F98B971EBA2921D608</key>
-		<string>../../..NetworkObjectsUI/NetworkObjects/RoutingHTTPServer/External/CocoaHTTPServer</string>
-		<key>9D8E50737BD1955BFF09EC27A96CDD52A2431CCE</key>
-		<string>../../..NetworkObjectsUI/NetworkObjects/RoutingHTTPServer</string>
-		<key>A5260C930E0CFC29BE4E638F3BCB24458F4E5121</key>
-		<string>../../..NetworkObjectsUI/NetworkObjects</string>
-		<key>A68612D16629ED34AF576BD1E5D94391B7182E11</key>
-		<string>../../..NetworkObjectsUI</string>
 		<key>ACFD7193FD9E2A3F48E6D0863F74951FF595FC16</key>
 		<string>../../..</string>
-		<key>AFADF01AFBA46DFD7A5AFD980110E89E8E63AACD</key>
-		<string>../../..KeychainAccess</string>
-		<key>CA0F008EE3879A49D4AD08C803AC26CAC131963A</key>
-		<string>../../../CoreCerraduraClient/CoreCerradura/IDZSwiftCommonCrypto</string>
-		<key>D9420E81D6A438210B7B3BBEADC7A0283866D9A2</key>
-		<string>../../../CoreCerraduraClient/CoreCerradura/IDZSwiftCommonCrypto/CommonCrypto</string>
-		<key>E2F476CE895D3596DBE8080E8F363F8F94823E70</key>
-		<string>../../..NetworkObjectsUI/NetworkObjects/ExSwift</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/colemancda/Cerradura-iOS.git</string>
@@ -79,94 +35,6 @@
 			<string>ACFD7193FD9E2A3F48E6D0863F74951FF595FC16</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Cerradura-iOS</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>AFADF01AFBA46DFD7A5AFD980110E89E8E63AACD</string>
-			<key>IDESourceControlWCCName</key>
-			<string>Cerradura-iOSKeychainAccess</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>A68612D16629ED34AF576BD1E5D94391B7182E11</string>
-			<key>IDESourceControlWCCName</key>
-			<string>Cerradura-iOSNetworkObjectsUI</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>1C75F1C5CFCB95B3702F6F632FA05ED5244B519E</string>
-			<key>IDESourceControlWCCName</key>
-			<string>CocoaAsyncSocket</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>71CFC0DE1DEFC877B0C5B9F98B971EBA2921D608</string>
-			<key>IDESourceControlWCCName</key>
-			<string>CocoaHTTPServer</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>D9420E81D6A438210B7B3BBEADC7A0283866D9A2</string>
-			<key>IDESourceControlWCCName</key>
-			<string>CommonCrypto</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>12F38FB327716B7895CF61666B41920A578D627D</string>
-			<key>IDESourceControlWCCName</key>
-			<string>CoreCerradura</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>18E0B2BF6E713AFC803F52709F0520675E0ABA1A</string>
-			<key>IDESourceControlWCCName</key>
-			<string>CoreCerraduraClient</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>E2F476CE895D3596DBE8080E8F363F8F94823E70</string>
-			<key>IDESourceControlWCCName</key>
-			<string>ExSwift</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>CA0F008EE3879A49D4AD08C803AC26CAC131963A</string>
-			<key>IDESourceControlWCCName</key>
-			<string>IDZSwiftCommonCrypto</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>A5260C930E0CFC29BE4E638F3BCB24458F4E5121</string>
-			<key>IDESourceControlWCCName</key>
-			<string>NetworkObjects</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>9D8E50737BD1955BFF09EC27A96CDD52A2431CCE</string>
-			<key>IDESourceControlWCCName</key>
-			<string>RoutingHTTPServer</string>
 		</dict>
 	</array>
 </dict>
