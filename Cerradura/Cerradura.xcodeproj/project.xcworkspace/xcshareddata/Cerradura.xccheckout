@@ -10,6 +10,8 @@
 	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>A68612D16629ED34AF576BD1E5D94391B7182E11</key>
+		<string>https://github.com/ColemanCDA/NetworkObjectsUI.git</string>
 		<key>ACFD7193FD9E2A3F48E6D0863F74951FF595FC16</key>
 		<string>https://github.com/colemancda/Cerradura-iOS.git</string>
 	</dict>
@@ -17,6 +19,8 @@
 	<string>Cerradura/Cerradura.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>A68612D16629ED34AF576BD1E5D94391B7182E11</key>
+		<string>../../..Carthage/Checkouts/NetworkObjectsUI/</string>
 		<key>ACFD7193FD9E2A3F48E6D0863F74951FF595FC16</key>
 		<string>../../..</string>
 	</dict>
@@ -35,6 +39,14 @@
 			<string>ACFD7193FD9E2A3F48E6D0863F74951FF595FC16</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Cerradura-iOS</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>A68612D16629ED34AF576BD1E5D94391B7182E11</string>
+			<key>IDESourceControlWCCName</key>
+			<string>NetworkObjectsUI</string>
 		</dict>
 	</array>
 </dict>
